@@ -1,0 +1,150 @@
+﻿<UserControl xmlns:my1="clr-namespace:MhczTBG.Controls.DataGridOperate"   
+             x:Class="MhczTBG.Controls.DataGridOperate.ModeDataGrid"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"            
+             mc:Ignorable="d" 
+               xmlns:bor="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero"
+            >
+    <UserControl.Resources>
+        <!--标题画刷-->
+        <LinearGradientBrush Opacity="0.45" x:Key="linTittle" EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Offset="0" Color="White">             
+            </GradientStop>
+
+            <GradientStop Color="#FFC8C8C8" Offset="1"/>
+        </LinearGradientBrush>
+        
+        <SolidColorBrush x:Key="translateBrush" Color="White"/>
+
+        <!--预览画刷-->
+        <SolidColorBrush Opacity="0.15" x:Key="linEnter" Color="LightBlue"/>
+
+        <!--行画刷-->
+        <LinearGradientBrush Opacity="0.7"  x:Key="linRowSelect" EndPoint="0.5,1" StartPoint="0.5,0">           
+            <GradientStop Color="White" Offset="0"/>
+            <GradientStop Color="#FFC8C8C8" Offset="1"/>
+        </LinearGradientBrush>
+
+        <!--支持-->
+        <Style x:Key="ColumnHeaderGripperStyle" TargetType="{x:Type Thumb}">
+            <Setter Property="Width" Value="1"/>
+            <Setter Property="Background" Value="Gray"/>
+            <Setter Property="Cursor" Value="SizeWE"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Thumb}">
+                        <Border  Background="{TemplateBinding Background}"  Padding="{TemplateBinding Padding}"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </UserControl.Resources>
+    <Border Name="borMain">        
+        <Border.Resources>
+           
+            <!--标题样式-->
+            <Style   TargetType="{x:Type DataGridColumnHeader}">
+                <Setter Property="VerticalContentAlignment" Value="Center"/>
+                <Setter Property="HorizontalContentAlignment" Value="Center"/>               
+                <Setter Property="Height" Value="30"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate  TargetType="{x:Type DataGridColumnHeader}">
+                            <Grid  >
+                                <bor:DataGridHeaderBorder Loaded="DataGridHeaderBorder_Loaded"   BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" IsClickable="{TemplateBinding CanUserSort}" IsPressed="{TemplateBinding IsPressed}" IsHovered="{TemplateBinding IsMouseOver}" Padding="{TemplateBinding Padding}" SortDirection="{TemplateBinding SortDirection}" SeparatorBrush="{TemplateBinding SeparatorBrush}" SeparatorVisibility="{TemplateBinding SeparatorVisibility}">
+                                    <ContentPresenter Margin="10,0" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                                </bor:DataGridHeaderBorder>
+                                <Thumb  x:Name="PART_LeftHeaderGripper" HorizontalAlignment="Left" Style="{StaticResource ColumnHeaderGripperStyle}"/>
+                                <Thumb x:Name="PART_RightHeaderGripper" HorizontalAlignment="Right" Style="{StaticResource ColumnHeaderGripperStyle}"/>
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <!--行样式-->
+            <Style TargetType="{x:Type  DataGridRow}">
+                <Setter Property="Height" Value="30"/>   
+                <Setter Property="Background" Value="White"/>
+                <Setter Property="SnapsToDevicePixels" Value="true"/>
+                <Setter Property="Validation.ErrorTemplate" Value="{x:Null}"/>
+                <Setter Property="ValidationErrorTemplate">
+                    <Setter.Value>
+                        <ControlTemplate>
+                            <TextBlock Foreground="Red" Margin="2,0,0,0" Text="!" VerticalAlignment="Center"/>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type  DataGridRow}">
+                            <Border x:Name="DGR_Border" PreviewMouseLeftButtonDown="DGR_Border_MouseLeftButtonDown"   MouseLeave="DGR_Border_MouseLeave" MouseEnter="DGR_Border_MouseEnter"   BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+                                <SelectiveScrollingGrid >
+                                    <SelectiveScrollingGrid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </SelectiveScrollingGrid.ColumnDefinitions>
+                                    <SelectiveScrollingGrid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </SelectiveScrollingGrid.RowDefinitions>
+                                    <Path  x:Name="pathLeft" Visibility="Collapsed"   Grid.Column="1" Stroke="DarkGray"   Height="10" Fill="Black" VerticalAlignment="Center" HorizontalAlignment="Left" Width="15"   Data="M394.33334,204.66667 L392.33368,206.99966 L399.99939,213.33296 L391.66745,219.66682 L394.33347,222.33318 L405.99863,214.33328 L406.33191,212.99991 z"  Stretch="Fill"  >
+                                    </Path>
+                                    <DataGridCellsPresenter  Grid.Column="1" ItemsPanel="{TemplateBinding ItemsPanel}" >
+                                    </DataGridCellsPresenter>
+                                    <DataGridDetailsPresenter  Grid.Column="1" Grid.Row="1" SelectiveScrollingGrid.SelectiveScrollingOrientation="{Binding AreRowDetailsFrozen, ConverterParameter={x:Static SelectiveScrollingOrientation.Vertical}, Converter={x:Static DataGrid.RowDetailsScrollingConverter}, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}" Visibility="{TemplateBinding DetailsVisibility}"/>
+                                </SelectiveScrollingGrid>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsSelected" Value="True">
+                                    <Setter Property="Visibility" TargetName="pathLeft" Value="Visible"/>                                  
+                                </Trigger>                               
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+                <!--<Style.Triggers>
+                    <Trigger Property="IsMouseOver"  Value="True">
+                        <Setter  Property="Background" Value="{StaticResource linEnter}"/>
+                    </Trigger>
+                    
+                    <Trigger Property="IsSelected" Value="True">
+                        <Setter Property="Background" Value="{StaticResource linRowSelect}"/>
+                    </Trigger>
+                </Style.Triggers>-->
+            </Style>
+
+            <!--单元格样式-->
+            <Style TargetType="{x:Type DataGridCell}">
+                <Setter Property="Margin" Value="15,0,0,0"/>
+                <Setter Property="Foreground" Value="Black"/>
+                <Setter Property="Background" Value="Transparent"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type DataGridCell}">
+                            <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+                                <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Style.Triggers>
+                    <Trigger Property="IsSelected" Value="True">                      
+                        <Setter Property="BorderThickness" Value="0"/>
+                    </Trigger>
+                    <Trigger Property="IsKeyboardFocusWithin" Value="True">
+                        <Setter Property="BorderBrush" Value="Gray"/>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+
+        </Border.Resources>
+        <!--CanUserSortColumns="True" CanUserResizeColumns="True"   CanUserAddRows="False" CanUserDeleteRows="False" EnableRowVirtualization="False" CanUserResizeRows="False"-->
+        <DataGrid   VerticalGridLinesBrush="Transparent" x:FieldModifier="public"  x:Name="datagrid" Grid.Row="1"  FrozenColumnCount="3"     IsReadOnly="True"  FontSize="13" FontFamily="Microsoft YaHei" AutoGenerateColumns="false" >
+           
+        </DataGrid>
+    </Border>
+</UserControl>

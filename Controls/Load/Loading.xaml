@@ -1,0 +1,146 @@
+﻿<UserControl x:Class="MhczTBG.Controls.Load.Loading"
+         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"           
+      Visibility="Collapsed"      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"  
+             IsHitTestVisible="False">
+    <UserControl.Resources>
+        <SolidColorBrush x:Key="loadBrush" Color="SkyBlue" />
+        <!--block style-->
+        <Style x:Key="PathStyle" TargetType="Path">
+            <Setter Property="Fill" Value="{StaticResource loadBrush}"></Setter>
+            <Setter Property="Stretch" Value="Fill"></Setter>
+            <Setter Property="RenderTransformOrigin" Value="0.5,4.3"></Setter>
+            <Setter Property="VerticalAlignment" Value="Top"></Setter>
+            <Setter Property="Height" Value="10"></Setter>
+            <Setter Property="Data" Value="M291.15499,85.897525 C291.15499,85.897525 301.88917,85.87921 301.88917,85.87921 301.88917,85.87921 300.38339,94.355061 300.38339,94.355061 300.38339,94.355061 292.85366,94.355042 292.85366,94.355042 292.85366,94.355042 291.15499,85.897525 291.15499,85.897525 Z"/>
+        </Style>
+
+       
+
+    </UserControl.Resources>
+    <UserControl.Triggers>
+
+    </UserControl.Triggers>
+    <DockPanel   Background="{x:Null}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
+        <Grid>
+            <TextBlock Text="计算中..." TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Left="17.069" Canvas.Top="35.214"/>
+            <Grid Background="Gray" Opacity="0.4"/>
+            <Canvas   x:Name="LayoutRoot" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Center" HorizontalAlignment="Center" Height="88" Width="88"   >
+            <Canvas.RenderTransform>
+                <RotateTransform x:Name="rrrr" Angle="30"/>
+            </Canvas.RenderTransform>
+            
+            <Grid Width="10.734" Height="10.004" Canvas.Left="38.614" Canvas.Top="0.331">
+                <!-- Block 0 -->
+                    <Path x:Name="block0" Style="{StaticResource PathStyle}"    OpacityMask="{StaticResource loadBrush}" >
+                    <Path.RenderTransform>
+                        <RotateTransform Angle="180"/>
+                    </Path.RenderTransform>
+                </Path>
+                <!-- Block 1 -->
+                    <Path x:Name="block1" Style="{StaticResource PathStyle}" Opacity="0.06"  OpacityMask="{StaticResource loadBrush}"  >
+                    <Path.RenderTransform>
+                        <RotateTransform Angle="-160"/>
+                    </Path.RenderTransform>
+                </Path>
+                <!-- Block 2 -->
+                    <Path x:Name="block2" Style="{StaticResource PathStyle}"     Opacity="0.12"  OpacityMask="{StaticResource loadBrush}"  >
+                    <Path.RenderTransform>
+                        <RotateTransform Angle="-140"/>
+                    </Path.RenderTransform>
+                </Path>
+                <!-- Block 3 -->
+                    <Path x:Name="block3" Style="{StaticResource PathStyle}"   Opacity="0.18"  OpacityMask="{StaticResource loadBrush}"  >
+                    <Path.RenderTransform>
+                        <RotateTransform Angle="-120"/>
+                    </Path.RenderTransform>
+                </Path>
+                <!-- Block 4 -->
+                    <Path x:Name="block4" Style="{StaticResource PathStyle}"     Opacity="0.24"  OpacityMask="{StaticResource loadBrush}" >
+                    <Path.RenderTransform>
+                        <RotateTransform Angle="-100"/>
+                    </Path.RenderTransform>
+                </Path>
+                <!-- Block 5 -->
+                    <Path x:Name="block5" Style="{StaticResource PathStyle}"    Opacity="0.30"  OpacityMask="{StaticResource loadBrush}"  >
+                    <Path.RenderTransform>
+                        <RotateTransform Angle="-80"/>
+                    </Path.RenderTransform>
+                </Path>
+                <!-- Block 6 -->
+                    <Path x:Name="block6" Style="{StaticResource PathStyle}"    Opacity="0.36"  OpacityMask="{StaticResource loadBrush}"  >
+                    <Path.RenderTransform>
+                        <RotateTransform Angle="-60"/>
+                    </Path.RenderTransform>
+                </Path>
+                <!-- Block 7 -->
+                    <Path x:Name="block7" Style="{StaticResource PathStyle}"    Opacity="0.42"  OpacityMask="{StaticResource loadBrush}"  >
+                    <Path.RenderTransform>
+                        <RotateTransform Angle="-40"/>
+                    </Path.RenderTransform>
+                </Path>
+                <!-- Block 8 -->
+                    <Path x:Name="block8" Style="{StaticResource PathStyle}"     Opacity="0.48"  OpacityMask="{StaticResource loadBrush}"  >
+                    <Path.RenderTransform>
+                        <RotateTransform Angle="-20"/>
+                    </Path.RenderTransform>
+                </Path>
+                <!-- Block 9 -->
+                    <Path x:Name="block9" Style="{StaticResource PathStyle}"    Opacity="0.54"  OpacityMask="{StaticResource loadBrush}"   >
+                    <Path.RenderTransform>
+                        <RotateTransform Angle="0"/>
+                    </Path.RenderTransform>
+                </Path>
+                <!-- Block 10 -->
+                    <Path x:Name="block10" Style="{StaticResource PathStyle}"     Opacity="0.6"  OpacityMask="{StaticResource loadBrush}"  >
+                    <Path.RenderTransform>
+                        <RotateTransform Angle="20"/>
+                    </Path.RenderTransform>
+                </Path>
+                <!-- Block 11 -->
+                    <Path x:Name="block11" Style="{StaticResource PathStyle}"     Opacity="0.66"  OpacityMask="{StaticResource loadBrush}"  >
+                    <Path.RenderTransform>
+                        <RotateTransform Angle="40"/>
+                    </Path.RenderTransform>
+                </Path>
+                <!-- Block 12 -->
+                    <Path x:Name="block12" Style="{StaticResource PathStyle}"     Opacity="0.72"  OpacityMask="{StaticResource loadBrush}"  >
+                    <Path.RenderTransform>
+                        <RotateTransform Angle="60"/>
+                    </Path.RenderTransform>
+                </Path>
+                <!-- Block 13 -->
+                    <Path x:Name="block13" Style="{StaticResource PathStyle}"    Opacity="0.78"  OpacityMask="{StaticResource loadBrush}"  >
+                    <Path.RenderTransform>
+                        <RotateTransform Angle="80"/>
+                    </Path.RenderTransform>
+                </Path>
+                <!-- Block 14 -->
+                    <Path x:Name="block14" Style="{StaticResource PathStyle}"     Opacity="0.84"  OpacityMask="{StaticResource loadBrush}"  >
+                    <Path.RenderTransform>
+                        <RotateTransform Angle="100"/>
+                    </Path.RenderTransform>
+                </Path>
+                <!-- Block 15 -->
+                    <Path x:Name="block15" Style="{StaticResource PathStyle}"    Opacity="0.90"  OpacityMask="{StaticResource loadBrush}"  >
+                    <Path.RenderTransform>
+                        <RotateTransform Angle="120"/>
+                    </Path.RenderTransform>
+                </Path>
+                <!-- Block 16 -->
+                    <Path x:Name="block16" Style="{StaticResource PathStyle}"    Opacity="0.96"  OpacityMask="{StaticResource loadBrush}" >
+                    <Path.RenderTransform>
+                        <RotateTransform Angle="140"/>
+                    </Path.RenderTransform>
+                </Path>
+                <!-- Block 17 -->
+                    <Path x:Name="block17" Style="{StaticResource PathStyle}"    OpacityMask="{StaticResource loadBrush}"  >
+                    <Path.RenderTransform>
+                        <RotateTransform Angle="160"/>
+                    </Path.RenderTransform>
+                </Path>
+            </Grid>
+        </Canvas>
+        </Grid>
+    </DockPanel>
+</UserControl>

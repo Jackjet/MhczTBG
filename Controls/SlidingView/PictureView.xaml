@@ -1,0 +1,130 @@
+﻿<UserControl xmlns:my="clr-namespace:MhczTBG.Controls.SlidingView"  x:Class="MhczTBG.Controls.SlidingView.PictureView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Background="Transparent"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+    <UserControl.Resources>
+
+        <ItemsPanelTemplate x:Key="ItemsPanelTemplate1">
+            <VirtualizingStackPanel IsItemsHost="True" Orientation="Horizontal"/>
+        </ItemsPanelTemplate>     
+
+        <!--导航按钮默认状态-->
+        <LinearGradientBrush x:Key="btnBrush"  EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="White" Offset="0.4"/>
+            <GradientStop  Color="SkyBlue" Offset="1"/>
+        </LinearGradientBrush>
+
+        <!--箭头边框色-->
+        <SolidColorBrush x:Key="ArrowBrush"  Color="#FFCECECE"/>
+
+        <!--鼠标进入导航背景设置-->
+        <LinearGradientBrush x:Key="linEnter" Opacity="0.85"  EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="White" Offset="0.3"/>
+            <GradientStop  Color="SkyBlue" Offset="1"/>
+        </LinearGradientBrush>
+
+        <!--导航按钮选择背景设置-->
+        <LinearGradientBrush x:Key="linSelct"   EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="White" Offset="0.3"/>
+            <!--<GradientStop  Color="SkyBlue" Offset="1"/>-->
+        </LinearGradientBrush>
+
+        <!--整个背景色-->
+        <LinearGradientBrush Opacity="0.6" x:Key="backBrush" EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="White" Offset="0"/>
+            <GradientStop Color="#FFC8C8C8" Offset="1"/>
+        </LinearGradientBrush>
+
+        <!--导航背景色-->
+        <LinearGradientBrush Opacity="0.5" x:Key="daohangBrush" EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FFC8C8C8" Offset="0.1"/>
+            <GradientStop Color="White" Offset="0.5"/>
+            <GradientStop Color="#FFC8C8C8" Offset="1"/>
+        </LinearGradientBrush>
+
+        <Style x:Key="btn1Style" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate  TargetType="Button">
+                        <Grid Background="Transparent" Name="gridLeft"  >
+                            <Path Height="40" Cursor="Hand" Stroke="{StaticResource ArrowBrush}"  Name="pth" Data="M488,254 L522,287 L489,322 L502,288 z"   Stretch="Fill"  RenderTransformOrigin="0.5,0.5">
+                                <Path.RenderTransform>
+                                    <RotateTransform Angle="180"/>
+                                </Path.RenderTransform>
+                                <Path.Fill>
+                                    <SolidColorBrush Color="Silver" />
+                                </Path.Fill>
+                            </Path>
+                        </Grid>
+
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        
+
+        <Style x:Key="page_item" TargetType="{x:Type my:ListBoxItem2}">           
+            <Setter Property="HorizontalContentAlignment" Value="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
+            <Setter Property="VerticalContentAlignment" Value="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
+            <Setter Property="Padding" Value="2,0,0,0"/>
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type my:ListBoxItem2}">
+                        <Border ToolTip="{TemplateBinding TagDisplay}"  x:Name="Bd" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true" Height="Auto" Cursor="Hand" Margin="5,0" Opacity="0.5">
+                            <Grid x:Name="grid" >
+                                <Border CornerRadius="20" BorderBrush="White" Width="23" Height="23" BorderThickness="1.3"/>
+                                <Ellipse Cursor="Hand" Stroke="{x:Null}" Width="21" Fill="{TemplateBinding Foreground}"  Height="20" Margin="1,2,1,1">
+                                </Ellipse>
+                                <TextBlock Foreground="Black" HorizontalAlignment="Center"  VerticalAlignment="Center" Text="{TemplateBinding Content}"/>
+                            </Grid>
+                        </Border>
+
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+       
+    </UserControl.Resources>
+    <Grid x:Name="LayoutRoot" Background="{StaticResource backBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition/>
+            <RowDefinition Height="32"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="32"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="32"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Name="txtTittle" Grid.ColumnSpan="2" HorizontalAlignment="Left" FontSize="14" FontFamily="雅黑" VerticalAlignment="Center" Text="标题" Margin="32,0,0,0"/>
+        <Border BorderBrush="Gray" Grid.Row="1" BorderThickness="1,1,1,0" Grid.Column="1" Background="Transparent" >
+            <ScrollViewer Background="Transparent" Padding="0" Name="scro" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Disabled" VerticalContentAlignment="Stretch">
+                <StackPanel Name="spMain" Orientation="Horizontal" >
+                </StackPanel>
+            </ScrollViewer>
+        </Border>
+        <Button ToolTip="向后翻页" Grid.Column="2" Grid.Row="1" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave"  RenderTransformOrigin="0.5,0.5" Opacity="0.3" Style="{StaticResource btn1Style}"  Content="Button" Width="30"  Click="Button_Click"  HorizontalAlignment="Right">
+            <Button.RenderTransform>
+                <RotateTransform Angle="180"/>
+            </Button.RenderTransform>
+        </Button>
+        <Button ToolTip="向前翻页" Grid.Row="1"  MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave" Style="{StaticResource btn1Style}" Opacity="0.6" Content="Button" Width="30" Click="Button_Click_1" HorizontalAlignment="Left" />
+        <Border Grid.ColumnSpan="3" Grid.Row="2" BorderBrush="Gray" BorderThickness="0,1,0,0" >
+            <StackPanel  Orientation="Horizontal">
+                <!--<Image x:Name="window" Source="/MhczTBG;component/Resources/windows.png" Width="32" MouseLeftButtonDown="window_MouseLeftButtonDown" Cursor="Hand" ToolTip="切换到电脑桌面">
+                    <Image.Effect>
+                        <DropShadowEffect ShadowDepth="0" Opacity="0.5"/>
+                    </Image.Effect>
+                </Image>-->
+                <ListBox x:Name="pagelist" Margin="32,0,0,0" Background="{StaticResource daohangBrush}"  ItemsPanel="{DynamicResource ItemsPanelTemplate1}" ItemContainerStyle="{DynamicResource page_item}" SelectedIndex="0" Grid.Column="1">                   
+                </ListBox>
+                
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>

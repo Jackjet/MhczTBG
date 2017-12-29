@@ -1,0 +1,132 @@
+﻿<UserControl xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" 
+             x:Class="MhczTBG.Controls.DragView.DragTab"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400" >
+    <UserControl.Resources>
+        <Style x:Key="lblStyle1" TargetType="Label">
+            <Setter Property="Background" Value="LightBlue"  />
+            <Setter Property="BorderBrush" Value="Transparent" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Label">
+                        <Grid Margin="4">
+
+                            <Border Opacity="0.7"  CornerRadius="10" Background="{TemplateBinding Background}">
+
+                            </Border>
+                            <Border   BorderThickness="2" BorderBrush="Silver"  Name="recChange" CornerRadius="10"  >
+
+                                <Border.Background>
+                                    <LinearGradientBrush StartPoint="0.2,0" EndPoint="0.2,1">
+                                        <GradientStop Color="{TemplateBinding Background}" Offset="1"/>
+                                        <GradientStop Color="White" Offset="0.2"/>
+
+                                    </LinearGradientBrush>
+                                </Border.Background>
+
+                                <ContentControl Margin="5"  VerticalContentAlignment="Stretch"   HorizontalContentAlignment="Stretch"      Content="{TemplateBinding Content}"/>
+                            </Border>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="btnStyle2" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid >                           
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <Border RenderTransformOrigin="0.5,0.5"  Name="bor" Grid.ColumnSpan="2" CornerRadius="40" BorderBrush="SkyBlue" BorderThickness="1" Grid.RowSpan="2" >
+                                <Border.RenderTransform>
+                                    <ScaleTransform />
+                                </Border.RenderTransform>
+                                <Border.Background>
+                                    <LinearGradientBrush  >
+                                        <GradientStop Color='Beige' Offset='0.3'/>
+                                        <GradientStop Color='black' Offset='1'/>
+                                    </LinearGradientBrush>
+                                </Border.Background>
+                            </Border>
+
+                            <Ellipse Cursor="Hand" RenderTransformOrigin="0.5,0.5" Name ='elli' Grid.ColumnSpan='2' Fill='SkyBlue' Grid.RowSpan='2'  Margin="6">
+                                <Ellipse.RenderTransform>
+                                    <ScaleTransform />
+                                </Ellipse.RenderTransform>
+                            </Ellipse>
+
+                            <Path Cursor="Hand"  Margin="15,11,13,15" Fill='White' Grid.Row='1' Data='M321,373.33333 L324.66667,381.33368 327.33274,386.00088 328.33302,389.00101 328.33302,391.00109 323.00001,391.66779 318.33332,390.33409 314.33376,388.33404 311.00095,386.66733 308.33442,384.0006 306.33488,382.00055 z'    Stretch='Fill'>
+                                <Path.Effect>
+                                    <BlurEffect  Radius='11'/>
+                                </Path.Effect>
+                            </Path>
+
+                            <Path  Cursor="Hand" Margin="10,0,15,15"  Grid.Column="1"  Fill='White' Grid.Row='1' Data='M328.66667,373 L330.99966,378.33333 333.99967,383.66735 337.66634,389.33388 340.33259,389.66758 342.99956,389.00055 347.33288,387.33383 352.66662,384.33372 356.99962,381.66696 361.99963,377.00014 365.99963,372.33331 368.99963,367.00023 371.99963,360.66682 373.33297,353.66629 373.33297,347.66574 366.99993,353.33232 362.9999,357.99919 355.99985,362.66606 347.33312,365.66619 339.6664,367.99963 333.66636,370.99976 z' HorizontalAlignment='Right'   Stretch='Fill' >
+                                <Path.Effect>
+                                    <BlurEffect  Radius='10'/>
+                                </Path.Effect>
+                            </Path>
+
+                            <Ellipse   Cursor="Hand" Fill='white' Height='10'   Width='25' HorizontalAlignment="Right">
+                                <Ellipse.RenderTransform>
+                                    <RotateTransform Angle='-17.509'/>
+                                </Ellipse.RenderTransform>
+                                <Ellipse.Effect>
+                                    <BlurEffect  Radius='10'/>
+                                </Ellipse.Effect>
+                            </Ellipse>
+
+                            <ContentControl Cursor="Hand"  Opacity=" 0.6" Grid.ColumnSpan="2" Grid.RowSpan="2" Content="{TemplateBinding Content}" Name = 'txtBlock' HorizontalAlignment='Center' VerticalAlignment='Center' />
+
+
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+
+
+    <Grid x:Name="LayoutRoot" >
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+      
+        <Grid  Name="gridLeft"  Canvas.ZIndex="-1"/>
+        <Grid Name="gridRightMain" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="45"/>
+            </Grid.RowDefinitions>
+                <Grid Grid.Column="1"   Name="gridRight"/>
+            <Label Visibility="Collapsed" Name="lblPagePanel" Grid.Row="1"  Grid.Column="1" Style="{StaticResource lblStyle1}">
+                <Grid>
+                    <Button Style="{StaticResource btnStyle2}" FontSize="11" Name="btnLast" Content="上一页" HorizontalAlignment="Left" Margin="0,-5" Width="50" Click="btnLast_Click" />
+                    <TextBlock Name="txtPage" HorizontalAlignment="Center" VerticalAlignment="Center" Text="1/3"/>
+                    <Button Style="{StaticResource btnStyle2}" FontSize="11" Name="btnNext" Content="下一页" HorizontalAlignment="Right" Margin="0,-5" Width="50" Click="btnNext_Click" />
+                </Grid>
+            </Label>
+
+        </Grid>
+
+        
+    </Grid>
+
+</UserControl>

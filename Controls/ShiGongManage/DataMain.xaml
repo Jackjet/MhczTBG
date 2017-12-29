@@ -1,0 +1,228 @@
+﻿<UserControl  xmlns:my="clr-namespace:MhczTBG.Controls.ShiGongManage"    
+               x:Class="MhczTBG.Controls.ShiGongManage.DataMain"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="900">
+    <UserControl.Resources>
+
+        <SolidColorBrush x:Key="borderBrush" Color="LightBlue" Opacity="0.7"/>
+
+        <SolidColorBrush x:Key="backBrush" Color="White" />
+        
+        <LinearGradientBrush Opacity="0.7" x:Key="borTTT" EndPoint="1,0.5" StartPoint="0,0.5">
+            <GradientStop Color="#FFC0DEFF" Offset="0.1"/>
+            <GradientStop Color="White" Offset="0.5"/>
+            <GradientStop Color="#FFC0DEFF" Offset="1"/>
+        </LinearGradientBrush>
+
+        <Style x:Key="lblStyle1" TargetType="Label">         
+            <Setter Property="BorderBrush" Value="Transparent" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Label">
+                        <Grid Margin="4">
+                            <Border Opacity="0.7" Background="{TemplateBinding Background}" CornerRadius="3">
+                            </Border>
+                            <Border    BorderThickness="2" BorderBrush="Silver"  Name="recChange" CornerRadius="3"  >
+                                <Border.Background>
+                                    <LinearGradientBrush StartPoint="0.2,0" EndPoint="0.2,1">
+                                        <GradientStop Color="{TemplateBinding Background}" Offset="1"/>
+                                        <GradientStop Color="White" Offset="0.2"/>
+                                    </LinearGradientBrush>
+                                </Border.Background>
+                                <ContentControl Margin="5"  VerticalContentAlignment="Stretch"   HorizontalContentAlignment="Stretch"      Content="{TemplateBinding Content}"/>
+                            </Border>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        
+        <Style x:Key="cmbStyle1" TargetType="ComboBox">
+            <Setter Property="Padding" Value="6,2,25,2"/>
+            <Setter Property="Background" Value="#FF1F3B53"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="BorderThickness" Value="1"/>
+           
+            <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto"/>
+            <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
+            <Setter Property="BorderBrush">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFA3AEB9" Offset="0"/>
+                        <GradientStop Color="#FF8399A9" Offset="0.375"/>
+                        <GradientStop Color="#FF718597" Offset="0.375"/>
+                        <GradientStop Color="#FF617584" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ComboBox">
+                        <Grid>
+                            <Grid.Resources>
+                                <Style x:Name="comboToggleStyle" TargetType="ToggleButton">
+                                    <Setter Property="Foreground" Value="#FF333333"/>
+                                    <Setter Property="Background" Value="#FF1F3B53"/>
+                                    <Setter Property="BorderBrush">
+                                        <Setter.Value>
+                                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                                <GradientStop Color="#FFA3AEB9" Offset="0"/>
+                                                <GradientStop Color="#FF8399A9" Offset="0.375"/>
+                                                <GradientStop Color="#FF718597" Offset="0.375"/>
+                                                <GradientStop Color="#FF617584" Offset="1"/>
+                                            </LinearGradientBrush>
+                                        </Setter.Value>
+                                    </Setter>
+                                    <Setter Property="BorderThickness" Value="1"/>
+                                    <Setter Property="Padding" Value="3"/>
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="ToggleButton">
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*"/>
+                                                        <ColumnDefinition Width="20"/>
+                                                    </Grid.ColumnDefinitions>
+                                                    
+                                                    <!--颜色选取（左）-->
+                                                    <Border BorderBrush="#FF9F9F9F" BorderThickness="1" CornerRadius="3" Background="SkyBlue" Grid.ColumnSpan="2">
+                                                        <Border BorderThickness="1" CornerRadius="3" Background="LightGray"/>
+                                                    </Border>
+                                                    <!--颜色选取（右）-->
+                                                    <Border BorderThickness="0" Grid.Column="1" CornerRadius="0,5,5,0" Cursor="Hand">
+                                                        <Border.Background>
+                                                            <!--<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                                            <GradientStop Color="AliceBlue" Offset="0"/>
+                                                            <GradientStop Color="SkyBlue" Offset="1"/>
+                                                        </LinearGradientBrush>-->
+                                                            <SolidColorBrush Color="SkyBlue"/>
+                                                        </Border.Background>
+                                                        <ContentPresenter x:Name="contentPresenter" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                                    </Border>
+                                                </Grid>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </Grid.Resources>                           
+                            <Border x:Name="ContentPresenterBorder">
+                                <Grid>
+                                    <ToggleButton x:Name="DropDownToggle" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" HorizontalAlignment="Stretch" HorizontalContentAlignment="Right" Margin="0"  VerticalAlignment="Stretch">
+                                        <Path x:Name="BtnArrow" Data="F1 M301.14001,-189.041 L311.57001,-189.041 L306.35501,-180.33408 L301.14001,-189.041 z" HorizontalAlignment="Right" Height="6.676" Stretch="Uniform" Width="7.998" UseLayoutRounding="False" StrokeThickness="0">
+                                            <Path.Effect>
+                                                <DropShadowEffect Direction="200" ShadowDepth="1" BlurRadius="2" Opacity="0.5"/>
+                                            </Path.Effect>
+                                            <Path.Fill>
+                                                <SolidColorBrush x:Name="BtnArrowColor" Color="White"/>
+                                            </Path.Fill>
+                                        </Path>
+                                    </ToggleButton>
+                                    <ContentPresenter x:Name="ContentPresenter" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" MinHeight="20"/>
+                                </Grid>
+                            </Border>
+                            <Popup x:Name="Popup">
+                                <Border x:Name="PopupBorder" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="3" HorizontalAlignment="Stretch" Height="Auto" Background="#FFE2E2E2" BorderBrush="#FF9A9A9A" RenderTransformOrigin="0.5,0.5">
+                                    <Border.RenderTransform>
+                                        <ScaleTransform/>
+                                    </Border.RenderTransform>
+                                    <ScrollViewer x:Name="ScrollViewer" BorderThickness="1" Padding="1" BorderBrush="White">
+                                        <ItemsPresenter Cursor="Hand">
+                                            <ItemsPresenter.Effect>
+                                                <DropShadowEffect ShadowDepth="1" BlurRadius="2" Color="White" Direction="-90" Opacity="0.5"/>
+                                            </ItemsPresenter.Effect>
+                                        </ItemsPresenter>
+                                    </ScrollViewer>
+                                </Border>
+                            </Popup>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+                
+        <!--<LinearGradientBrush x:Key="linear1" EndPoint="1,0.5" StartPoint="0,0.5">
+            <GradientStop Color="White" Offset="0"/>
+            <GradientStop Color="#FFC0DEFF" Offset="1"/>
+        </LinearGradientBrush>-->
+        
+    </UserControl.Resources>
+        <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition MaxHeight="55" />
+            <RowDefinition />           
+        </Grid.RowDefinitions>
+        <Label Margin="3,0" Background="{StaticResource borderBrush}" Name="lblTittle" Style="{StaticResource lblStyle1}">
+            <Grid >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="450"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="1"  x:Name="LayoutRoot"  Orientation="Horizontal" >
+                    <TextBlock FontSize="15"  VerticalAlignment="Center"   Text="开始年份："/>
+                    <my:DataPicker  SelectionMode="Year" Margin="0,0,10,0"  VerticalAlignment="Center" x:Name="t1" Width="120" Height="25" />
+                    <TextBlock FontSize="15"  VerticalAlignment="Center" Text="开始月份："  />
+                    <my:DataPicker SelectionMode="Month" VerticalAlignment="Center" x:Name="t2" Width="120" Height="25" />
+
+                </StackPanel>
+                <StackPanel Grid.Column="2" Orientation="Horizontal">
+                    <TextBlock  Margin="0,0,0,0" FontSize="15"  VerticalAlignment="Center" Text="结束日期："  />
+                    <TextBlock  FontSize="15"  VerticalAlignment="Center" Name="reng1"  />                                  
+                </StackPanel>              
+            </Grid>
+
+        </Label>
+            
+        <Border Margin="5,0"    CornerRadius="3" BorderThickness="3" Background="Transparent" Grid.Row="1" >
+            <Border BorderThickness="5"  BorderBrush="{StaticResource borderBrush}" CornerRadius="5" >                
+                <Grid  Background="{StaticResource backBrush}" Name="gridCenter" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="130"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition  Height="65" />
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <!--<Label Cursor="Hand"  Name="lblTittle"  HorizontalContentAlignment="Center"  Content="施工编号"  BorderThickness="1"  BorderBrush="Silver" Background="{StaticResource linear1}"/>-->
+                    <Border Name="borTittle2" Cursor="Hand" Background="{StaticResource borTTT}" BorderThickness="1"  BorderBrush="Silver">
+                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="列标题"/>
+                    </Border>
+                    <ScrollViewer Margin="0,0,0,16" VerticalContentAlignment="Stretch"  Grid.Row="1" BorderThickness="0" Padding="0" Name="scroLeft"  HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden">
+
+                        <StackPanel   x:Name="sp1" Orientation="Vertical" >
+                            <!--添加列标题-->
+                        </StackPanel>
+                    </ScrollViewer>
+                    
+                    <ScrollViewer    Name="scroTop" Padding="0" BorderThickness="1" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" Grid.Column="1" >
+                        <StackPanel Margin="1,0,18,0" x:Name="sp2" Orientation="Horizontal">
+                            <!--添加日期，-->
+
+                        </StackPanel>
+                    </ScrollViewer>
+
+                    <Border Grid.Column="1" Grid.Row="1" BorderThickness="1" BorderBrush="Silver">
+                        <ScrollViewer  Padding="0"  HorizontalScrollBarVisibility="Auto" Name="scro" VerticalScrollBarVisibility="Auto" >
+                            <Grid   Name="grr"  MouseRightButtonDown="grr_MouseRightButtonDown"  >
+                                <!-- 添加表单-->
+                            </Grid>
+                        </ScrollViewer>
+                    </Border>
+
+                </Grid>
+            </Border>
+        </Border>       
+        <!--<TextBlock HorizontalAlignment="Left" Margin="20,0,0,0"  Name="txtTittle" Text="TextBlock" />-->
+        <Border Name="borTittle" HorizontalAlignment="Left" Margin="20,0,0,0" Height="23">
+            <TextBlock Text="时间轴"/>
+        </Border>
+    </Grid>
+</UserControl>

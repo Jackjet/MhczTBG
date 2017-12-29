@@ -1,0 +1,109 @@
+﻿<UserControl x:Class="MhczTBG.Controls.Tab.UcPanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d"  
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <LinearGradientBrush x:Key="linColor1" EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+            <GradientStop Color="#FFF5F5E9" Offset="0"/>
+            <GradientStop Color="#FFAFAFA3" Offset="0.853"/>
+        </LinearGradientBrush>
+
+        <LinearGradientBrush x:Key="linBlue" EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+            <GradientStop Color="#FF7BEBDE" Offset="0.302"/>
+            <GradientStop Color="#FFF1F2F9" Offset="0.784"/>
+            <GradientStop Color="#FFC1EDDE" Offset="0.448"/>
+        </LinearGradientBrush>
+
+        <SolidColorBrush x:Key="soloBlue" Color="#FF7BEBDE"/>
+
+        <SolidColorBrush x:Key="soloYellow" Color="#FFF3D581"/>
+
+        <LinearGradientBrush x:Key="linYellow" EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+            <GradientStop Color="#FFF3D581" Offset="0.302"/>
+            <GradientStop Color="#FFF1F2F9" Offset="0.784"/>
+            <GradientStop Color="#FFE5E39C" Offset="0.448"/>
+        </LinearGradientBrush>
+
+        <Style x:Key="btnStyleGreen" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <StackPanel  Cursor="Hand" MouseLeave="StackPanel_MouseLeave"   MouseEnter="StackPanel_MouseEnter" Background="{StaticResource linBlue}"  Orientation="Horizontal">
+                            <Border Margin="10,0,0,0"   Width="15" Height="15" Background="{TemplateBinding Background}" />
+                            <TextBlock Foreground="Black" Margin="5,0,10,0"  VerticalAlignment="Center" Text="{TemplateBinding Content}"/>
+                            <Line  X1="0" X2="0" Y1="10" Width="1" Stretch="Fill" Stroke="Gray" />
+                            <Line X1="0" X2="0" Y1="10" Width="1" Stretch="Fill" Stroke="White" />
+                        </StackPanel>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="btnStyleYellow" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <StackPanel  Cursor="Hand" MouseLeave="StackPanel_MouseLeave_1" MouseEnter="StackPanel_MouseEnter_1" Background="{StaticResource linYellow}" Orientation="Horizontal">
+                            <Border Margin="10,0,0,0"  Width="15" Height="15"  Background="{TemplateBinding Background}" />
+                            <TextBlock Margin="5,0,10,0" Foreground="Black"  VerticalAlignment="Center" Text="{TemplateBinding Content}"/>
+                            <Line  X1="0" X2="0" Y1="10" Width="1" Stretch="Fill" Stroke="Gray" />
+                            <Line X1="0" X2="0" Y1="10" Width="1" Stretch="Fill" Stroke="White" />
+                        </StackPanel>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </UserControl.Resources>
+    <Grid Background="White">
+        <Border Margin="4"   Background="Orange" Opacity="0.5" BorderBrush="Silver" BorderThickness="1">
+        </Border>
+
+        <Border Margin="4" CornerRadius="5"  Background="White"  BorderBrush="Silver" BorderThickness="1">
+            <Grid Margin="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
+                    <StackPanel.Resources>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="VerticalAlignment" Value="Center"/>
+                            <Setter Property="Margin" Value="7,0,0,0"/>
+                            <Setter Property="Foreground" Value="Black"/>
+                        </Style>
+                    </StackPanel.Resources>
+                    <TextBlock Margin="0"  Name="txtOperate" Text="操作模式"/>
+                    <TextBlock Name="txtTittl1" Text="一级标题"/>
+                    <TextBlock Name="txtTittl2" Text="二级标题"/>
+                </StackPanel>
+                <Border Grid.Row="1" BorderBrush="Gray" BorderThickness="1">
+                    <Grid   Background="LightGray">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="3"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <StackPanel Name="stackTop" x:FieldModifier="public" Orientation="Horizontal">
+                            <Button Name="btnOk" x:FieldModifier="public" Content="提交"  Style="{StaticResource btnStyleGreen}"/>
+
+                            <Button  Name="btnClose" x:FieldModifier="public" Content="取消"  Style="{StaticResource btnStyleYellow}"/>
+                           
+                        </StackPanel>
+                        <Line  X1="0" X2="10" Y1="0"  Grid.Row="1" Stretch="Fill" Stroke="Gray" />
+
+                        <Border Name="borMain" Grid.Row="2" >
+                            <ScrollViewer VerticalScrollBarVisibility="Auto" Background="Transparent" x:FieldModifier="public" Name="scroMain">
+
+                            </ScrollViewer>
+                        </Border>
+
+                    </Grid>
+                </Border>
+            </Grid>
+
+        </Border>
+    </Grid>
+</UserControl>

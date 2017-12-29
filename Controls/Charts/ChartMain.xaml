@@ -1,0 +1,174 @@
+﻿<UserControl xmlns:my4="clr-namespace:MhczTBG.Controls.Charts"  
+             xmlns:my3="clr-namespace:MhczTBG.Controls.Load"  xmlns:my2="clr-namespace:MhczTBG.Controls.ComSearchsDongTai" 
+             xmlns:my1="clr-namespace:MhczTBG.Controls.CustomButton"  
+             xmlns:my="clr-namespace:MhczTBG.Controls.DataGridOperate"  
+              xmlns:Microsoft_Windows_Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero"
+             
+             x:Class="MhczTBG.Controls.Charts.ChartMain"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:vc="clr-namespace:Visifire.Charts;assembly=WPFVisifire.Charts"
+             mc:Ignorable="d" 
+              d:DesignWidth="1000" d:DesignHeight="600"
+    Width="auto" Height="auto">
+    <UserControl.Resources>
+
+        <DataTemplate x:Key="DataTemplate1">
+
+            <Image x:Name="imgexit2" Tag="{Binding Path=ID}" Source="{Binding 附件}"  Width="20" Height="20" Cursor="Hand" Margin="0" HorizontalAlignment="Right"  MouseLeftButtonDown="imgexit2_MouseLeftButtonUp" />
+
+        </DataTemplate>
+        <DataTemplate x:Key="DataTemplate2">
+
+            <TextBlock Name="btn" Text="{Binding Path=ID}" Margin="0" Cursor="Hand" Foreground="#FF5151A9" VerticalAlignment="Center" d:LayoutOverrides="Width, Height"  MouseLeftButtonDown="ID_MouseLeftButtonDown">
+            </TextBlock>
+
+        </DataTemplate>
+        <DataTemplate x:Key="DataTemplate3">
+            <Grid>
+                <TextBlock Cursor="Hand" MouseLeftButtonDown="StartTime_MouseLeftButtonDown" Tag="{Binding Path=ID}" Foreground="#FF5151A9"   Text="{Binding Path= 故障发生日期时间,StringFormat=yyyy年MM月dd日 HH:mm:ss }" />
+            </Grid>
+        </DataTemplate>
+
+        <DataTemplate x:Key="DataTemplate4">
+            <Label Background="{Binding 责任单位背景}" Content="{Binding 责任单位}"/>
+        </DataTemplate>
+
+        <Style TargetType="DataGrid">
+            <!--网格线颜色-->
+            <Setter Property="CanUserResizeColumns" Value="false"/>
+            <Setter Property="Background" Value="#FFF1F4F8" />
+            <Setter Property="HorizontalGridLinesBrush">
+                <Setter.Value>
+                    <SolidColorBrush Color="#FFC9CACA"/>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="VerticalGridLinesBrush">
+                <Setter.Value>
+                    <SolidColorBrush Color="#FFC9CACA"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <!--行样式触发-->
+        <Style  TargetType="DataGridRow">
+            <Setter Property="Background" Value="#F2F2F2" />
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Foreground" Value="Black" />
+            <Style.Triggers>
+                <Trigger Property="AlternationIndex" Value="1" >
+                    <Setter Property="Background" Value="White" />
+                </Trigger>
+                <Trigger  Property="AlternationIndex" Value="0" >
+                    <Setter Property="Background" Value="#FFF7F7F7" />
+                </Trigger>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#FFA7BAD4"/>
+                </Trigger>
+
+                <Trigger Property="IsSelected" Value="True">
+                    <Setter Property="Background" Value="#FF80A8E0"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <!--单元格样式触发-->
+        <Style TargetType="DataGridCell">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="DataGridCell">
+                        <TextBlock TextAlignment="Center" VerticalAlignment="Center"  >
+                           <ContentPresenter />
+                        </TextBlock>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsSelected" Value="True">
+                    <!--<Setter Property="Background" Value="White"/>
+                <Setter Property="BorderThickness" Value="0"/>-->
+                    <Setter Property="Foreground" Value="Black"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="ColumnHeaderGripperStyle" TargetType="{x:Type Thumb}">
+            <Setter Property="Width" Value="8"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Cursor" Value="SizeWE"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Thumb}">
+                        <Border Background="#FFC9CACA" Padding="{TemplateBinding Padding}"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="DataGridColumnHeaderStyle1" TargetType="{x:Type DataGridColumnHeader}">
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type DataGridColumnHeader}">
+                        <Grid>
+                            <Microsoft_Windows_Themes:DataGridHeaderBorder BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" IsClickable="{TemplateBinding CanUserSort}" IsPressed="{TemplateBinding IsPressed}" IsHovered="{TemplateBinding IsMouseOver}" Padding="{TemplateBinding Padding}" SortDirection="{TemplateBinding SortDirection}" SeparatorBrush="{TemplateBinding SeparatorBrush}" SeparatorVisibility="{TemplateBinding SeparatorVisibility}">
+                                <ContentPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" HorizontalAlignment="Center"/>
+                            </Microsoft_Windows_Themes:DataGridHeaderBorder>
+                            <Thumb x:Name="PART_LeftHeaderGripper" HorizontalAlignment="Left" Style="{StaticResource ColumnHeaderGripperStyle}"/>
+                            <Thumb x:Name="PART_RightHeaderGripper" HorizontalAlignment="Right" Style="{StaticResource ColumnHeaderGripperStyle}"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ButtonFocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" SnapsToDevicePixels="true" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </UserControl.Resources>
+
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Grid Margin="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition />
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <Border Grid.Row="0" BorderBrush="#FF818181"  BorderThickness="0" Background="#FFF4F4F4" Margin="0,0,0,0">
+                <my2:ComSearch x:FieldModifier="public" x:Name="comS"/>
+            </Border>
+
+            <Grid Grid.Row="1" >
+                <!--支持三种视图-->
+                <my4:ChartCommon x:Name="chratModern1" Visibility="Visible"/>
+            
+                <my4:ChartHuanBi x:FieldModifier="public" Margin="0,-26,0,0" x:Name="chratModern3" Visibility="Collapsed"/>
+
+                <my4:ChartTongQi x:FieldModifier="public" Margin="0,-26,0,0" x:Name="chratModern4" Visibility="Collapsed" />
+            </Grid>
+
+            <my1:BtnDaoHang Background="#FFF4F4F4" Height="70" Margin="0,5,0,0" x:FieldModifier="public" x:Name="btnDaoHang"  Grid.Row="2">
+                <my1:BtnDaoHang._Panel>
+                    <StackPanel Orientation="Horizontal">
+                        <my1:BtnDaoHangItem   _Tittle="雷害统计"  Tag="/MhczTBG;component/Resources/324262.png"/>
+                        <my1:BtnDaoHangItem   _Tittle="设备类型"  Tag="/MhczTBG;component/Resources/324261.png"/>
+                        <my1:BtnDaoHangItem   _Tittle="定性统计"  Tag="/MhczTBG;component/Resources/324262.png"/>
+                        <my1:BtnDaoHangItem   _Tittle="定责统计"  Tag="/MhczTBG;component/Resources/324263.png"/>
+                        <my1:BtnDaoHangItem   _Tittle="车间故障"  Tag="/MhczTBG;component/Resources/324267.png"/>
+                        <my1:BtnDaoHangItem   _Tittle="延时计算"  Tag="/MhczTBG;component/Resources/324266.png"/>
+                        <my1:BtnDaoHangItem   _Tittle="同期数据"  Tag="/MhczTBG;component/Resources/324258.png"/>
+                        <my1:BtnDaoHangItem   _Tittle="定性环比"  Tag="/MhczTBG;component/Resources/324265.png"/>
+                        <my1:BtnDaoHangItem   _Tittle="局定定责"  Tag="/MhczTBG;component/Resources/123.png"/>
+                        <my1:BtnDaoHangItem   _Tittle="段定定责"  Tag="/MhczTBG;component/Resources/324262.png"/>
+                        <my1:BtnDaoHangItem   _Tittle="设备厂家"  Tag="/MhczTBG;component/Resources/324262.png"/>
+                    </StackPanel>
+                </my1:BtnDaoHang._Panel>
+            </my1:BtnDaoHang>
+        </Grid>
+    </Grid>
+</UserControl>

@@ -1,0 +1,28 @@
+﻿<UserControl x:Class="MhczTBG.Controls.DataGridOperate.ListYuLanDataGrid"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d"  Height="200"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <DataGrid  CanUserSortColumns="False" GridLinesVisibility="None" CanUserReorderColumns="False" CanUserAddRows="False" AutoGenerateColumns="False" IsReadOnly="True" HeadersVisibility="Column" Name="dataGrid">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding ID}" Header="序号"/>
+                <DataGridTextColumn Binding="{Binding HengTittle}" Header="左侧标题"/>
+                <DataGridTextColumn Binding="{Binding ShuTittle}" Header="顶层标题"/>
+                <DataGridTemplateColumn Header="操作">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Button Content="统计" Cursor="Hand" Margin="5,4,0,4" ToolTip="统计" Width="60"  Loaded="Button_Loaded" Click="Button_Click"/>
+
+                                <Button Content="删除" Cursor="Hand" Margin="6" ToolTip="删除"  Width="30" Loaded="Button_Loaded_1" Click="Button_Click_1" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

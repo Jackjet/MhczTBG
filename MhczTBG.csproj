@@ -1,0 +1,984 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{91732760-9370-4D7D-9D2E-47DE8D54CBC8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MhczTBG</RootNamespace>
+    <AssemblyName>MhczTBG</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Microsoft.SharePoint.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Runtime, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Microsoft.SharePoint.Client.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="NotifyIcoWpf, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\NotifyIcoWpf.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework.Aero" />
+    <Reference Include="ReachFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Controls.Layout.Toolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\System.Windows.Controls.Layout.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WPFToolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\WPFToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="WPFVisifire.Charts, Version=4.0.2.2, Culture=neutral, PublicKeyToken=9f1c752402bc35c9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\WPFVisifire.Charts.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ChenJieEntity.cs" />
+    <Compile Include="Common\Configuration.cs" />
+    <Compile Include="Common\DataOperation.cs" />
+    <Compile Include="Common\DragManage.cs" />
+    <Compile Include="Common\FHFormLb.cs" />
+    <Compile Include="Common\InformationCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\iniFile.cs" />
+    <Compile Include="Common\IShiGongManager.cs" />
+    <Compile Include="Common\DataGridUserEntity.cs" />
+    <Compile Include="Common\Proxy.cs" />
+    <Compile Include="Common\QueryCaml.cs" />
+    <Compile Include="Common\SLtxtHelp.cs" />
+    <Compile Include="Controls\Charts\ChartIndex.xaml.cs">
+      <DependentUpon>ChartIndex.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\Charts\ChartMain.xaml.cs">
+      <DependentUpon>ChartMain.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\Charts\ChartCommon.xaml.cs">
+      <DependentUpon>ChartCommon.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\Charts\ChartHuanBi.xaml.cs">
+      <DependentUpon>ChartHuanBi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Charts\ChartTongQi.xaml.cs">
+      <DependentUpon>ChartTongQi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ChaXun.xaml.cs">
+      <DependentUpon>ChaXun.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\ComSearchsDongTai\AllXuan.xaml.cs">
+      <DependentUpon>AllXuan.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ComSearchsDongTai\ComSearch.xaml.cs">
+      <DependentUpon>ComSearch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ComSearchsDongTai\ComSearchlei.cs" />
+    <Compile Include="Controls\ComSearchsDongTai\StartEndTime.xaml.cs">
+      <DependentUpon>StartEndTime.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CustomButton\BtnDaoHangItem.xaml.cs">
+      <DependentUpon>BtnDaoHangItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CustomButton\DataButton.xaml.cs">
+      <DependentUpon>DataButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CustomButton\UCButtonDaoHang.xaml.cs">
+      <DependentUpon>UCButtonDaoHang.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CustomWindow\LoginWindow.xaml.cs">
+      <DependentUpon>LoginWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CustomWindow\MessageWindow.xaml.cs">
+      <DependentUpon>MessageWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CustomButton\BtnDaoHang.xaml.cs">
+      <DependentUpon>BtnDaoHang.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\IMliaoTian\IMliaoTian.xaml.cs">
+      <DependentUpon>IMliaoTian.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DataGridOperate\ListYuLanDataGrid.xaml.cs">
+      <DependentUpon>ListYuLanDataGrid.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Load\Loading.xaml.cs">
+      <DependentUpon>Loading.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Load\loading2.xaml.cs">
+      <DependentUpon>loading2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Load\LoadingMainPage.xaml.cs">
+      <DependentUpon>LoadingMainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Modules\IconBtn.cs" />
+    <Compile Include="Controls\Modules\Desk.xaml.cs">
+      <DependentUpon>Desk.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\QuanXianSetint.xaml.cs">
+      <DependentUpon>QuanXianSetint.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RenYuanGuanLI\AddDepartment.xaml.cs">
+      <DependentUpon>AddDepartment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RenYuanGuanLI\EditUser.xaml.cs">
+      <DependentUpon>EditUser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RenYuanGuanLI\RenYuanGuanLi.xaml.cs">
+      <DependentUpon>RenYuanGuanLi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RenYuanGuanLI\UpdatePassWord.xaml.cs">
+      <DependentUpon>UpdatePassWord.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RenYuanGuanLI\ViewUser.xaml.cs">
+      <DependentUpon>ViewUser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RiLi\IRiLiEntity.cs" />
+    <Compile Include="Controls\RiLi\RiLi.xaml.cs">
+      <DependentUpon>RiLi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RiLi\RiLiItem.xaml.cs">
+      <DependentUpon>RiLiItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SelectColumns.xaml.cs">
+      <DependentUpon>SelectColumns.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TongJiBaoBiao\DocumentView.xaml.cs">
+      <DependentUpon>DocumentView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TongJiBaoBiao\FenXiBaoGao.xaml.cs">
+      <DependentUpon>FenXiBaoGao.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TongJiDataGrid\TJColumn.xaml.cs">
+      <DependentUpon>TJColumn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TongJiDataGrid\TJGridView.xaml.cs">
+      <DependentUpon>TJGridView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TongJiDataGrid\TJRow.xaml.cs">
+      <DependentUpon>TJRow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TongJiFenXis\TongJi.xaml.cs">
+      <DependentUpon>TongJi.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\TongJiFenXis\TongJiHelper.xaml.cs">
+      <DependentUpon>TongJiHelper.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\TongJiFenXis\TongJiItem.xaml.cs">
+      <DependentUpon>TongJiItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TongXin\TongXinMain.xaml.cs">
+      <DependentUpon>TongXinMain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CustomWindow\ChildWindow.xaml.cs">
+      <DependentUpon>ChildWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CustomButton\MyButton.cs" />
+    <Compile Include="Controls\TongZhi\TongZhi.xaml.cs">
+      <DependentUpon>TongZhi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TooltipGuZhangChuLi\ToolTipGuZhangChuLiJingGuo.xaml.cs">
+      <DependentUpon>ToolTipGuZhangChuLiJingGuo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\DocumentControl.xaml.cs">
+      <DependentUpon>DocumentControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\DocumentDataGrid.xaml.cs">
+      <DependentUpon>DocumentDataGrid.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\SharePointListWindow.xaml.cs">
+      <DependentUpon>SharePointListWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\TemplateDisPlay.xaml.cs">
+      <DependentUpon>TemplateDisPlay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\UserControl1.xaml.cs">
+      <DependentUpon>UserControl1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Programm.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\wcfTX\Reference.cs" />
+    <Compile Include="Service References\wcfTX\Reference2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="StyleResource\MyStyle.xaml.cs">
+      <DependentUpon>MyStyle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StyleResource\Style1.xaml.cs">
+      <DependentUpon>Style1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StyleResource\StyleBack.xaml.cs">
+      <DependentUpon>StyleBack.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StyleResource\TongXinStyle.xaml.cs">
+      <DependentUpon>TongXinStyle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StyleResource\UsStyle.xaml.cs">
+      <DependentUpon>UsStyle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UICommon\iniFile.cs" />
+    <Compile Include="UICommon\MessageInfo.cs" />
+    <Compile Include="UICommon\UIHelper.cs" />
+    <Page Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Charts\ChartIndex.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Charts\ChartMain.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Charts\ChartCommon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Charts\ChartHuanBi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Charts\ChartTongQi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ChaXun.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\CustomButton\BtnDaoHangItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\CustomButton\DataButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\DataGridOperate\ListYuLanDataGrid.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Load\loading2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Load\LoadingMainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\SelectColumns.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\TongJiDataGrid\TJColumn.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\TongJiDataGrid\TJGridView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\TongJiDataGrid\TJRow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\TongJiFenXis\TongJi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\TongJiFenXis\TongJiHelper.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\TongJiFenXis\TongJiItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Helper\BookControlUser.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\ComSearchsDongTai\AllXuan.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\ComSearchsDongTai\ComSearch.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\ComSearchsDongTai\StartEndTime.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\CustomButton\UCButtonDaoHang.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\CustomWindow\LoginWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\DataGridOperate\DataPager.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\DragView\DragTab.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\DragView\DragTabItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Files\FileDown.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Files\FileUp.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\FloatCom.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\CustomWindow\MessageWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\DataGridOperate\ModeDataGrid.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\DataGridOperate\GroupHelper.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\CustomButton\BtnDaoHang.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\IMliaoTian\IMliaoTian.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Load\Loading.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Modules\Desk.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\QuanXianSetint.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\RenYuanGuanLI\AddDepartment.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\RenYuanGuanLI\EditUser.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\RenYuanGuanLI\RenYuanGuanLi.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\RenYuanGuanLI\UpdatePassWord.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\RenYuanGuanLI\ViewUser.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\RiLi\RiLi.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\RiLi\RiLiItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\TongJiBaoBiao\DocumentView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\TongJiBaoBiao\FenXiBaoGao.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\TongXin\TongXinMain.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\CustomWindow\ChildWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\TongZhi\TongZhi.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\TooltipGuZhangChuLi\ToolTipGuZhangChuLiJingGuo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Helper\DocumentControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Helper\DocumentDataGrid.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Helper\GuZhangShouLi_New.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Load\LoadingPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\CustomWindow\MessageShow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Print\PrintDataGrid.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Print\PrintDocument.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Print\PrintItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\DataGridOperate\ScroviewDataPager.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Helper\SpIDisPaly.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\ShiGongManage\DataControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\ShiGongManage\DataMain.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\ShiGongManage\DataPicker.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\ShiGongManage\DateWeekControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\ShiGongManage\TitleControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\ShiGongManage\ToolTip_Control.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\SlidingView\PictureView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Tab\TabChange.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Tab\UcDataGrid.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Tab\UcPanel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\CustomWindow\TbgWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\TimePicker.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\DataGridOperate\CommonDataGrid.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\DataGridOperate\CommonDataGridCell.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="Common\AssessmentControl.cs" />
+    <Compile Include="Common\ClientContextMethod.cs" />
+    <Compile Include="Common\CommonMethod.cs" />
+    <Compile Include="Helper\CustomerUnitInformation.cs" />
+    <Compile Include="Common\DataGridItemLb.cs" />
+    <Compile Include="Common\DocumentLb.cs" />
+    <Compile Include="Common\ElementTuoDong.cs" />
+    <Compile Include="Common\FileInformationLb.cs" />
+    <Compile Include="Common\MethodLb.cs" />
+    <Compile Include="Common\SafetyAssessment.cs" />
+    <Compile Include="Common\TomDisPatcherLb.cs" />
+    <Compile Include="Helper\BookControlUser.xaml.cs">
+      <DependentUpon>BookControlUser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Book\UcBook.cs" />
+    <Compile Include="Controls\Book\UcBookShell.cs" />
+    <Compile Include="Controls\Book\UcButton3.cs" />
+    <Compile Include="Controls\DataGridOperate\DataPager.xaml.cs">
+      <DependentUpon>DataPager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DragView\DragTab.xaml.cs">
+      <DependentUpon>DragTab.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DragView\DragTabItem.xaml.cs">
+      <DependentUpon>DragTabItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Files\FileDown.xaml.cs">
+      <DependentUpon>FileDown.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Files\FileUp.xaml.cs">
+      <DependentUpon>FileUp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FloatCom.xaml.cs">
+      <DependentUpon>FloatCom.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DataGridOperate\ModeDataGrid.xaml.cs">
+      <DependentUpon>ModeDataGrid.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DataGridOperate\GroupHelper.xaml.cs">
+      <DependentUpon>GroupHelper.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\GuZhangShouLi_New.xaml.cs">
+      <DependentUpon>GuZhangShouLi_New.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Load\LoadingPage.xaml.cs">
+      <DependentUpon>LoadingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CustomWindow\MessageShow.xaml.cs">
+      <DependentUpon>MessageShow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Print\PrintDataGrid.xaml.cs">
+      <DependentUpon>PrintDataGrid.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Print\PrintDocument.xaml.cs">
+      <DependentUpon>PrintDocument.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Print\PrintItem.xaml.cs">
+      <DependentUpon>PrintItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DataGridOperate\ScroviewDataPager.xaml.cs">
+      <DependentUpon>ScroviewDataPager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\SpIDisPaly.xaml.cs">
+      <DependentUpon>SpIDisPaly.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Common\TbgMenuItem.cs" />
+    <Compile Include="Controls\ShiGongManage\DataControl.xaml.cs">
+      <DependentUpon>DataControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ShiGongManage\DataMain.xaml.cs">
+      <DependentUpon>DataMain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ShiGongManage\DataPicker.xaml.cs">
+      <DependentUpon>DataPicker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ShiGongManage\DateWeekControl.xaml.cs">
+      <DependentUpon>DateWeekControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ShiGongManage\TitleControl.xaml.cs">
+      <DependentUpon>TitleControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ShiGongManage\CustomMenuItem.cs" />
+    <Compile Include="Controls\ShiGongManage\ToolTip_Control.xaml.cs">
+      <DependentUpon>ToolTip_Control.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ShiGongManage\UserControlOperate.cs" />
+    <Compile Include="Controls\SlidingView\PictureView.xaml.cs">
+      <DependentUpon>PictureView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Tab\TabChange.xaml.cs">
+      <DependentUpon>TabChange.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Tab\UcDataGrid.xaml.cs">
+      <DependentUpon>UcDataGrid.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Tab\UcPanel.xaml.cs">
+      <DependentUpon>UcPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CustomWindow\TbgWindow.xaml.cs">
+      <DependentUpon>TbgWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TimePicker.xaml.cs">
+      <DependentUpon>TimePicker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DataGridOperate\CommonDataGrid.xaml.cs">
+      <DependentUpon>CommonDataGrid.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DataGridOperate\CommonDataGridCell.xaml.cs">
+      <DependentUpon>CommonDataGridCell.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Helper\SharePointListWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Helper\TemplateDisPlay.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Helper\UserControl1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="StyleResource\MyStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StyleResource\Style1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StyleResource\StyleBack.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StyleResource\TongXinStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StyleResource\UsStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="Common\CommonClass分析.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <None Include="Service References\wcfTX\mex.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wcfTX\mex1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wcfTX\mex2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wcfTX\mex3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wcfTX\Stxd.wsdl" />
+    <None Include="Service References\wcfTX\TongXin.wcfTX.chart月份故障分析返回.datasource" />
+    <None Include="Service References\wcfTX\TongXin.wcfTX.chart月份故障比较返回.datasource" />
+    <None Include="Service References\wcfTX\TongXin.wcfTX.chart通信故障件数设备类型一类.datasource" />
+    <None Include="Service References\wcfTX\TongXin.wcfTX.c车间设备二级月份计算.datasource" />
+    <None Include="Service References\wcfTX\TongXin.wcfTX.list日志01.datasource" />
+    <None Include="Service References\wcfTX\TongXin.wcfTX.TXListItem.datasource" />
+    <None Include="Service References\wcfTX\TongXin.wcfTX.TXListV2.datasource" />
+    <None Include="Service References\wcfTX\TongXin.wcfTX.tx定性故障统计.datasource" />
+    <None Include="Service References\wcfTX\TongXin.wcfTX.tx定责故障统计.datasource" />
+    <None Include="Service References\wcfTX\TongXin.wcfTX.tx局定责任统计.datasource" />
+    <None Include="Service References\wcfTX\TongXin.wcfTX.tx段定责统计.datasource" />
+    <None Include="Service References\wcfTX\TongXin.wcfTX.tx设备类型故障统计.datasource" />
+    <None Include="Service References\wcfTX\TongXin.wcfTX.tx车间故障统计.datasource" />
+    <None Include="Service References\wcfTX\TongXin.wcfTX.T定性分类统计表月份.datasource" />
+    <None Include="Service References\wcfTX\TongXin.wcfTX.T定性分类统计表车间.datasource" />
+    <None Include="Service References\wcfTX\TongXin.wcfTX.t定责段局分类统计表月份.datasource" />
+    <None Include="Service References\wcfTX\TongXin.wcfTX.t定责段局分类统计表车间.datasource" />
+    <None Include="Service References\wcfTX\TongXin.wcfTX.T设备二级分类统计表.datasource" />
+    <None Include="Service References\wcfTX\TongXin.wcfTX.T设备二级分类统计表车间.datasource" />
+    <None Include="Service References\wcfTX\TongXin.wcfTX.UserInfo.datasource" />
+    <None Include="Service References\wcfTX\TongXin.wcfTX.三级设备类型故障统计.datasource" />
+    <None Include="Service References\wcfTX\TongXin.wcfTX.两列数据返回.datasource" />
+    <None Include="Service References\wcfTX\TongXin.wcfTX.同期对比图list.datasource" />
+    <None Include="Service References\wcfTX\TongXin.wcfTX.多列数据返回.datasource" />
+    <None Include="Service References\wcfTX\TongXin.wcfTX.故障延时占比.datasource" />
+    <None Include="Service References\wcfTX\TongXin.wcfTX.车间故障统计.datasource" />
+    <None Include="Service References\wcfTX\TongXin.wcfTX.返回一列数据.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\无附件.png" />
+    <None Include="Resources\附件.png" />
+    <None Include="Resources\Image2.bmp" />
+    <Resource Include="Resources\324258.png" />
+    <Resource Include="Resources\324261.png" />
+    <Resource Include="Resources\324262.png" />
+    <Resource Include="Resources\324263.png" />
+    <Resource Include="Resources\324264.png" />
+    <Resource Include="Resources\324265.png" />
+    <Resource Include="Resources\324266.png" />
+    <Resource Include="Resources\324267.png" />
+    <Resource Include="Resources\123.png" />
+    <Resource Include="bin\Excel问题.txt" />
+    <Content Include="Lib\Microsoft.Office.Interop.Excel.dll" />
+    <Content Include="Lib\WPFVisifire.Charts.dll" />
+    <Content Include="Service References\wcfTX\configuration.svcinfo" />
+    <Content Include="Service References\wcfTX\configuration91.svcinfo" />
+    <Content Include="Service References\wcfTX\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference2.cs</LastGenOutput>
+    </Content>
+    <Resource Include="Resources\word128x128.png" />
+    <Resource Include="Resources\Notify关闭.png" />
+    <Resource Include="Resources\logo02.png" />
+    <Resource Include="Resources\Password.png" />
+    <Resource Include="Resources\UserName.png" />
+    <Resource Include="Resources\WithBlack.png" />
+    <Resource Include="Resources\Setting.png" />
+    <Resource Include="Resources\Setting1.png" />
+    <Resource Include="Resources\tou2.png" />
+    <Resource Include="Resources\tou3.png" />
+    <Resource Include="Resources\tou1.png" />
+    <Resource Include="Resources\DeleteItem.png" />
+    <Resource Include="Resources\deleteUser.png" />
+    <Resource Include="Resources\SmallSanJiao.png" />
+    <Resource Include="Resources\打印.png" />
+    <Resource Include="Resources\箭头.png" />
+    <Resource Include="Resources\bg2.jpg" />
+    <Resource Include="Resources\Info.png" />
+    <Resource Include="Resources\UCButton.png" />
+    <Resource Include="Resources\tou.jpg" />
+    <Resource Include="Resources\w2.jpg" />
+    <Resource Include="Resources\icon_01.png" />
+    <Resource Include="Resources\icon_02.png" />
+    <Resource Include="Resources\icon_03.png" />
+    <Resource Include="Resources\icon_04.png" />
+    <Resource Include="Resources\icon_05.png" />
+    <Resource Include="Resources\icon_06.png" />
+    <Resource Include="Resources\img.jpg" />
+    <Resource Include="Resources\left.png" />
+    <Resource Include="Resources\man.png" />
+    <Resource Include="Resources\more.png" />
+    <Resource Include="Resources\open.ico" />
+    <Resource Include="Resources\platform.ico" />
+    <Resource Include="Resources\refresh.png" />
+    <Resource Include="Resources\right.png" />
+    <Resource Include="Resources\title.png" />
+    <Resource Include="Resources\topbtn_normal.png" />
+    <Resource Include="Resources\topbtn_select.png" />
+    <Resource Include="Resources\usplate.png" />
+    <Resource Include="Resources\windows.png" />
+    <Resource Include="Resources\window_close.png" />
+    <Resource Include="Resources\window_max.png" />
+    <Resource Include="Resources\window_min.png" />
+    <Resource Include="Resources\woman.png" />
+    <Resource Include="Resources\address.png" />
+    <Resource Include="Resources\关闭.png" />
+    <Resource Include="Resources\关闭1.png" />
+    <Resource Include="Resources\最小化.png" />
+    <Resource Include="Resources\最小化1.png" />
+    <Resource Include="Resources\comIcon.png" />
+    <Resource Include="Resources\people.png" />
+    <Resource Include="Resources\文件夹.png" />
+    <Resource Include="Resources\logo.png" />
+    <Resource Include="Resources\bg.jpg" />
+    <Resource Include="Resources\未开始.png" />
+    <Resource Include="Resources\分配任务.png" />
+    <Resource Include="Resources\查看详情.png" />
+    <Resource Include="Resources\zip.png" />
+    <Resource Include="Resources\xlx.png" />
+    <Resource Include="Resources\xlsx.png" />
+    <Resource Include="Resources\xls.png" />
+    <Resource Include="Resources\wps.png" />
+    <Resource Include="Resources\wmv.png" />
+    <Resource Include="Resources\wma.png" />
+    <Resource Include="Resources\wav.png" />
+    <Resource Include="Resources\txt.png" />
+    <Resource Include="Resources\swf.png" />
+    <Resource Include="Resources\sheying.jpg" />
+    <Resource Include="Resources\SearchBtn.png" />
+    <Resource Include="Resources\Search.png" />
+    <Resource Include="Resources\save.png" />
+    <Resource Include="Resources\rmvb.png" />
+    <Resource Include="Resources\reg.png" />
+    <Resource Include="Resources\pub.png" />
+    <Resource Include="Resources\psd.png" />
+    <Resource Include="Resources\pptx.png" />
+    <Resource Include="Resources\ppt.png" />
+    <Resource Include="Resources\pp.png" />
+    <Resource Include="Resources\png.png" />
+    <Resource Include="Resources\pinglun.jpg" />
+    <Resource Include="Resources\pdf.png" />
+    <Resource Include="Resources\Other.png" />
+    <Resource Include="Resources\mpg.png" />
+    <Resource Include="Resources\MPEG.png" />
+    <Resource Include="Resources\mp4.png" />
+    <Resource Include="Resources\mp3.png" />
+    <Resource Include="Resources\Min.png" />
+    <Resource Include="Resources\Max.png" />
+    <Resource Include="Resources\mag.png" />
+    <Resource Include="Resources\lzh.png" />
+    <Resource Include="Resources\log.png" />
+    <Resource Include="Resources\jpeg.png" />
+    <Resource Include="Resources\img.png" />
+    <Resource Include="Resources\IcoExcel.png" />
+    <Resource Include="Resources\hui23.jpg" />
+    <Resource Include="Resources\Huan.png" />
+    <Resource Include="Resources\html.png" />
+    <Resource Include="Resources\gif.png" />
+    <Resource Include="Resources\forder5.png" />
+    <Resource Include="Resources\folder4.png" />
+    <Resource Include="Resources\folder3.png" />
+    <Resource Include="Resources\folder2.png" />
+    <Resource Include="Resources\folder.png" />
+    <Resource Include="Resources\flv.png" />
+    <Resource Include="Resources\Excel.png" />
+    <Resource Include="Resources\dot.png" />
+    <Resource Include="Resources\DaoHang.png" />
+    <Resource Include="Resources\com.png" />
+    <Resource Include="Resources\cmd.png" />
+    <Resource Include="Resources\close.png" />
+    <Resource Include="Resources\cab.png" />
+    <Resource Include="Resources\BookShell2.png" />
+    <Resource Include="Resources\BookShell.png" />
+    <Resource Include="Resources\book.png" />
+    <Resource Include="Resources\bmp.png" />
+    <Resource Include="Resources\avi.png" />
+    <Resource Include="Resources\asx.png" />
+    <Resource Include="Resources\asp.png" />
+    <Resource Include="Resources\AddItem.png" />
+    <Resource Include="Resources\Reflesh.png" />
+    <Resource Include="Resources\Edit.png" />
+    <Content Include="bin\Debug\MhczTBG.dll" />
+    <Content Include="bin\Debug\MhczTBG.pdb" />
+    <Content Include="bin\Debug\Microsoft.SharePoint.Client.dll" />
+    <Content Include="bin\Debug\Microsoft.SharePoint.Client.Runtime.dll" />
+    <Content Include="bin\Debug\System.Windows.Controls.Layout.Toolkit.dll" />
+    <Content Include="bin\Debug\WPFToolkit.dll" />
+    <Content Include="Lib\NotifyIcoWpf.dll" />
+    <Content Include="Lib\System.Windows.Controls.Layout.Toolkit.dll" />
+    <Content Include="Lib\WPFToolkit.dll" />
+    <Resource Include="Resources\Image1.png" />
+    <Content Include="Lib\Microsoft.SharePoint.Client.dll" />
+    <Content Include="Lib\Microsoft.SharePoint.Client.Runtime.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\StyleResource\" />
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

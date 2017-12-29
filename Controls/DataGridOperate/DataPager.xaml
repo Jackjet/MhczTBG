@@ -1,0 +1,128 @@
+﻿<UserControl x:Class="MhczTBG.Controls.DataGridOperate.DataPager"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="30" d:DesignWidth="300">
+    <UserControl.Resources>
+        <Style x:Key="btn1Style" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+
+                    <ControlTemplate TargetType="Button">
+
+                        <Grid Background="Transparent" Cursor="Hand">
+                            <!--<Grid.Triggers>
+                                <EventTrigger RoutedEvent="MouseEnter">
+                                    <BeginStoryboard Name="gridEnter">
+                                        <Storyboard>
+                                            <DoubleAnimation Duration="0" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="bor" To="0.6"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </EventTrigger>
+                                <EventTrigger RoutedEvent="MouseLeave">
+                                    <StopStoryboard BeginStoryboardName="gridEnter"/>
+                                    <StopStoryboard BeginStoryboardName="gridClick"/>
+                                </EventTrigger>
+                                <EventTrigger RoutedEvent="MouseLeftButtonDown">
+                                    <BeginStoryboard Name="gridClick">
+                                        <Storyboard>
+                                            <DoubleAnimation Duration="0" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="bor" To="0.8"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </EventTrigger>
+                            </Grid.Triggers>-->
+                            <Border Name="bor" BorderBrush="Silver"  BorderThickness="1" Background="LightGray" Opacity="0"/>
+
+                            <Path Width="8" Height="15" Data="M291,173 L313,195 L292,221 L301,196 z" Fill="Gray" Stretch="Fill">
+
+                            </Path>
+                        </Grid>
+
+                    </ControlTemplate>
+
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="btn2Style" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+
+                    <ControlTemplate TargetType="Button">
+
+                        <Grid Background="Transparent" Cursor="Hand">
+                            <!--<Grid.Triggers>
+                                <EventTrigger RoutedEvent="MouseEnter">
+                                    <BeginStoryboard Name="gridEnter">
+                                        <Storyboard>
+                                            <DoubleAnimation Duration="0" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="bor" To="0.6"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </EventTrigger>
+                                <EventTrigger RoutedEvent="MouseLeave">
+                                    <StopStoryboard BeginStoryboardName="gridEnter"/> 
+                                    <StopStoryboard BeginStoryboardName="gridClick"/>
+                                </EventTrigger>
+                                <EventTrigger RoutedEvent="MouseLeftButtonDown">
+                                    <BeginStoryboard Name="gridClick">
+                                        <Storyboard>
+                                            <DoubleAnimation Duration="0" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="bor" To="0.8"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </EventTrigger>
+                            </Grid.Triggers>-->
+                            <Border Name="bor" BorderBrush="Silver"  BorderThickness="1" Background="LightGray" Opacity="0"/>
+
+                            <Path Width="8" Height="15" Data="M331.66666,196.33333 L317.33301,176.00034 L337.33286,195.33366 L318,219.66699 L332.12488,197.00017 L328.74991,197.25017 L316.5,179.00032 L324.74994,196.75018 L317.5,216.00003 L327.49994,197.50017" Fill="Gray" Stretch="Fill">
+                            </Path>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <ContentControl FontSize="13" VerticalAlignment="Center" HorizontalAlignment="Right">
+            <StackPanel Orientation="Horizontal" Margin="0,0,10,0" >
+                <TextBlock  Text="共"/>
+                <TextBlock Text="1" Name="txtCount"/>
+                <TextBlock Text="页"/>
+            </StackPanel>
+        </ContentControl>
+        <StackPanel  Orientation="Horizontal" HorizontalAlignment="Left">
+            <Button Style="{StaticResource btn2Style}" ToolTipService.ToolTip ="第一页" Name="btnFirst"  RenderTransformOrigin="0.5,0.5"  Height="25" Width="30" >
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <RotateTransform Angle="180" />
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <Button  Style="{StaticResource btn1Style}" ToolTipService.ToolTip="上一页" Name="btnUp" RenderTransformOrigin ="0.5,0.5"   Height="25" Width="30" >
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <RotateTransform Angle="180"/>
+                        <ScaleTransform />
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <TextBlock FontSize="13" VerticalAlignment="Center" Text="第"/>
+            <TextBlock FontSize="13" VerticalAlignment="Center" Text="1" Name="txtNow"/>
+            <TextBlock FontSize="13" VerticalAlignment="Center" Text="页"/>
+            <Button Style="{StaticResource btn1Style}" ToolTipService.ToolTip="下一页"  Name="btnNext" Height="25" Width="30" >
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform />
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <Button Style="{StaticResource btn2Style}" ToolTipService.ToolTip="最后一页"  Name="btnLast" Height="25" Width="30" >
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform />
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+        </StackPanel>
+    </Grid>
+</UserControl>

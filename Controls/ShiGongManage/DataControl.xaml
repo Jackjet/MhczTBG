@@ -1,0 +1,67 @@
+﻿<UserControl x:Class="MhczTBG.Controls.ShiGongManage.DataControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Cursor="Hand" 
+    d:DesignHeight="62" d:DesignWidth="400">
+    <UserControl.Resources>
+        <LinearGradientBrush x:Key="GreenColor" EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#CCB0FF7D" Offset="0"/>
+            <GradientStop Color="#CC5CDA0A" Offset="1"/>
+        </LinearGradientBrush>
+        
+        <LinearGradientBrush x:Key="BlueColor" EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#CCA1DEFF" Offset="0"/>
+            <GradientStop Color="#CC259FE0" Offset="1"/>
+        </LinearGradientBrush>
+        
+        <LinearGradientBrush x:Key="RedColor" EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#CCFFA49B" Offset="0"/>
+            <GradientStop Color="#CCFF5522" Offset="1"/>
+        </LinearGradientBrush>
+        
+        <LinearGradientBrush x:Key="YellowColor" EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#CCFFE08A" Offset="0"/>
+            <GradientStop Color="#CCFFC21D" Offset="1"/>
+        </LinearGradientBrush>
+
+        <SolidColorBrush x:Key="deeppinkColorBrush" Color="#FF1493"/>
+        <SolidColorBrush x:Key="BlueColorBrush" Color="#CC58B4E5"/>
+        <SolidColorBrush x:Key="RedColorBrush" Color="#CCF08D79"/>
+        <SolidColorBrush x:Key="YellowColorBrush" Color="#CCF7D195"/>
+        <SolidColorBrush x:Key="GreenColorBrush" Color="#CC86EB47"/>
+
+        <SolidColorBrush x:Key="chocolateColorBrush" Color="#D2691E"/>
+        <SolidColorBrush x:Key="orangeredColorBrush" Color="#FF4500"/>
+        <SolidColorBrush x:Key="sandybrownColorBrush" Color="#F4A460"/>
+        <SolidColorBrush x:Key="plumColorBrush" Color="#DDA0DD"/>
+
+        <SolidColorBrush x:Key="darkkhakiColorBrush" Color="#BDB76B"/>
+        <SolidColorBrush x:Key="limegreenColorBrush" Color="#32CD32"/>
+        <SolidColorBrush x:Key="aquamarineColorBrush" Color="#7FFFD4"/>
+        <SolidColorBrush x:Key="aquaColorBrush" Color="#00FFFF"/>
+        
+
+       
+    </UserControl.Resources>
+
+    <Grid Margin="0,3" x:Name="AllGrid">
+       
+        <Border  x:Name="data_img"  BorderThickness="1"   Opacity="0.8"  HorizontalAlignment="Left" Visibility="Collapsed" />
+
+        
+        	<Grid Name="gri" >
+                <StackPanel Orientation="Horizontal" >
+                    <Border  Margin="0,5" Name="b1"  CornerRadius="15,0,0,15"  />
+                    <Border   Name="b2"  Margin="0,5" CornerRadius="0,15,15,0"   />
+                </StackPanel>
+                
+        		<Grid  HorizontalAlignment="Left" Width="50">
+                    <Image  x:Name="trainImg"/>
+        			<TextBlock x:Name="datatext" TextWrapping="Wrap"   HorizontalAlignment="Center" Foreground="White" FontSize="12" Margin="0,7,0,0"/>
+        		</Grid>
+        	</Grid>
+        
+    </Grid>
+</UserControl>

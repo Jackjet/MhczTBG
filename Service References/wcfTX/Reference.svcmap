@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1be9eddb-796a-4315-b56f-83e187c27bec" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://192.168.0.154/_Layouts/FtxdWcf/txd.svc/mex" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="mex.xsd" MetadataType="Schema" ID="925c41e0-f15c-4446-ab7f-65cad4d09897" SourceId="1" SourceUrl="http://txds.bjtxd.com/_Layouts/FtxdWcf/txd.svc/mex?xsd=xsd2" />
+    <MetadataFile FileName="Stxd.wsdl" MetadataType="Wsdl" ID="37fdc8c2-3b81-4037-bc96-1263e9cbc129" SourceId="1" SourceUrl="http://192.168.0.154/_Layouts/FtxdWcf/txd.svc/mex" />
+    <MetadataFile FileName="mex1.xsd" MetadataType="Schema" ID="57a2df05-40f0-442e-a53a-8465d65e954e" SourceId="1" SourceUrl="http://txds.bjtxd.com/_Layouts/FtxdWcf/txd.svc/mex?xsd=xsd0" />
+    <MetadataFile FileName="mex2.xsd" MetadataType="Schema" ID="14f73ecf-51d1-4193-a0a0-35e31cb0d6df" SourceId="1" SourceUrl="http://txds.bjtxd.com/_Layouts/FtxdWcf/txd.svc/mex?xsd=xsd3" />
+    <MetadataFile FileName="mex3.xsd" MetadataType="Schema" ID="0f29f1df-75a3-4a79-89f8-6c160de4b7a8" SourceId="1" SourceUrl="http://txds.bjtxd.com/_Layouts/FtxdWcf/txd.svc/mex?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

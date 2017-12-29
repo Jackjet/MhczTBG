@@ -1,0 +1,118 @@
+﻿<Window x:Class="MhczTBG.Controls.Files.FileUp"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="附件上传:" Background="LightGray"
+         WindowStartupLocation="CenterScreen"
+    Height="340" Width="510">
+    <Window.Resources>
+        <ControlTemplate x:Key="InTemplate">
+            <Grid Width="20" Height="20">
+                <Path RenderTransformOrigin="0.5,0.5" Name="img" Fill="LightBlue" Stretch="Fill" Data="F1M149,44C165.417,44.076 196.502,48.91 192,69 190.653,75.011 185.59,77.932 188,86 191.333,95.332 194.667,104.668 198,114 205.002,153.631 169.033,184.537 140,190 97.042,198.083 66.914,164.334 60,135 53.177,106.052 70.958,64.218 94,62 94.333,63 94.667,64 95,65 97.862,69.536 101.402,82.215 99,88 94.667,94.666 90.333,101.334 86,108 77.249,136.406 97.256,159.793 117,164 157.631,172.658 185.504,116.959 156,96 114.841,112.909 133.65,54.586 149,44z">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                    <Path.Triggers>
+                        <EventTrigger RoutedEvent="Loaded">
+                            <!--<BeginStoryboard >
+                                <Storyboard >
+                                    <DoubleAnimation Duration="0:0:1" RepeatBehavior="Forever" To="-360" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" >
+                                    </DoubleAnimation>
+                                </Storyboard>
+                            </BeginStoryboard>-->
+
+                        </EventTrigger>
+                    </Path.Triggers>
+                    <Path.Effect>
+                        <BlurEffect Radius="3"/>
+                    </Path.Effect>
+                </Path>
+            </Grid>
+        </ControlTemplate>
+        
+        <ControlTemplate x:Key="NoBeginTemplate">
+            <TextBlock Text="未开始" VerticalAlignment="Center"/>
+        </ControlTemplate>
+        <ControlTemplate x:Key="CompleateTemplate">
+            <TextBlock Text="已完成" VerticalAlignment="Center"/>
+        </ControlTemplate>
+    </Window.Resources>
+    <Grid>
+        <Grid Background="LightGray" Opacity="0.5"/>
+        <Grid x:Name="LayoutRoot" Width="484" Height="300" >
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+            <Button Grid.RowSpan="4">
+            </Button>
+
+            <DataGrid AutoGenerateColumns="False"   Name="dataGrid1" >
+                <DataGrid.Columns>
+
+                    <DataGridTemplateColumn Header="类型" >
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Image Width="20" Height="20" Source="{Binding StrTypeImageUri}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+
+                    <DataGridTextColumn Header="名称"  Binding="{Binding StrFileName}"/>
+                    <DataGridTextColumn Header="大小"   Binding="{Binding StrFileSize}"/>
+                    <DataGridTemplateColumn Header="状态"    >
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button  Template="{Binding TemUpLoadStatu}">
+
+                                </Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <ProgressBar VerticalAlignment="Top" Height="20" Margin="10" Name="progressBar1" Grid.Row="1"/>
+                <StackPanel Height="30" Margin="10,0,0,0" Width="95" HorizontalAlignment="Left" VerticalAlignment="Bottom" Orientation="Horizontal">
+                    <TextBlock Text="稍等处理中--:" Foreground="#FFA41212" FontSize="14" x:Name="Tbinfo"/>
+                </StackPanel>
+                <Grid Margin="5,8,0,0" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Orientation="Horizontal" Margin="0,3,0,0">
+                        <TextBlock   Text="已上载"/>
+                        <TextBlock Text="0" Name="txtCompleteCount"/>
+                        <TextBlock   Text="个文件（共"/>
+                        <TextBlock Name="txtAllCount"/>
+                        <TextBlock   Text="）个文件"/>
+
+                    </StackPanel>
+                    <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="-97,0,6,0">
+                        <TextBlock  Name="txtAllSize"/>
+                        <TextBlock  Name="txtIsFinish"/>
+                    </StackPanel>
+                </Grid>
+                <Button x:Name="StaticSync" Margin="110,39,96,1" Template="{StaticResource InTemplate}" Width="36" />
+            </Grid>
+            <StackPanel Grid.Row="2" HorizontalAlignment="Right" Orientation="Horizontal">
+                <Button Name="btnOk"  Content=" 确定(请等待) " IsEnabled="False" Margin="10,10" Click="btnOk_Click" />
+
+            </StackPanel>
+        </Grid>
+
+    </Grid>
+</Window>

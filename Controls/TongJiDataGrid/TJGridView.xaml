@@ -1,0 +1,208 @@
+﻿<UserControl xmlns:my2="clr-namespace:MhczTBG.Controls.TongJiDataGrid"  x:Class="MhczTBG.Controls.TongJiDataGrid.TJGridView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+              xmlns:my1="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"    
+              VirtualizingStackPanel.VirtualizationMode="Recycling"  
+             mc:Ignorable="d"   FontSize="13.5" FontFamily="雅黑" 
+            >
+    <UserControl.Resources>
+        <SolidColorBrush Color="Black" x:Key="_borColor"/>
+        <!--标题背景色-->
+        <SolidColorBrush x:Key="_BackColor" Color="White" />
+
+        <!--预览画刷-->
+        <SolidColorBrush Opacity="0.1" x:Key="linEnter" Color="LightBlue"/>
+
+        <!--选择之后的行的背景色-->
+        <LinearGradientBrush Opacity="0.7" x:Key="selectedBrush" EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="White" Offset="0"/>
+            <GradientStop   Color="#FFC8C8C8" Offset="1"/>
+        </LinearGradientBrush>
+
+        <!--行样式-->
+        <Style  TargetType="{x:Type DataGridRow}">
+            <Style.Triggers>
+                <Trigger Property="AlternationIndex" Value="1" >
+                    <Setter Property="Background" Value="White" />
+                </Trigger>
+                <Trigger  Property="AlternationIndex" Value="0" >
+                    <Setter Property="Background" Value="#FFEEF9FF" />
+                </Trigger>
+
+            </Style.Triggers>
+            <Setter Property="Height" Value="25"/>
+            <Setter Property="Margin" Value="1,0,0,0"/>
+            <Setter Property="SnapsToDevicePixels" Value="true"/>
+            <Setter Property="Validation.ErrorTemplate" Value="{x:Null}"/>
+            <Setter Property="ValidationErrorTemplate">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <TextBlock  Foreground="Red" Margin="2,0,0,0" Text="!" VerticalAlignment="Center"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+
+        <Style x:Key="ColumnHeaderGripperStyle" TargetType="{x:Type Thumb}">
+            <Setter Property="Width" Value="1"/>
+            <Setter Property="Background" Value="Gray"/>
+            <Setter Property="Cursor" Value="SizeWE"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Thumb}">
+                        <Border   BorderBrush="#FFC3E2F7" Margin="-1,0,0,0" BorderThickness="0.5" />
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        
+        
+        
+        <Style x:Key="ColumnHeaderGripperStyle1" TargetType="{x:Type Thumb}">
+            <Setter Property="Width" Value="1"/>
+            <Setter Property="Background" Value="Gray"/>
+            <Setter Property="Cursor" Value="SizeWE"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Thumb}">
+                        <Border   BorderBrush="#FFC3E2F7"    BorderThickness="0.1" />
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!--标题样式-->
+        <Style  x:Key="headerStyle1" TargetType="{x:Type DataGridColumnHeader}">
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <EventSetter Event="SizeChanged"  Handler="ColumnHeader_SizeChanged"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter  Property="Foreground" Value="White"></Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate  TargetType="{x:Type DataGridColumnHeader}">
+                        <Grid >
+                            <my1:DataGridHeaderBorder  Background="{TemplateBinding Background}"     IsClickable="{TemplateBinding CanUserSort}" IsPressed="{TemplateBinding IsPressed}" IsHovered="{TemplateBinding IsMouseOver}" Padding="{TemplateBinding Padding}" SortDirection="{TemplateBinding SortDirection}" SeparatorBrush="{TemplateBinding SeparatorBrush}" SeparatorVisibility="{TemplateBinding SeparatorVisibility}"  >
+                               
+                                <ContentPresenter   HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                            </my1:DataGridHeaderBorder>
+
+                            <Thumb  x:Name="PART_LeftHeaderGripper" HorizontalAlignment="Left" Style="{StaticResource ColumnHeaderGripperStyle}"/>
+                            <Thumb x:Name="PART_RightHeaderGripper" HorizontalAlignment="Right" Style="{StaticResource ColumnHeaderGripperStyle1}"/>
+                        </Grid>
+                    </ControlTemplate>
+
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!--标题样式（打印专用）-->
+        <Style x:Key="headerStyle2" TargetType="{x:Type DataGridColumnHeader}">
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="White"></Setter>  
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Height" Value="110"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type DataGridColumnHeader}">
+                        <Grid  >
+                            <my1:DataGridHeaderBorder  Background="{TemplateBinding Background}" IsClickable="{TemplateBinding CanUserSort}" IsPressed="{TemplateBinding IsPressed}" IsHovered="{TemplateBinding IsMouseOver}" Padding="{TemplateBinding Padding}" SortDirection="{TemplateBinding SortDirection}" SeparatorBrush="{TemplateBinding SeparatorBrush}" SeparatorVisibility="{TemplateBinding SeparatorVisibility}"  >                               
+                                <TextBlock TextWrapping="Wrap" Text="{TemplateBinding Content}"  Width="20"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                            </my1:DataGridHeaderBorder>                           
+                            <Thumb  x:Name="PART_LeftHeaderGripper" HorizontalAlignment="Left" Style="{StaticResource ColumnHeaderGripperStyle}"/>
+                            <Thumb x:Name="PART_RightHeaderGripper" HorizontalAlignment="Right" Style="{StaticResource ColumnHeaderGripperStyle}"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+
+        <!--单元格样式-->
+        <SolidColorBrush x:Key="{x:Static DataGrid.FocusBorderBrushKey}" Color="#FF000000"/>
+        <Style TargetType="{x:Type DataGridCell}">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type DataGridCell}">
+                        <Border  Name="tt"   BorderBrush="#FFC3E2F7" Margin="0,0,-0.5,0" BorderThickness="0.5" PreviewMouseLeftButtonUp="tt_PreviewMouseLeftButtonUp"   Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+                            <ContentPresenter  VerticalAlignment="Center" HorizontalAlignment="Center" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
+                           </ContentPresenter>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <!--Loaded="ContentPresenter_Loaded"-->
+            <Style.Triggers>
+                <Trigger Property="IsSelected" Value="True">
+                    <Setter Property="Foreground" Value="Black"/>
+                    <Setter Property="BorderThickness" Value="0"/>
+                </Trigger>
+
+                <Trigger Property="IsKeyboardFocusWithin" Value="True">
+                    <Setter Property="BorderBrush" Value="Gray"/>
+                </Trigger>
+                <Trigger Property="IsMouseOver" Value="True">
+
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+
+    </UserControl.Resources>
+    <Grid Name="gridMain"  >
+        
+        <Grid.Resources>
+            <LinearGradientBrush x:Key="linBiao" EndPoint="1,0.5" StartPoint="0,0.5">
+                <GradientStop Color="#FF207CD3" Offset="0"/>
+                <GradientStop Color="#FF74B9F2" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Resources>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <!--表头-->
+        <Border Name="borBiao" BorderBrush="#FFC3E2F7" BorderThickness="1,1,0,1">
+            <TextBlock HorizontalAlignment="Center"  Foreground="White" VerticalAlignment="Center" Name="txtTittle"/>
+        </Border>
+
+        <!--列标题-->
+        <Border Name="borTop"  VerticalAlignment="Top" Grid.Column="1"  BorderBrush="#FFC3E2F7" Margin="0,0,18,0" BorderThickness="0,0,1,0">
+            <ScrollViewer Name="scroTop" Grid.Column="1"   HorizontalScrollBarVisibility="Hidden"  VerticalScrollBarVisibility="Disabled">               
+                <my2:TJColumn  Foreground="White" x:Name="tongjiC"  HorizontalAlignment="Left"/>
+            </ScrollViewer>
+        </Border>
+
+        <!--行标题-->
+        <Border Name="borLeft"  Grid.Row="1" BorderBrush="#FFC3E2F7" BorderThickness="0,0,1,1" >
+            <ScrollViewer  Name="scroLeft"   HorizontalScrollBarVisibility="Disabled"  VerticalScrollBarVisibility="Hidden" >
+                <my2:TJRow  Foreground="White" VerticalAlignment="Top" x:Name="tongjiR"/>
+            </ScrollViewer>
+        </Border>
+
+
+        <!--Datagrid-->
+        <DataGrid  HeadersVisibility="Column"   VirtualizingStackPanel.IsVirtualizing="True"   ColumnHeaderStyle="{StaticResource headerStyle1}" AlternationCount="2" CanUserSortColumns="False" CanUserReorderColumns="False" Background="White" Grid.Row="1" Grid.Column="1" AutoGenerateColumns="False" IsReadOnly="True" VerticalScrollBarVisibility="Visible" Loaded="dataGrid_Loaded" HorizontalScrollBarVisibility="Auto"  GridLinesVisibility="None"
+ x:Name="dataGrid">
+
+        </DataGrid>
+        <Line  Name="lineColumn"  Width="2" Margin="0,0,18,0" Stretch="Fill" Stroke="Gray"  Y1="0"  Y2="100" Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" HorizontalAlignment="Right"/>
+
+        <Line  Height="2"  Margin="0,0,0,18" Stretch="Fill" Stroke="Gray"  X1="0"  X2="100" Grid.Row="2" Grid.ColumnSpan="2" VerticalAlignment="Bottom"/>
+
+        <Border  Visibility="Visible" Height="17" Background="White" Grid.Column="0" BorderThickness="0,1,0,0" Grid.Row="1"  VerticalAlignment="Bottom"/>
+
+    </Grid>
+</UserControl>

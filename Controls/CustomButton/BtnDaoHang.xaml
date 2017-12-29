@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="MhczTBG.Controls.CustomButton.BtnDaoHang"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      >
+    <UserControl.Resources>
+
+        <SolidColorBrush x:Key="SolidEnterBrush" Color="LightGray" Opacity="0.5"/>
+        
+    </UserControl.Resources>
+    <Grid>
+        <Border  BorderThickness="0" CornerRadius="50,50,0,0" Height="40" VerticalAlignment="Bottom">
+            <Border.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF245EBA" Offset="0"/>
+                    <GradientStop Color="#FF0F4AA9" Offset="1"/>
+                    <GradientStop Color="#FF7EB1FF" Offset="0.312"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+
+        <Border Name="borMain" HorizontalAlignment="Center" MinWidth="100">
+            <Border.Resources>
+                <Style TargetType="Button">
+                    <Setter Property="Margin" Value="0,0,10,0"/>
+                    <!--<Setter Property="Cursor" Value="Hand"/>-->
+                    <Setter Property="Width" Value="65"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="Button">
+                                <Grid Loaded="g_Loaded" MouseLeftButtonDown="g_MouseLeftButtonDown" MouseEnter="g_MouseEnter" MouseLeave="g_MouseLeave" Tag="{TemplateBinding Content}"  x:Name="g">
+                                    <!--灰色阴影-->
+                                    <Border  x:Name="border"  BorderThickness="1" Background="#FF505050"  BorderBrush="#FF211212" CornerRadius="8" Visibility="Collapsed"/>
+                                    <!--图片存放-->
+                                    <Border      Width="35"  Background="{TemplateBinding Background}" Height="33" HorizontalAlignment="Center" VerticalAlignment="Top"  RenderTransformOrigin="0.5,0.5">
+                                        <Border.RenderTransform>
+                                            <RotateTransform/>
+                                        </Border.RenderTransform>
+                                    </Border>
+                                    <TextBlock  x:Name="txtTag" TextWrapping="Wrap" Text="{TemplateBinding Content}"  Foreground="White" Margin="1,40,1,5" HorizontalAlignment="Center"/>
+                                </Grid>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Border.Resources>
+            
+        </Border>        
+    </Grid>
+</UserControl>

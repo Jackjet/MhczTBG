@@ -1,0 +1,72 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:Microsoft_Windows_Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero"
+    xmlns:loca="clr-namespace:MhczTBG.Controls.Modules" 
+    xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" 
+    xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions" 
+    x:Class="MhczTBG.Controls.Modules.Desk"
+        Title="安全桌面WPF版" Background="{x:Null}" WindowStyle="None" AllowsTransparency="True" WindowState="Maximized" WindowStartupLocation="Manual" ResizeMode="NoResize" FontFamily="Microsoft YaHei" Icon="/MhczTBG;component/Resources/platform.ico">
+    <Window.Resources>
+        <SolidColorBrush x:Key="CheckBoxStroke" Color="#8E8F8F"/>
+        <Style x:Key="topmain_btn" TargetType="{x:Type RadioButton}">
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="Background" Value="#F4F4F4"/>
+            <Setter Property="BorderBrush" Value="{StaticResource CheckBoxStroke}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type RadioButton}">
+                        <Grid x:Name="grid" Width="Auto" Background="#00000000" Cursor="Hand" Opacity="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>                           
+                            <Image x:Name="normal" Grid.ColumnSpan="2" Source="/MhczTBG;component/Resources/topbtn_normal.png" Stretch="None"/>
+                            <Image x:Name="select" Grid.ColumnSpan="2" Source="/MhczTBG;component/Resources/topbtn_select.png" Stretch="None" Visibility="Collapsed"/>
+                            <ContentPresenter x:Name="contentPresenter" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Width="24" Margin="20,0,0,0">
+                                <ContentPresenter.Effect>
+                                    <DropShadowEffect ShadowDepth="0" Direction="-90" Opacity="0" Color="White"/>
+                                </ContentPresenter.Effect>
+                            </ContentPresenter>
+                            <TextBlock x:Name="textBlock" Grid.ColumnSpan="1" Text="{TemplateBinding Tag}" Grid.Column="1" VerticalAlignment="Center" Margin="5,0,8,0" Foreground="#FFF3F3F3" FontSize="12" FontWeight="Bold">
+                    		<TextBlock.Effect>
+                    			<DropShadowEffect ShadowDepth="1" BlurRadius="2" Direction="-90" Opacity="0.5"/>
+                    		</TextBlock.Effect>
+                            </TextBlock>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+        <Grid>
+        <Grid x:Name="main">
+            
+            
+            <Border x:FieldModifier="public" Padding="0,35,0,0" x:Name="desk" RenderTransformOrigin="0.5,0.5">
+                <Border.Background>
+                    <ImageBrush ImageSource="/MhczTBG;component/Resources/bg.jpg" />
+                </Border.Background>
+                <Border.RenderTransform>
+                    <TranslateTransform x:Name="desk_x" X="0"/>
+                </Border.RenderTransform>
+            </Border>
+            
+            <Border BorderThickness="1,0,1,1" HorizontalAlignment="Center" Height="32" VerticalAlignment="Top" CornerRadius="0,0,5,5" Margin="0,-1,0,0" >
+                <Border CornerRadius="0,0,4,4" BorderThickness="1,0,1,1">
+                    <StackPanel Orientation="Horizontal">
+                        <RadioButton x:Name="window_btn" Tag="回到桌面" Style="{DynamicResource topmain_btn}" Margin="0,0,-7,0">
+                            <Image Source="MhczTBG;component/Resources/windows.png"/>
+                        </RadioButton>
+                        <RadioButton x:Name="desk_btn" Tag="进入程序" Style="{DynamicResource topmain_btn}" Margin="-7,0,0,0" IsChecked="True">
+                            <Image Source="MhczTBG;component/Resources/usplate.png"/>
+                        </RadioButton>
+                    </StackPanel>
+                </Border>
+            </Border>
+        </Grid>   
+    </Grid>
+</Window>

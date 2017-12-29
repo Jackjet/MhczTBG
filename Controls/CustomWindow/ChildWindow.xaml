@@ -1,0 +1,88 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" 
+    xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions" 
+    x:Class="MhczTBG.Controls.CustomWindow.ChildWindow"
+        Title="弹出框" Background="{x:Null}" WindowStyle="None" AllowsTransparency="True" Width="650" Height="425" WindowStartupLocation="CenterScreen" Icon="/MhczTBG;component/Resources/open.ico">
+    <Window.Resources>
+        <LinearGradientBrush x:Key="backBrush" Opacity="0.6" EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="White" Offset="0"/>
+            <GradientStop Color="Black" Offset="1"/>
+        </LinearGradientBrush>
+
+        <LinearGradientBrush x:Key="backBorder" Opacity="0.4" EndPoint="0.5,1" StartPoint="0.5,0">            
+            <GradientStop Color="Black" Offset="1"/>
+        </LinearGradientBrush>
+        
+        <SolidColorBrush x:Key="tt" Color="Black" Opacity="0.5"/>
+
+        <Style x:Key="window_btn" TargetType="{x:Type Button}">
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid VerticalAlignment="Center" Background="{StaticResource tt}" Cursor="Hand">                           
+                            <ContentPresenter x:Name="contentPresenter" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Margin="3,0">
+                                <ContentPresenter.Effect>
+                                    <DropShadowEffect ShadowDepth="0" BlurRadius="10" Opacity="0"/>
+                                </ContentPresenter.Effect>
+                            </ContentPresenter>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsKeyboardFocused" Value="true"/>
+                            <Trigger Property="ToggleButton.IsChecked" Value="true"/>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Foreground" Value="#ADADAD"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+
+        <Border BorderBrush="{StaticResource backBorder}" BorderThickness="5">
+    		<Border BorderBrush="Black" BorderThickness="1">
+    			<Grid  Background="#FFF9F9F9">
+    				<Grid.RowDefinitions>
+    					<RowDefinition Height="27"/>
+    					<RowDefinition Height="*"/>
+    				</Grid.RowDefinitions>
+                    <Border  Grid.Row="1" Name="borMain">                        
+                    </Border>
+
+                    <Border x:Name="header" BorderBrush="#FF747474" Background="{StaticResource backBrush}" BorderThickness="1">    					
+    					<Grid>
+    						<Grid.ColumnDefinitions>
+    							<ColumnDefinition Width="*"/>
+    							<ColumnDefinition Width="70"/>
+    						</Grid.ColumnDefinitions>
+    						<TextBlock x:Name="title" Foreground="Black" Text="标题" VerticalAlignment="Center" Margin="5,0,0,0"  FontWeight="Bold">
+    							
+    						</TextBlock>
+    						<StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center">
+    							<Button x:Name="min_btn" Style="{DynamicResource window_btn}" >
+                                    <Image Source="/MhczTBG;component/Resources/window_min.png" Stretch="None"/>
+    							</Button>
+    							<Button  x:Name="max_btn" Style="{DynamicResource window_btn}" >
+                                    <Image Source="/MhczTBG;component/Resources/window_max.png" Stretch="None"/>
+    							</Button>
+    							<Button x:Name="close_btn" Style="{DynamicResource window_btn}" >
+                                    <Image Source="/MhczTBG;component/Resources/window_close.png" Stretch="None"/>
+    							</Button>
+    						</StackPanel>
+    					</Grid>
+    				</Border>
+                    
+                   
+                   
+    			</Grid>
+    		</Border>
+    	</Border>       
+    </Grid>
+</Window>

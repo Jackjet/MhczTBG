@@ -1,0 +1,114 @@
+﻿<UserControl x:Class="MhczTBG.Controls.CustomButton.UCButtonDaoHang"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"  
+             mc:Ignorable="d"  Padding="150,90,0,24" 
+           >
+    <UserControl.Resources>
+        <LinearGradientBrush x:Key="MouseEnterLin" Opacity="0.3" StartPoint="0,0.5" EndPoint="1,0.7" >
+            <GradientStop Color="Blue"  Offset="0.3"/>
+            <GradientStop Color="White" Offset="1"/>
+        </LinearGradientBrush>
+
+        <LinearGradientBrush x:Key="MouseClck" Opacity="0.7" StartPoint="0,0.5" EndPoint="1,0.7" >
+            <GradientStop Color="Blue"  Offset="0.3"/>
+            <GradientStop Color="White" Offset="1"/>
+        </LinearGradientBrush>
+
+        <ImageBrush x:Key="imageBrush" ImageSource="/MhczTBG;component/Resources/UCButton.png" />
+    </UserControl.Resources>
+    <Grid>
+        <Grid.Resources>            
+            <Style TargetType="Button" >
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Grid>
+                                <Grid.Resources>
+                                    <Style TargetType="TextBlock" >
+                                        <Setter Property="Foreground" Value="White"/>
+                                        <Setter Property="FontSize" Value="13"/>
+                                        <Setter Property="RenderTransformOrigin" Value="0.5,0.5"/>
+                                        <Setter Property="HorizontalAlignment" Value="Center"/>
+                                        <Setter Property="VerticalAlignment" Value="Center"/>
+                                        <Setter Property="Cursor" Value="Hand"/>
+                                        <Setter Property="RenderTransform">
+                                            <Setter.Value >
+                                                <RotateTransform Angle="293"/>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </Style>
+                                </Grid.Resources>
+
+                                <Grid   Height="{TemplateBinding Height}" Width="{TemplateBinding Width}" RenderTransformOrigin="-0.23,0.28" >
+                                    <Grid.RenderTransform>
+                                        <RotateTransform  Angle="144"/>
+                                    </Grid.RenderTransform>
+                                    <Path Loaded="Path_Loaded" MouseEnter="Path_MouseEnter" MouseLeave="Path_MouseLeave"  MouseLeftButtonDown="Grid_MouseLeftButtonDown" Cursor ='Hand' Fill="{StaticResource imageBrush}" Stretch="Fill" RenderTransformOrigin='0.5,0.5' Data='M239.75,258.75 L306.25,349 L310.5,347 L312.75,345.25 L314.5,343.75 L316.5,342.25 L319.25,340 L322,338 L324.25,336 L327.5,332.75 L329.5,330.5 L332.25,328 L334.5,325 L337.5,321.5 L339.25,319.5 L342.75,315.75 L344.25,313.25 L345.75,310.5 L351,303 L355.66666,296 L359.99966,288 L362.33301,283.33334 L365.33334,277 L368.33368,268.66666 L370.66736,261 L372.66705,254.33333 L375.66675,244.66702 L376.99976,236.6667 L378.33307,228.33301 L379.66672,220.00002 L379.99973,209.66669 L380.24973,203.49966 L379.99973,195.99965 L379.74973,187.74963 L379.24973,180.74962 L378.24973,174.9996 L377.24973,168.24959 L375.99976,162.99957 L374.49976,158.49956 L373.49976,153.24954 L371.74976,147.74954 L265.74994,182.49962'/>
+                                    <!--文本1-->
+                                    <TextBlock MouseLeftButtonDown="Grid_MouseLeftButtonDown" FontFamily="{TemplateBinding FontFamily}" FontSize="{TemplateBinding FontSize}" Foreground="{TemplateBinding Foreground}"   Name="t1" MouseEnter="Path_MouseEnter" />
+                                </Grid>
+
+                                <Grid   RenderTransformOrigin="-0.23,0.28"  Height="{TemplateBinding Height}" Width="{TemplateBinding Width}">
+                                    <Grid.RenderTransform>
+                                        <RotateTransform  Angle="72"/>
+                                    </Grid.RenderTransform>
+                                    <Path Loaded="Path_Loaded" MouseEnter="Path_MouseEnter" MouseLeave="Path_MouseLeave" MouseLeftButtonDown="Grid_MouseLeftButtonDown" Cursor ='Hand' Fill="{StaticResource imageBrush}" Stretch="Fill" RenderTransformOrigin='0.5,0.5' Data='M239.75,258.75 L306.25,349 L310.5,347 L312.75,345.25 L314.5,343.75 L316.5,342.25 L319.25,340 L322,338 L324.25,336 L327.5,332.75 L329.5,330.5 L332.25,328 L334.5,325 L337.5,321.5 L339.25,319.5 L342.75,315.75 L344.25,313.25 L345.75,310.5 L351,303 L355.66666,296 L359.99966,288 L362.33301,283.33334 L365.33334,277 L368.33368,268.66666 L370.66736,261 L372.66705,254.33333 L375.66675,244.66702 L376.99976,236.6667 L378.33307,228.33301 L379.66672,220.00002 L379.99973,209.66669 L380.24973,203.49966 L379.99973,195.99965 L379.74973,187.74963 L379.24973,180.74962 L378.24973,174.9996 L377.24973,168.24959 L375.99976,162.99957 L374.49976,158.49956 L373.49976,153.24954 L371.74976,147.74954 L265.74994,182.49962'/>
+                                    <!--文本2-->
+                                    <TextBlock MouseLeftButtonDown="Grid_MouseLeftButtonDown" FontFamily="{TemplateBinding FontFamily}" FontSize="{TemplateBinding FontSize}" Foreground="{TemplateBinding Foreground}"  MouseEnter="Path_MouseEnter"   RenderTransformOrigin="0.5,0.5">
+
+                                    </TextBlock>
+                                </Grid>
+
+                                <Grid   RenderTransformOrigin="-0.23,0.28" Height="{TemplateBinding Height}" Width="{TemplateBinding Width}">
+                                    <Grid.RenderTransform>
+                                        <RotateTransform />
+                                    </Grid.RenderTransform>
+                                    <Path Loaded="Path_Loaded" MouseEnter="Path_MouseEnter" MouseLeave="Path_MouseLeave" MouseLeftButtonDown="Grid_MouseLeftButtonDown" Cursor ='Hand' Fill="{StaticResource imageBrush}" Stretch="Fill" RenderTransformOrigin='0.5,0.5' Data='M239.75,258.75 L306.25,349 L310.5,347 L312.75,345.25 L314.5,343.75 L316.5,342.25 L319.25,340 L322,338 L324.25,336 L327.5,332.75 L329.5,330.5 L332.25,328 L334.5,325 L337.5,321.5 L339.25,319.5 L342.75,315.75 L344.25,313.25 L345.75,310.5 L351,303 L355.66666,296 L359.99966,288 L362.33301,283.33334 L365.33334,277 L368.33368,268.66666 L370.66736,261 L372.66705,254.33333 L375.66675,244.66702 L376.99976,236.6667 L378.33307,228.33301 L379.66672,220.00002 L379.99973,209.66669 L380.24973,203.49966 L379.99973,195.99965 L379.74973,187.74963 L379.24973,180.74962 L378.24973,174.9996 L377.24973,168.24959 L375.99976,162.99957 L374.49976,158.49956 L373.49976,153.24954 L371.74976,147.74954 L265.74994,182.49962'/>
+                                    <!--文本3-->
+                                    <TextBlock MouseLeftButtonDown="Grid_MouseLeftButtonDown" FontFamily="{TemplateBinding FontFamily}" FontSize="{TemplateBinding FontSize}" Foreground="{TemplateBinding Foreground}"  MouseEnter="Path_MouseEnter"  />
+
+                                </Grid>
+
+                                <Grid  Height="{TemplateBinding Height}" Width="{TemplateBinding Width}"  RenderTransformOrigin="-0.23,0.28" >
+                                    <Grid.RenderTransform>
+                                        <RotateTransform  Angle="288"/>
+                                    </Grid.RenderTransform>
+                                    <Path Loaded="Path_Loaded" MouseEnter="Path_MouseEnter" MouseLeave="Path_MouseLeave" MouseLeftButtonDown="Grid_MouseLeftButtonDown" Cursor ='Hand' Fill="{StaticResource imageBrush}" Stretch="Fill" RenderTransformOrigin='0.5,0.5' Data='M239.75,258.75 L306.25,349 L310.5,347 L312.75,345.25 L314.5,343.75 L316.5,342.25 L319.25,340 L322,338 L324.25,336 L327.5,332.75 L329.5,330.5 L332.25,328 L334.5,325 L337.5,321.5 L339.25,319.5 L342.75,315.75 L344.25,313.25 L345.75,310.5 L351,303 L355.66666,296 L359.99966,288 L362.33301,283.33334 L365.33334,277 L368.33368,268.66666 L370.66736,261 L372.66705,254.33333 L375.66675,244.66702 L376.99976,236.6667 L378.33307,228.33301 L379.66672,220.00002 L379.99973,209.66669 L380.24973,203.49966 L379.99973,195.99965 L379.74973,187.74963 L379.24973,180.74962 L378.24973,174.9996 L377.24973,168.24959 L375.99976,162.99957 L374.49976,158.49956 L373.49976,153.24954 L371.74976,147.74954 L265.74994,182.49962'/>
+                                    <!--文本4-->
+                                    <TextBlock MouseLeftButtonDown="Grid_MouseLeftButtonDown" FontFamily="{TemplateBinding FontFamily}" FontSize="{TemplateBinding FontSize}" Foreground="{TemplateBinding Foreground}"  MouseEnter="Path_MouseEnter"  >
+                                          <TextBlock.RenderTransform>
+                                        <RotateTransform  Angle="120"/>
+                                    </TextBlock.RenderTransform>
+                                    </TextBlock>
+                                </Grid>
+
+                                <Grid  Height="{TemplateBinding Height}" Width="{TemplateBinding Width}" RenderTransformOrigin="-0.23,0.28"   >
+                                    <Grid.RenderTransform>
+                                        <RotateTransform  Angle="216"/>
+                                    </Grid.RenderTransform>
+                                    <Path  Loaded="Path_Loaded" MouseEnter="Path_MouseEnter" MouseLeave="Path_MouseLeave" MouseLeftButtonDown="Grid_MouseLeftButtonDown" Cursor ='Hand' Fill="{StaticResource imageBrush}" Stretch="Fill" RenderTransformOrigin='0.5,0.5' Data='M239.75,258.75 L306.25,349 L310.5,347 L312.75,345.25 L314.5,343.75 L316.5,342.25 L319.25,340 L322,338 L324.25,336 L327.5,332.75 L329.5,330.5 L332.25,328 L334.5,325 L337.5,321.5 L339.25,319.5 L342.75,315.75 L344.25,313.25 L345.75,310.5 L351,303 L355.66666,296 L359.99966,288 L362.33301,283.33334 L365.33334,277 L368.33368,268.66666 L370.66736,261 L372.66705,254.33333 L375.66675,244.66702 L376.99976,236.6667 L378.33307,228.33301 L379.66672,220.00002 L379.99973,209.66669 L380.24973,203.49966 L379.99973,195.99965 L379.74973,187.74963 L379.24973,180.74962 L378.24973,174.9996 L377.24973,168.24959 L375.99976,162.99957 L374.49976,158.49956 L373.49976,153.24954 L371.74976,147.74954 L265.74994,182.49962'/>
+                                    <!--文本5-->
+                                    <TextBlock MouseLeftButtonDown="Grid_MouseLeftButtonDown" FontFamily="{TemplateBinding FontFamily}" FontSize="{TemplateBinding FontSize}" Foreground="{TemplateBinding Foreground}"  MouseEnter="Path_MouseEnter" >
+                                          <TextBlock.RenderTransform>
+                                        <RotateTransform  Angle="105"/>
+                                    </TextBlock.RenderTransform>
+                                    </TextBlock>
+                                </Grid>
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </Grid.Resources>
+
+        <Button FontFamily ="{Binding Path=FontFamily,RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}, AncestorLevel=1 }}"  FontSize ="{Binding Path=FontSize,RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}, AncestorLevel=1 }}"   Foreground ="{Binding Path=Foreground,RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}, AncestorLevel=1 }}"    Content="hew"  Name="btn" Height="140" Width="100" />
+
+        <Ellipse Name="ellTou" Margin="-150,-90,0,-24" Height="100" Width="100">
+            <Ellipse.Fill>
+                <ImageBrush ImageSource="/MhczTBG;component/Resources/tou.jpg" />
+            </Ellipse.Fill>
+        </Ellipse>
+    </Grid>
+</UserControl>

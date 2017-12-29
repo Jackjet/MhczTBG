@@ -1,0 +1,12 @@
+﻿<UserControl xmlns:my="clr-namespace:MhczTBG.Controls.ComSearchsDongTai" 
+             x:Class="MhczTBG.Controls.ComSearchsDongTai.AllXuan"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+            >
+    <Grid>
+        <CheckBox x:Name="cbkAll" Tag="" Content="全部"  IsChecked="True"  ></CheckBox>
+    </Grid>
+</UserControl>

@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="MhczTBG.Helper.BookControlUser"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit">
+    <Grid  >
+        <Grid.Background>
+            <ImageBrush  />
+        </Grid.Background>
+        <Grid Name="gridMain" Margin="60">
+            <Path Data="M61.333332,74 L73.333664,164 L74.667366,234 L72.66703,241.33333 L47.33363,386.00061 L75.333694,388.00061 L76.000694,399.33398 L103.33409,399.33398 L105.33444,412.66766 L385.33868,402.66733 L399.33923,402.66733 L536.00842,410.00067 L538.00848,400.00064 L567.34229,398.00064 L570.67603,395.33395 L596.67615,394.6673 L572.00879,203.33359 L596.00916,71.333328 L568.00873,68.666992 L568.00873,59.333305 L553.34186,58.000301 L552.67517,54.000298 L315.33813,56.666969 L109.33493,47.333626 L106.00154,47.333626 L106.66822,58.000629 L76.001076,58.667294 L74.667725,73.333961 z"   Stretch="Fill"  >
+                <Path.Fill>
+                    <ImageBrush/>
+                </Path.Fill>
+            </Path>
+            
+            <ScrollViewer  VerticalScrollBarVisibility="Auto" Margin="70">
+                <StackPanel x:Name="LayoutRoot"  >
+
+                </StackPanel>
+            </ScrollViewer>           
+        </Grid>
+    </Grid>
+</UserControl>

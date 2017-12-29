@@ -1,0 +1,263 @@
+﻿<UserControl x:Class="MhczTBG.Controls.TongXins.TongXinMain"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+              xmlns:layoutToolkit="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Layout.Toolkit" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"  FontSize="13" FontFamily="Microsoft YaHei" 
+             mc:Ignorable="d" 
+            >
+    <UserControl.Resources>
+        <SolidColorBrush x:Key="TrasteBrush" Color="Transparent"/>
+
+
+        <LinearGradientBrush x:Key="borTittleBrush" Opacity="0.3" EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="WhiteSmoke" Offset="0"/>
+            <GradientStop Color="Gray" Offset="1"/>
+        </LinearGradientBrush>
+
+        <LinearGradientBrush Opacity="0.3" x:Key="ItemEnterBrush" EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="White" Offset="0"/>
+            <GradientStop Color="#FFC8C8C8" Offset="1"/>
+        </LinearGradientBrush>    
+        
+        <LinearGradientBrush Opacity="0.6" x:Key="ItemSelectBrush" EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="White" Offset="0"/>
+            <GradientStop Color="#FFC8C8C8" Offset="1"/>
+        </LinearGradientBrush>
+        
+        <LinearGradientBrush x:Key="backBrush" EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF007BD2" Offset="0"/>
+            <GradientStop Color="Transparent" Offset="1"/>
+        </LinearGradientBrush>
+    </UserControl.Resources>
+    <Grid x:Name="gridMain"  >
+        <Grid.Background>
+            <ImageBrush Stretch="Fill" ImageSource="/MhczTBG;component/Resources/bg.jpg" />
+        </Grid.Background>
+        <Border BorderThickness="1" Margin="10" CornerRadius="8" Background="{StaticResource backBrush}" BorderBrush="#99FFFFFF">         
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Border BorderBrush="Black" BorderThickness="0,0,1,0" CornerRadius="8,0,0,8"/>
+                <Border  CornerRadius="8" Grid.ColumnSpan="2">
+                    <Border.Background>
+                        <LinearGradientBrush EndPoint="0.436,0.943" StartPoint="-0.061,-0.114">
+                            <GradientStop Color="#4CFFFFFF" Offset="0"/>
+                            <GradientStop Color="Transparent" Offset="1"/>
+                            <GradientStop Color="#19FFFFFF" Offset="0.517"/>
+                            <GradientStop Color="Transparent" Offset="0.517"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                </Border>
+                <Grid x:Name="left">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="35"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <!--修改180-->
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <!--logo-->
+                    <Border x:Name="full_bd" BorderBrush="#4CFFFFFF" BorderThickness="0,0,0,1" CornerRadius="8,0,0,0" Cursor="Hand">
+                        <!--<Border.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#66FFFFFF" Offset="0"/>
+                                <GradientStop Color="Transparent" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Border.Background>-->
+                        <Image HorizontalAlignment="Left"  Margin="5,3,0,5" Source="/MhczTBG;component/Resources/logo.png">
+                            <Image.Effect>
+                                <DropShadowEffect ShadowDepth="1" BlurRadius="2" Direction="-90"/>
+                            </Image.Effect>
+                        </Image>
+                    </Border>
+                    <TextBlock HorizontalAlignment="Center" Grid.Row="1" TextWrapping="Wrap" Text="通信安全风险预警管理平台" VerticalAlignment="Center" Foreground="White">
+    					<TextBlock.Effect>
+    						<DropShadowEffect ShadowDepth="1" BlurRadius="2" Direction="90"/>
+    					</TextBlock.Effect>
+                    </TextBlock>
+                    <Rectangle Height="1" Grid.Row="1" VerticalAlignment="Bottom" Fill="#FF8DC9F5"/>
+                    <Border Margin="10" Grid.Row="2" CornerRadius="8" Background="#66000000">
+                        <!--用户信息-->
+                        <Grid>
+                            <Border BorderThickness="0,0,0,1" CornerRadius="8" BorderBrush="#CCFFFFFF"/>
+                            <Border BorderThickness="0,1,0,0" CornerRadius="8" BorderBrush="#CC000000"/>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="auto"/>
+                                </Grid.RowDefinitions>
+                                <Image HorizontalAlignment="Left"  Margin="5,5,0,5" Source="/MhczTBG;component/Resources/people.png" />
+                                <StackPanel Margin="50,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Horizontal">
+                                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="欢迎您：" Foreground="White"/>
+                                    <TextBlock x:Name="user_name" Text=" " HorizontalAlignment="Left" TextWrapping="Wrap"  Foreground="White" Cursor="Hand"/>
+                                </StackPanel>
+                                <StackPanel Grid.Row="1" Margin="5">
+                                    <Grid Margin="0,2">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="70"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock TextWrapping="Wrap" Text="职位：" Foreground="#FFF2FF78"/>
+                                        <TextBlock x:Name="txtOfficer" TextWrapping="Wrap" Text=" " Foreground="White"  Grid.Column="1"/>
+                                    </Grid>
+                                    <Grid Margin="0,2">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="70"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock TextWrapping="Wrap" Text="部门名称：" Foreground="#FFF2FF78" />
+                                        <TextBlock x:Name="dep_name" TextWrapping="Wrap" Text="" Foreground="White"  Grid.Column="1"/>
+                                    </Grid>
+
+                                </StackPanel>
+                                <StackPanel  VerticalAlignment="Bottom" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,20,0">
+                                    <Button x:Name="ChangePassword" Content="更改密码"  />
+                                    <Button x:Name="bt注销" Content="注销"  />
+                                </StackPanel>
+                            </Grid>
+                        </Grid>
+                    </Border>
+
+
+
+                    <Border Name="bordDaoHang" Margin="10" Grid.Row="3" BorderThickness="0,1,0,1" CornerRadius="8" BorderBrush="#CCFFFFFF" >
+                        <Border.Resources>                                                                                   
+                            <Style TargetType="Expander">
+                                <Setter Property="BorderBrush" Value="Silver"/>
+                                <Setter Property="Foreground" Value="White"/>
+                                <Setter Property="BorderThickness" Value="1"/>
+                            </Style>
+                                                        
+                            <Style TargetType="TextBox">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="TextBox">
+                                            <Border  BorderBrush="Black" BorderThickness="0,0.5,0,0">
+                                                <StackPanel MouseEnter="StackPanel_MouseEnter" MouseLeave="StackPanel_MouseLeave" MouseLeftButtonDown="txtTittle_MouseLeftButtonDown" MouseLeftButtonUp="StackPanel_MouseLeftButtonUp" Background="Transparent" Orientation="Horizontal" >                                                    
+                                                    <Border Height="20"  Width="20" Margin="5,3" Background="{TemplateBinding Background}"/>
+                                                    <TextBlock    HorizontalAlignment="Center" VerticalAlignment="Center"  Foreground="{TemplateBinding Foreground}" Text="{TemplateBinding Text}" >
+                                                    </TextBlock>
+                                                </StackPanel>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                            
+                        </Border.Resources>
+                        
+                        <!--导航切换按钮-->
+                        <Grid   Margin="5" >
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            
+                            <Border  Name="borLeft">
+                            </Border>
+                            
+                        </Grid>
+                    </Border>
+                </Grid>
+                
+                <Grid x:Name="right" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <!--顶部区域-->
+                    <Border BorderThickness="0,0,0,1" CornerRadius="0,8,0,0">
+                        <!--<Border.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#66FFFFFF" Offset="0"/>
+                                <GradientStop Color="Transparent" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Border.Background>-->
+                        <Grid>
+                            <TextBlock x:Name="Title" HorizontalAlignment="Left" TextWrapping="Wrap" Text="安全故障管理系统" VerticalAlignment="Center" FontSize="24" FontWeight="Bold" Margin="20,5,0,0" Cursor="Hand">    						
+    							<TextBlock.Foreground>
+    								<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+    									<GradientStop Color="White" Offset="0"/>
+    									<GradientStop Color="#FFD6D6D6" Offset="1"/>
+    								</LinearGradientBrush>
+    							</TextBlock.Foreground>
+                            </TextBlock>
+
+                            <StackPanel HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0" Orientation="Horizontal">
+                                <!--<StackPanel.Effect>
+                                    <DropShadowEffect ShadowDepth="1" BlurRadius="2" Direction="90"/>
+                                </StackPanel.Effect>-->
+
+                                <TextBlock x:Name="time1" TextWrapping="Wrap" VerticalAlignment="Center" Foreground="White" FontSize="18" />
+                                <TextBlock x:Name="time3" TextWrapping="Wrap" VerticalAlignment="Center" Foreground="White" FontSize="18" Margin="15,0,0,0"/>
+                                <TextBlock x:Name="time2" TextWrapping="Wrap" VerticalAlignment="Center" Foreground="White" FontSize="18" Margin="15,0,0,0"/>
+                            </StackPanel>
+                            <Grid HorizontalAlignment="Left" Width="300" Clip="M29.749578,28.66943 C29.249578,29.521023 28.773016,30.302299 28.319889,31.013262 L32.796455,32.677383 C33.99958,31.732037 34.925362,30.396051 35.573799,28.66943 z M29.046453,22.200455 L32.819893,23.184864 L31.437078,25.716202 L43.601151,25.716202 L43.601151,28.66943 L39.335522,28.66943 C38.601147,30.825754 37.56599,32.591442 36.230049,33.966488 L42.968338,36.521267 L41.280834,39.661999 L33.300362,36.169689 C30.64411,37.638493 26.898014,38.771343 22.062075,39.568245 C21.421448,38.271328 20.86676,37.224415 20.39801,36.427513 C24.093325,35.974373 27.069889,35.329819 29.327703,34.493851 C27.265202,33.65007 25.413637,32.919579 23.773012,32.302368 C24.562075,31.138266 25.304264,29.927286 25.999577,28.66943 L20.421448,28.66943 L20.421448,25.716202 L27.523014,25.716202 C28.062077,24.575539 28.569891,23.403622 29.046453,22.200455 z M33.546455,16.364313 L34.43708,18.872213 L42.757397,18.872213 L42.757397,23.981766 L39.358959,23.981766 L39.358959,21.778564 L24.73395,21.778564 L24.73395,23.888014 L21.33551,23.888014 L21.33551,18.872213 L30.335516,18.872213 C30.116766,18.262817 29.898016,17.684673 29.679266,17.137779 z M55.999596,19.833185 C54.718342,21.458242 53.124592,23.020796 51.218342,24.520847 L60.780846,24.520847 C58.905846,23.0833 57.312096,21.520744 55.999596,19.833185 z M54.499592,16.458067 L58.601158,16.458067 L57.991783,17.348722 C60.007408,20.239449 63.233974,22.723911 67.671478,24.802107 C66.843353,25.833393 66.140228,26.755301 65.562103,27.567829 C64.390221,26.942806 63.296474,26.286533 62.280849,25.59901 L62.280849,27.520952 L57.733971,27.520952 L57.733971,29.888222 L64.788658,29.888222 L64.788658,32.888325 L57.733971,32.888325 L57.733971,35.700924 L66.616791,35.700924 L66.616791,38.701031 L45.382401,38.701031 L45.382401,35.700924 L54.241779,35.700924 L54.241779,32.888325 L47.257401,32.888325 L47.257401,29.888222 L54.241779,29.888222 L54.241779,27.520952 L49.718342,27.520952 L49.718342,25.669325 C48.687088,26.403727 47.585526,27.122501 46.413651,27.825651 C45.960526,27.185003 45.265213,26.270908 44.327713,25.083368 C49.327717,22.395775 52.718342,19.520674 54.499592,16.458067 z M72.171478,30.239798 L72.171478,34.458694 L76.249603,34.458694 L76.249603,30.239798 z M75.827728,23.841137 L75.827728,27.427198 L79.179298,27.427198 L79.179298,35.841553 C80.632423,35.044651 81.901955,34.122746 82.987892,33.075832 C82.019142,31.4039 81.331642,29.532742 80.925392,27.462357 C80.675392,27.798306 80.421486,28.122536 80.163673,28.435047 C79.616798,27.653769 78.968361,26.841242 78.218361,25.997461 C78.710548,25.349001 79.171486,24.630226 79.601173,23.841137 z M83.409767,23.137987 C83.316017,23.372372 83.214455,23.598942 83.10508,23.817698 C83.339455,26.434977 83.952736,28.677242 84.944923,30.544495 C86.023048,28.622553 86.76133,26.153717 87.159767,23.137987 z M82.226173,16.317438 L85.507423,17.161217 C85.241798,18.161251 84.956642,19.11441 84.651955,20.020691 L91.601181,20.020691 L91.601181,23.137987 L90.194923,23.137987 C89.741798,27.216253 88.651955,30.595278 86.925392,33.275059 C88.19883,34.595417 89.788673,35.614983 91.694931,36.333759 C91.023056,37.224415 90.327736,38.263515 89.608986,39.451054 C87.780861,38.419769 86.226173,37.193165 84.944923,35.77124 C83.476173,37.325981 81.702736,38.607277 79.624611,39.615124 C79.171486,38.763531 78.714455,37.982254 78.253517,37.27129 L72.171478,37.27129 L72.171478,39.09948 L69.241791,39.09948 L69.241791,27.427198 L72.593353,27.427198 L72.593353,23.841137 L68.702728,23.841137 L68.702728,20.676964 L72.593353,20.676964 L72.593353,16.41119 L75.827728,16.41119 L75.827728,20.676964 L79.624611,20.676964 L79.624611,23.805979 C80.726173,21.759033 81.593361,19.262852 82.226173,16.317438 z M103.95275,30.450741 L103.95275,31.388275 L111.31213,31.388275 L111.31213,30.450741 z M103.95275,27.68502 L103.95275,28.622553 L111.31213,28.622553 L111.31213,27.68502 z M101.14024,25.575573 L114.12463,25.575573 L114.12463,33.497723 L109.17931,33.497723 L109.17931,34.505569 L115.43713,34.505569 L115.43713,36.990032 L109.17931,36.990032 L109.17931,39.568245 L106.08556,39.568245 L106.08556,36.990032 L99.733994,36.990032 L99.733994,34.505569 L106.08556,34.505569 L106.08556,33.497723 L101.14024,33.497723 z M105.359,20.30195 C105.76525,20.786345 106.25744,21.387928 106.83556,22.106701 L105.98009,22.4114 L109.06213,22.4114 C109.609,21.669188 110.07384,20.966038 110.45666,20.30195 z M95.983994,20.208199 L95.983994,32.314087 C96.374619,32.353153 96.710556,32.372684 96.991806,32.372684 C97.616806,32.372684 97.929306,31.966419 97.929306,31.153891 C97.929306,29.200699 97.374619,27.474075 96.265244,25.974024 L97.765244,20.208199 z M93.288681,17.442476 L100.57774,17.442476 L100.57774,20.231636 L98.890244,25.856833 C99.999619,27.96628 100.55431,29.817907 100.55431,31.411713 C100.55431,32.372684 100.41759,33.150055 100.14415,33.743824 C99.870712,34.337597 99.489853,34.737999 99.001572,34.945038 C98.51329,35.152077 97.632431,35.239971 96.358994,35.208721 C96.249619,34.404003 96.124619,33.571945 95.983994,32.71254 L95.983994,39.52137 L93.288681,39.52137 z M108.82775,16.317438 C109.03869,16.786203 109.26916,17.364349 109.51916,18.051872 L114.9215,18.051872 L114.9215,20.30195 L111.31213,20.30195 L113.58556,21.122292 L112.49572,22.4114 L115.39025,22.4114 L115.39025,24.661478 L100.24962,24.661478 L100.24962,22.4114 L103.34337,22.4114 C102.96837,21.848881 102.62462,21.387928 102.31212,21.02854 L104.26916,20.30195 L101.11681,20.30195 L101.11681,18.051872 L105.99181,18.051872 C105.81213,17.629984 105.62463,17.231531 105.42931,16.856518 z M122.46838,35.34935 L122.46838,36.708771 L134.37463,36.708771 L134.37463,35.34935 z M122.46838,28.739744 L122.46838,30.005413 L133.62463,30.005413 L133.62463,28.739744 z M119.28088,26.58342 L136.67152,26.58342 L136.67152,32.161739 L122.46838,32.161739 L122.46838,33.193024 L137.42152,33.193024 L137.42152,39.591686 L134.37463,39.591686 L134.37463,38.84166 L122.46838,38.84166 L122.46838,39.591686 L119.28088,39.591686 z M121.01526,20.231636 C120.23401,21.184795 119.34338,22.036386 118.34338,22.786413 L123.07776,22.786413 C122.65588,22.255144 122.1637,21.653561 121.6012,20.981663 L122.56213,20.231636 z M120.12463,16.387753 L123.35901,16.387753 C123.10901,16.950272 122.84338,17.489353 122.56213,18.004995 L128.60901,18.004995 L128.60901,20.231636 L124.10901,20.231636 C124.57776,20.74728 125.0387,21.262922 125.49182,21.778564 L124.13245,22.786413 L126.40588,22.786413 C126.26526,22.38015 126.12463,21.966072 125.98401,21.544182 L128.63245,21.098854 C128.80432,21.645748 128.9762,22.208269 129.14807,22.786413 L134.5387,22.786413 C133.89807,21.973885 133.33557,21.309799 132.8512,20.794155 L133.57776,20.231636 L132.52307,20.231636 C132.00745,21.044165 131.42932,21.802004 130.7887,22.505152 C130.33557,22.161392 129.50745,21.591059 128.30432,20.794155 C129.42932,19.559738 130.3512,18.090937 131.06995,16.387753 L134.32776,16.387753 C134.14026,16.950272 133.92932,17.489353 133.69495,18.004995 L139.10902,18.004995 L139.10902,20.231636 L135.59338,20.231636 C136.01527,20.684778 136.42934,21.137918 136.83559,21.591059 L135.19495,22.786413 L139.01527,22.786413 L139.01527,26.16153 L135.82777,26.16153 L135.82777,25.17712 L120.26526,25.17712 L120.26526,26.16153 L117.07776,26.16153 L117.07776,22.786413 L118.29651,22.786413 C117.93713,22.317648 117.31213,21.606686 116.4215,20.653526 C118.12463,19.403482 119.35901,17.981558 120.12463,16.387753 z M157.31996,24.802107 L157.31996,27.052185 L159.61684,27.052185 L159.61684,24.802107 z M152.02309,24.802107 L152.02309,27.052185 L154.31996,27.052185 L154.31996,24.802107 z M157.31996,20.137882 L157.31996,22.364523 L159.61684,22.364523 L159.61684,20.137882 z M152.02309,20.137882 L152.02309,22.364523 L154.31996,22.364523 L154.31996,20.137882 z M149.0934,17.512791 L162.54654,17.512791 L162.54654,29.677277 L157.31996,29.677277 L157.31996,31.364836 L162.66373,31.364836 L162.66373,34.036804 L157.31996,34.036804 L157.31996,36.075939 L163.69498,36.075939 L163.69498,38.747906 L147.61684,38.747906 L147.61684,36.275162 C145.55434,36.845497 143.33559,37.513489 140.96059,38.27914 L140.30434,34.950897 L143.0934,34.318066 L143.0934,28.552238 L140.8434,28.552238 L140.8434,25.645887 L143.0934,25.645887 L143.0934,20.723841 L140.74965,20.723841 L140.74965,17.770613 L148.43715,17.770613 L148.43715,20.723841 L146.0934,20.723841 L146.0934,25.645887 L148.27309,25.645887 L148.27309,28.552238 L146.0934,28.552238 L146.0934,33.55632 C146.92934,33.32975 147.74184,33.09927 148.5309,32.864887 C148.4684,33.9743 148.46059,35.044651 148.50746,36.075939 L154.31996,36.075939 L154.31996,34.036804 L148.97621,34.036804 L148.97621,31.364836 L154.31996,31.364836 L154.31996,29.677277 L149.0934,29.677277 z M169.88248,32.302368 L172.24966,34.388378 C170.48404,36.044685 168.55435,37.560364 166.4606,38.935413 C165.74185,38.013504 165.03091,37.17754 164.32779,36.427513 C166.34341,35.286846 168.19498,33.9118 169.88248,32.302368 z M181.76529,32.067986 C183.49966,33.255527 185.44498,34.70089 187.60124,36.404076 L185.44498,38.654152 C183.7731,37.216602 181.89029,35.708736 179.79654,34.130558 z M186.12466,17.044025 L186.59341,19.62224 C183.45279,19.919125 180.16763,20.161322 176.73795,20.348827 C175.11295,21.333239 173.39029,22.270771 171.56998,23.161425 L179.31607,22.809851 C180.48013,22.15358 181.67154,21.458242 182.89029,20.723841 L185.09341,22.927042 C180.71841,25.349001 176.06216,27.4897 171.12466,29.34914 C174.49185,29.200699 177.88248,29.005379 181.29654,28.763184 C180.69498,28.169413 180.12466,27.630331 179.5856,27.145939 L181.76529,25.388065 C182.96841,26.434977 184.87466,28.270979 187.48405,30.89607 L185.25748,32.935204 C184.70279,32.317993 184.16763,31.735943 183.65201,31.189049 L177.99185,31.411713 L177.99185,36.919716 C177.99185,37.708805 177.76138,38.31039 177.30045,38.724468 C176.83951,39.138546 176.13638,39.363163 175.19107,39.398319 C174.24576,39.433475 172.98404,39.451054 171.40591,39.451054 C171.26529,38.31039 171.06216,37.247852 170.79654,36.263443 C171.56216,36.325947 172.37857,36.357197 173.24576,36.357197 C173.87857,36.357197 174.29654,36.28688 174.49966,36.146252 C174.70279,36.005623 174.80435,35.73999 174.80435,35.34935 L174.80435,31.564062 C171.30435,31.743755 168.62466,31.942982 166.76529,32.161739 L165.94498,29.255388 C168.5856,28.255352 171.44107,26.970152 174.51138,25.399784 C171.40982,25.587292 169.01529,25.802143 167.32779,26.044338 L166.4606,23.184864 C168.16373,22.552031 169.93716,21.688719 171.78091,20.594931 L165.80435,20.770718 C165.69498,19.880062 165.5231,18.942528 165.28873,17.958118 C172.94498,17.98937 179.89029,17.684673 186.12466,17.044025 z M204.03093,16.293999 C204.4528,17.145592 204.85515,18.012808 205.23796,18.895653 L211.13249,18.895653 L211.13249,21.567619 L203.63249,21.567619 C202.60905,23.161427 201.42937,24.731794 200.09343,26.278721 C202.05437,26.208406 204.21843,26.102934 206.58562,25.962305 C206.05437,25.157589 205.49187,24.341154 204.89812,23.513 L207.24187,22.177015 C208.89812,24.364592 210.31999,26.403727 211.50749,28.294416 L208.9528,29.841345 C208.68718,29.364767 208.40984,28.884281 208.12077,28.399889 L206.98405,28.458485 L206.98405,35.208721 C206.98405,35.818115 207.18718,36.122814 207.59343,36.122814 L207.80437,36.122814 C208.17155,36.122814 208.41374,35.9314 208.53093,35.548576 C208.64812,35.165749 208.7653,34.091492 208.88249,32.325806 C209.81999,32.794575 210.75749,33.185211 211.69499,33.497723 C211.48405,35.888432 211.11491,37.419735 210.58757,38.091633 C210.06023,38.763531 209.22624,39.09948 208.08562,39.09948 L206.7028,39.09948 C204.90593,39.09948 203.99968,38.107258 203.98405,36.122814 L203.98405,28.645992 L202.08562,28.786621 C201.99968,32.216427 201.47624,34.714561 200.5153,36.281021 C199.55437,37.847485 198.3903,38.974476 197.02312,39.661999 C196.36687,38.919788 195.59343,38.103352 194.7028,37.212696 C192.60905,37.423641 190.6403,37.669743 188.79655,37.951004 L188.53874,34.833706 C190.08562,34.724327 192.74968,34.443069 196.53093,33.989929 C196.49187,34.575886 196.46843,35.204815 196.46062,35.876713 C198.16374,34.743858 199.05046,32.478157 199.12077,29.079599 C198.24577,29.181166 197.54655,29.286638 197.02312,29.396017 L196.17937,26.536543 C197.41374,25.755266 198.74968,24.098959 200.18718,21.567619 L196.22624,21.567619 L196.22624,18.895653 L201.41765,18.895653 C201.15984,18.27063 200.86687,17.614357 200.53874,16.926834 z M192.33562,16.293999 L195.40593,17.512791 C194.2653,19.65349 193.03093,21.669188 191.7028,23.559877 C192.35124,23.552065 193.08952,23.524721 193.91765,23.477842 L194.98405,21.70825 L197.42155,23.020796 C195.79655,25.583385 194.22624,27.942842 192.71062,30.099167 L196.17937,29.700716 C196.05437,30.669498 195.99968,31.560156 196.0153,32.372684 C193.48405,32.497688 191.35124,32.716446 189.61687,33.028957 L188.8903,30.427303 C189.78874,29.528835 190.88249,28.114723 192.17155,26.184969 C190.9528,26.270908 189.94499,26.372475 189.14812,26.489666 L188.30437,23.841137 C189.78874,21.809816 191.13249,19.294104 192.33562,16.293999 z">
+                                <Rectangle x:Name="rectangle"  HorizontalAlignment="Left" Width="50" RenderTransformOrigin="0.5,0.5">
+                                    <Rectangle.RenderTransform>
+                                        <TranslateTransform  x:Name="tr"/>
+                                    </Rectangle.RenderTransform>
+                                    <Rectangle.Fill>
+                                        <LinearGradientBrush ColorInterpolationMode="SRgbLinearInterpolation" EndPoint="0,0.5" MappingMode="RelativeToBoundingBox" SpreadMethod="Pad" StartPoint="1,0.5">
+                                            <LinearGradientBrush.RelativeTransform>
+                                                <MatrixTransform Matrix="Identity"/>
+                                            </LinearGradientBrush.RelativeTransform>
+                                            <LinearGradientBrush.Transform>
+                                                <MatrixTransform Matrix="Identity"/>
+                                            </LinearGradientBrush.Transform>
+                                            <GradientStop Color="Transparent" Offset="0"/>
+                                            <GradientStop Color="Transparent" Offset="1"/>
+                                            <GradientStop Color="White" Offset="0.227"/>
+                                            <GradientStop Color="White" Offset="0.716"/>
+                                        </LinearGradientBrush>
+                                    </Rectangle.Fill>
+                                </Rectangle>
+                            </Grid>
+                        </Grid>
+                    </Border>
+
+                    <!--首页容器-->
+                    <Border Grid.Row="2" Background="#FFE7E7E7" CornerRadius="0,0,8,0">
+
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="30"/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Border Grid.Row="0" CornerRadius="5,5,0,0" Background="{StaticResource borTittleBrush}" BorderBrush="#FF818181" BorderThickness="0,0,0,1">                              
+                                <StackPanel  Orientation="Horizontal">
+                                    <Image x:Name="imgT" Margin="5,2"  Source="/MhczTBG;component/Resources/文件夹.png"></Image>
+                                    <TextBlock x:FieldModifier="public" Name="txtTittle"  Margin="5,0" Text="综合统计"  VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </Border>
+                            <Border  x:Name="borMain" Grid.Row="1"  RenderTransformOrigin="0.5,0.5" Background="#FFE7E7E7">
+                                <Border.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Border.RenderTransform>
+                                <!--<my1:Index />-->
+                                <!--放index页面-->
+                            </Border>
+
+                            <Border x:Name="borTip"  Grid.Row="1">
+                                
+                            </Border>
+                        </Grid>
+                    </Border>
+
+
+
+                </Grid>
+            </Grid>
+        </Border>
+
+    </Grid>
+</UserControl>

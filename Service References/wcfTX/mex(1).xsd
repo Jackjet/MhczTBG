@@ -1,0 +1,1277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/TxdWcf.Layouts.FTxdWcf" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/TxdWcf.Layouts.FTxdWcf" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOf两列数据返回">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="两列数据返回" nillable="true" type="tns:两列数据返回" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOf两列数据返回" nillable="true" type="tns:ArrayOf两列数据返回" />
+  <xs:complexType name="两列数据返回">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LinkTitle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="f父级" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="两列数据返回" nillable="true" type="tns:两列数据返回" />
+  <xs:complexType name="ArrayOfUserInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserInfo" nillable="true" type="tns:UserInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserInfo" nillable="true" type="tns:ArrayOfUserInfo" />
+  <xs:complexType name="UserInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="公司" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="办公室" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="名" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="姓" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="显示名称" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="用户登录名" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="电子邮件" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="电话号码" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="职务" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="部门" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserInfo" nillable="true" type="tns:UserInfo" />
+  <xs:complexType name="ArrayOf返回一列数据">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="返回一列数据" nillable="true" type="tns:返回一列数据" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOf返回一列数据" nillable="true" type="tns:ArrayOf返回一列数据" />
+  <xs:complexType name="返回一列数据">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LinkTitle" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="返回一列数据" nillable="true" type="tns:返回一列数据" />
+  <xs:complexType name="ArrayOf多列数据返回">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="多列数据返回" nillable="true" type="tns:多列数据返回" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOf多列数据返回" nillable="true" type="tns:ArrayOf多列数据返回" />
+  <xs:complexType name="多列数据返回">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Field01" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Field02" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Field03" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Field04" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Field05" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Field06" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="多列数据返回" nillable="true" type="tns:多列数据返回" />
+  <xs:complexType name="ArrayOfTXListItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TXListItem" nillable="true" type="tns:TXListItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTXListItem" nillable="true" type="tns:ArrayOfTXListItem" />
+  <xs:complexType name="TXListItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="C3Abis接口数据" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="C3A接口数据" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="C3CTCSID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="C3GuZhangSuoZaiRBCQu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="C3MT1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="C3MT2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="C3PRI接口数据" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="C3主用MT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="C3接口数据综合分析" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="C3故障发生公里标" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="C3故障恢复公里标" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="C3故障所在小区" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="C3故障跟踪处理情况" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ChuLiRen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DingXing" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DingZe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EndData" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GTchuliCuoShi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ISC3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsFinish" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsFirst" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShangJiDanWeiShouLiRen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShuJuLeiXing" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TongXinZhongDuanLuShi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="YNshouLi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="f附件url" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="startData" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="上报时间" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="值班调度" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="原因分析" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="发生故障单位" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="受理日期时间" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="处理单位" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="大中心定" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="定责类别" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="定责部门" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="局定" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="局电务调度得到通知时间" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="工区出发时间" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="工区到达时间" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="工区名称" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="延时" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="影响客车数" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="影响客车次" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="影响范围" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="影响货车数" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="影响货车次" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="故障地点" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="故障处理经过" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="故障类别" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="是否报局" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="是否登记" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="段出发时间" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="段到达时间" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="段定" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="段调度得到通知时间" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="申告单位" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="级别" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="线别" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="经济损失" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="考核意见" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="联系方式" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="设备故障概况" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="设备类型一级" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="设备类型三级" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="设备类型二级" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="说明" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="责任单位承担损失费用" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="责任程度" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="车间出发时间" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="车间到达时间" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="车间名称" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="车间通知时间" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="通信段" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="采取措施" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="防范措施" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="障碍外转情况" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="障碍现象" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="障碍设备名称" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="高铁公里标" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="高铁发生次" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="高铁定性" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="高铁定责" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="高铁机车型号" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="高铁机车所属局" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="高铁端" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="高铁类别" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="高铁车次" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="高铁问题归类" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TXListItem" nillable="true" type="tns:TXListItem" />
+  <xs:complexType name="ArrayOfTXListV2">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TXListV2" nillable="true" type="tns:TXListV2" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTXListV2" nillable="true" type="tns:ArrayOfTXListV2" />
+  <xs:complexType name="TXListV2">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="C3Abis接口数据" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="C3A接口数据" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="C3CTCSID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="C3GuZhangSuoZaiRBCQu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="C3MT1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="C3MT2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="C3PRI接口数据" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="C3主用MT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="C3接口数据综合分析" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="C3故障发生公里标" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="C3故障恢复公里标" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="C3故障所在小区" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="C3故障跟踪处理情况" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ChuLiRen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DingXing" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DingZe" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EndData" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GTchuliCuoShi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsFinish" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsFirst" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShangJiDanWeiShouLiRen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShuJuLeiXing" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TongXinZhongDuanLuShi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="YNshouLi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="startData" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="上报时间" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="值班调度" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="原因分析" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="发生故障单位" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="受理日期时间" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="处理单位" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="大中心定" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="定责类别" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="定责部门" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="局定" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="局电务调度得到通知时间" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="工区出发时间" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="工区到达时间" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="工区名称" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="序号" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="延时" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="影响客车数" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="影响客车次" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="影响范围" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="影响货车数" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="影响货车次" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="故障地点" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="故障处理经过" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="故障类别" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="是否报局" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="是否登记" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="段出发时间" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="段到达时间" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="段定" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="段调度得到通知时间" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="申告单位" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="级别" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="线别" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="经济损失" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="考核意见" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="联系方式" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="设备故障概况" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="设备类型一级" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="设备类型三级" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="设备类型二级" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="说明" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="责任单位承担损失费用" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="责任程度" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="车间出发时间" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="车间到达时间" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="车间名称" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="车间通知时间" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="采取措施" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="防范措施" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="障碍外转情况" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="障碍现象" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="障碍设备名称" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="高铁公里标" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="高铁发生次" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="高铁定性" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="高铁定责" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="高铁机车型号" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="高铁机车所属局" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="高铁端" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="高铁类别" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="高铁车次" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="高铁问题归类" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TXListV2" nillable="true" type="tns:TXListV2" />
+  <xs:complexType name="ArrayOflist日志01">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="list日志01" nillable="true" type="tns:list日志01" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOflist日志01" nillable="true" type="tns:ArrayOflist日志01" />
+  <xs:complexType name="list日志01">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IDNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="log" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="upTime" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="list日志01" nillable="true" type="tns:list日志01" />
+  <xs:complexType name="ArrayOfT定性分类统计表月份">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="T定性分类统计表月份" nillable="true" type="tns:T定性分类统计表月份" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfT定性分类统计表月份" nillable="true" type="tns:ArrayOfT定性分类统计表月份" />
+  <xs:complexType name="T定性分类统计表月份">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="D10事故" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="D16事故" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="D21事故" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="D9事故" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="大通道中断" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="小计" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="月份" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="行车设备故障" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="记事" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="通信一类障碍" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="通信二类障碍" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="T定性分类统计表月份" nillable="true" type="tns:T定性分类统计表月份" />
+  <xs:complexType name="ArrayOfT设备二级分类统计表车间">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="T设备二级分类统计表车间" nillable="true" type="tns:T设备二级分类统计表车间" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfT设备二级分类统计表车间" nillable="true" type="tns:ArrayOfT设备二级分类统计表车间" />
+  <xs:complexType name="T设备二级分类统计表车间">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="A会议设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="A传输设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="A光电缆线路" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="A其它" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="A外界影响" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="A数据网设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="A数调设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="A有线小计" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="A电源设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="A视频设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="A雷害" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="B天线" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="B干扰" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="B无线小计" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="B机车台" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="B杆塔" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="B电源" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="B车站台" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="B雷害" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CFAS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="C传输通道" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="C信号设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="C无线漏缆" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="C无线设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="C核心网设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="C电源设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="C空中切换" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="C空中掉话" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="C视频设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="C频率干扰" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="C高速小计" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="H合计" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="单位名称" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="T设备二级分类统计表车间" nillable="true" type="tns:T设备二级分类统计表车间" />
+  <xs:complexType name="ArrayOft定责段局分类统计表月份">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="t定责段局分类统计表月份" nillable="true" type="tns:t定责段局分类统计表月份" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOft定责段局分类统计表月份" nillable="true" type="tns:ArrayOft定责段局分类统计表月份" />
+  <xs:complexType name="t定责段局分类统计表月份">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="小计" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="局定否" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="局定是" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="月份" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="段定否" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="段定是" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="责任" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="非责任" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="t定责段局分类统计表月份" nillable="true" type="tns:t定责段局分类统计表月份" />
+  <xs:complexType name="ArrayOft定责段局分类统计表车间">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="t定责段局分类统计表车间" nillable="true" type="tns:t定责段局分类统计表车间" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOft定责段局分类统计表车间" nillable="true" type="tns:ArrayOft定责段局分类统计表车间" />
+  <xs:complexType name="t定责段局分类统计表车间">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="单位名称" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="小计" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="局定否" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="局定是" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="段定否" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="段定是" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="责任" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="非责任" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="t定责段局分类统计表车间" nillable="true" type="tns:t定责段局分类统计表车间" />
+  <xs:complexType name="ArrayOf三级设备类型故障统计">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="三级设备类型故障统计" nillable="true" type="tns:三级设备类型故障统计" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOf三级设备类型故障统计" nillable="true" type="tns:ArrayOf三级设备类型故障统计" />
+  <xs:complexType name="三级设备类型故障统计">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="一月" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="七月" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="三月" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="九月" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="二月" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="五月" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="八月" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="六月" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="十一月" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="十二月" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="十月" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="合计" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="四月" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="序号" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="设备类型" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="三级设备类型故障统计" nillable="true" type="tns:三级设备类型故障统计" />
+  <xs:complexType name="ArrayOfT设备二级分类统计表">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="T设备二级分类统计表" nillable="true" type="tns:T设备二级分类统计表" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfT设备二级分类统计表" nillable="true" type="tns:ArrayOfT设备二级分类统计表" />
+  <xs:complexType name="T设备二级分类统计表">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="A会议设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="A传输设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="A光电缆线路" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="A其它" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="A外界影响" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="A数据网设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="A数调设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="A有线小计" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="A电源设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="A视频设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="A雷害" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="B天线" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="B干扰" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="B无线小计" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="B机车台" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="B杆塔" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="B电源" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="B车站台" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="B雷害" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CFAS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="C传输通道" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="C信号设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="C无线漏缆" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="C无线设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="C核心网设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="C电源设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="C空中切换" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="C空中掉话" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="C视频设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="C频率干扰" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="C高速小计" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="H合计" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="月份" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="T设备二级分类统计表" nillable="true" type="tns:T设备二级分类统计表" />
+  <xs:complexType name="ArrayOfT定性分类统计表车间">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="T定性分类统计表车间" nillable="true" type="tns:T定性分类统计表车间" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfT定性分类统计表车间" nillable="true" type="tns:ArrayOfT定性分类统计表车间" />
+  <xs:complexType name="T定性分类统计表车间">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="D10事故" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="D16事故" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="D21事故" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="D9事故" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="单位名称" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="大通道中断" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="小计" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="行车设备故障" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="记事" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="通信一类障碍" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="通信二类障碍" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="T定性分类统计表车间" nillable="true" type="tns:T定性分类统计表车间" />
+  <xs:complexType name="ArrayOfc车间设备二级月份计算">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="c车间设备二级月份计算" nillable="true" type="tns:c车间设备二级月份计算" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfc车间设备二级月份计算" nillable="true" type="tns:ArrayOfc车间设备二级月份计算" />
+  <xs:complexType name="c车间设备二级月份计算">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bc保定车间_传输渠道" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bc保定车间_传输设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bc保定车间_车站台" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bc北京北车间_传输渠道" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bc北京北车间_传输设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bc北京北车间_车站台" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bc北京西车间_传输渠道" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bc北京西车间_传输设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bc北京西车间_车站台" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bc北京车间_传输渠道" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bc北京车间_传输设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bc北京车间_车站台" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bc报话车间_传输渠道" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bc报话车间_传输设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bc报话车间_车站台" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bd保定车间_电源设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bd北京北车间_电源设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bd北京西车间_电源设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bd北京车间_电源设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bd报话车间_电源设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bf保定车间_FAS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bf北京北车间_FAS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bf北京西车间_FAS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bf北京车间_FAS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bf报话车间_FAS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bg保定车间_光电缆线路" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bg保定车间_光缆线路" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bg保定车间_干扰" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bg保定车间_杆塔" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bg北京北车间_光电缆线路" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bg北京北车间_光缆线路" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bg北京北车间_干扰" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bg北京北车间_杆塔" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bg北京西车间_光电缆线路" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bg北京西车间_光缆线路" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bg北京西车间_干扰" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bg北京西车间_杆塔" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bg北京车间_光电缆线路" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bg北京车间_光缆线路" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bg北京车间_干扰" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bg北京车间_杆塔" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bg报话车间_光电缆线路" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bg报话车间_光缆线路" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bg报话车间_干扰" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bg报话车间_杆塔" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bh保定车间_会议设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bh保定车间_核心网设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bh北京北车间_会议设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bh北京北车间_核心网设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bh北京西车间_会议设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bh北京西车间_核心网设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bh北京车间_会议设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bh北京车间_核心网设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bh报话车间_会议设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bh报话车间_核心网设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bj保定车间_机车台" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bj北京北车间_机车台" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bj北京西车间_机车台" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bj北京车间_机车台" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bj报话车间_机车台" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bk保定车间_空中切换" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bk保定车间_空中掉话" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bk北京北车间_空中切换" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bk北京北车间_空中掉话" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bk北京西车间_空中切换" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bk北京西车间_空中掉话" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bk北京车间_空中切换" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bk北京车间_空中掉话" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bk报话车间_空中切换" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bk报话车间_空中掉话" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bl保定车间_雷害" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bl北京北车间_雷害" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bl北京西车间_雷害" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bl北京车间_雷害" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bl报话车间_雷害" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bq保定车间_其它" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bq北京北车间_其它" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bq北京西车间_其它" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bq北京车间_其它" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bq报话车间_其它" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bs保定车间_数据制作" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bs保定车间_数据网设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bs保定车间_数调设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bs保定车间_视频设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bs北京北车间_数据制作" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bs北京北车间_数据网设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bs北京北车间_数调设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bs北京北车间_视频设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bs北京西车间_数据制作" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bs北京西车间_数据网设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bs北京西车间_数调设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bs北京西车间_视频设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bs北京车间_数据制作" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bs北京车间_数据网设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bs北京车间_数调设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bs北京车间_视频设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bs报话车间_数据制作" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bs报话车间_数据网设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bs报话车间_数调设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bs报话车间_视频设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bt保定车间_天线" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bt北京北车间_天线" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bt北京西车间_天线" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bt北京车间_天线" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bt报话车间_天线" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bw保定车间_外界影响" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bw保定车间_无线干扰" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bw保定车间_无线漏缆" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bw保定车间_无线设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bw北京北车间_外界影响" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bw北京北车间_无线干扰" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bw北京北车间_无线漏缆" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bw北京北车间_无线设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bw北京西车间_外界影响" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bw北京西车间_无线干扰" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bw北京西车间_无线漏缆" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bw北京西车间_无线设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bw北京车间_外界影响" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bw北京车间_无线干扰" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bw北京车间_无线漏缆" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bw北京车间_无线设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bw报话车间_外界影响" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bw报话车间_无线干扰" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bw报话车间_无线漏缆" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bw报话车间_无线设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bx保定车间_信号设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bx北京北车间_信号设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bx北京西车间_信号设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bx北京车间_信号设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bx报话车间_信号设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cc承德车间_传输渠道" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cc承德车间_传输设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cc承德车间_车站台" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cc沧州车间_传输渠道" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cc沧州车间_传输设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cc沧州车间_车站台" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cc磁山车间_传输渠道" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cc磁山车间_传输设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cc磁山车间_车站台" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cd承德车间_电源设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cd沧州车间_电源设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cd磁山车间_电源设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cf承德车间_FAS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cf沧州车间_FAS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cf磁山车间_FAS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cg承德车间_光电缆线路" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cg承德车间_光缆线路" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cg承德车间_干扰" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cg承德车间_杆塔" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cg沧州车间_光电缆线路" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cg沧州车间_光缆线路" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cg沧州车间_干扰" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cg沧州车间_杆塔" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cg磁山车间_光电缆线路" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cg磁山车间_光缆线路" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cg磁山车间_干扰" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cg磁山车间_杆塔" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ch承德车间_会议设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ch承德车间_核心网设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ch沧州车间_会议设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ch沧州车间_核心网设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ch磁山车间_会议设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ch磁山车间_核心网设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cj承德车间_机车台" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cj沧州车间_机车台" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cj磁山车间_机车台" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ck承德车间_空中切换" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ck承德车间_空中掉话" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ck沧州车间_空中切换" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ck沧州车间_空中掉话" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ck磁山车间_空中切换" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ck磁山车间_空中掉话" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cl承德车间_雷害" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cl沧州车间_雷害" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cl磁山车间_雷害" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cq承德车间_其它" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cq沧州车间_其它" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cq磁山车间_其它" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cs承德车间_数据制作" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cs承德车间_数据网设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cs承德车间_数调设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cs承德车间_视频设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cs沧州车间_数据制作" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cs沧州车间_数据网设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cs沧州车间_数调设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cs沧州车间_视频设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cs磁山车间_数据制作" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cs磁山车间_数据网设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cs磁山车间_数调设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cs磁山车间_视频设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ct承德车间_天线" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ct沧州车间_天线" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ct磁山车间_天线" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cw承德车间_外界影响" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cw承德车间_无线干扰" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cw承德车间_无线漏缆" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cw承德车间_无线设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cw沧州车间_外界影响" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cw沧州车间_无线干扰" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cw沧州车间_无线漏缆" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cw沧州车间_无线设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cw磁山车间_外界影响" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cw磁山车间_无线干扰" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cw磁山车间_无线漏缆" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cw磁山车间_无线设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cx承德车间_信号设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cx沧州车间_信号设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cx磁山车间_信号设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fc丰台车间_传输渠道" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fc丰台车间_传输设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fc丰台车间_车站台" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fc丰润车间_传输渠道" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fc丰润车间_传输设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fc丰润车间_车站台" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fd丰台车间_电源设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fd丰润车间_电源设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ff丰台车间_FAS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ff丰润车间_FAS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fg丰台车间_光电缆线路" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fg丰台车间_光缆线路" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fg丰台车间_干扰" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fg丰台车间_杆塔" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fg丰润车间_光电缆线路" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fg丰润车间_光缆线路" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fg丰润车间_干扰" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fg丰润车间_杆塔" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fh丰台车间_会议设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fh丰台车间_核心网设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fh丰润车间_会议设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fh丰润车间_核心网设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fj丰台车间_机车台" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fj丰润车间_机车台" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fk丰台车间_空中切换" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fk丰台车间_空中掉话" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fk丰润车间_空中切换" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fk丰润车间_空中掉话" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fl丰台车间_雷害" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fl丰润车间_雷害" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fq丰台车间_其它" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fq丰润车间_其它" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fs丰台车间_数据制作" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fs丰台车间_数据网设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fs丰台车间_数调设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fs丰台车间_视频设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fs丰润车间_数据制作" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fs丰润车间_数据网设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fs丰润车间_数调设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fs丰润车间_视频设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ft丰台车间_天线" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ft丰润车间_天线" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fw丰台车间_外界影响" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fw丰台车间_无线干扰" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fw丰台车间_无线漏缆" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fw丰台车间_无线设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fw丰润车间_外界影响" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fw丰润车间_无线干扰" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fw丰润车间_无线漏缆" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fw丰润车间_无线设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fx丰台车间_信号设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fx丰润车间_信号设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="gcG网中心_传输渠道" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="gcG网中心_传输设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="gcG网中心_车站台" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="gdG网中心_电源设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="gfG网中心_FAS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ggG网中心_光电缆线路" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ggG网中心_光缆线路" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ggG网中心_干扰" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ggG网中心_杆塔" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ghG网中心_会议设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ghG网中心_核心网设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="gjG网中心_机车台" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="gkG网中心_空中切换" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="gkG网中心_空中掉话" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="glG网中心_雷害" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="gqG网中心_其它" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="gsG网中心_数据制作" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="gsG网中心_数据网设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="gsG网中心_数调设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="gsG网中心_视频设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="gtG网中心_天线" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="gwG网中心_外界影响" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="gwG网中心_无线干扰" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="gwG网中心_无线漏缆" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="gwG网中心_无线设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="gxG网中心_信号设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hc会调中心_传输渠道" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hc会调中心_传输设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hc会调中心_车站台" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hc怀北车间_传输渠道" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hc怀北车间_传输设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hc怀北车间_车站台" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hc衡水车间_传输渠道" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hc衡水车间_传输设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hc衡水车间_车站台" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hc邯郸车间_传输渠道" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hc邯郸车间_传输设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hc邯郸车间_车站台" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hd会调中心_电源设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hd怀北车间_电源设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hd衡水车间_电源设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hd邯郸车间_电源设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hf会调中心_FAS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hf怀北车间_FAS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hf衡水车间_FAS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hf邯郸车间_FAS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hg会调中心_光电缆线路" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hg会调中心_光缆线路" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hg会调中心_干扰" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hg会调中心_杆塔" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hg怀北车间_光电缆线路" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hg怀北车间_光缆线路" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hg怀北车间_干扰" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hg怀北车间_杆塔" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hg衡水车间_光电缆线路" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hg衡水车间_光缆线路" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hg衡水车间_干扰" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hg衡水车间_杆塔" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hg邯郸车间_光电缆线路" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hg邯郸车间_光缆线路" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hg邯郸车间_干扰" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hg邯郸车间_杆塔" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hh会调中心_会议设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hh会调中心_核心网设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hh怀北车间_会议设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hh怀北车间_核心网设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hh衡水车间_会议设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hh衡水车间_核心网设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hh邯郸车间_会议设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hh邯郸车间_核心网设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hj会调中心_机车台" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hj怀北车间_机车台" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hj衡水车间_机车台" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hj邯郸车间_机车台" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hk会调中心_空中切换" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hk会调中心_空中掉话" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hk怀北车间_空中切换" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hk怀北车间_空中掉话" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hk衡水车间_空中切换" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hk衡水车间_空中掉话" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hk邯郸车间_空中切换" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hk邯郸车间_空中掉话" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hl会调中心_雷害" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hl怀北车间_雷害" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hl衡水车间_雷害" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hl邯郸车间_雷害" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hq会调中心_其它" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hq怀北车间_其它" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hq衡水车间_其它" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hq邯郸车间_其它" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hs会调中心_数据制作" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hs会调中心_数据网设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hs会调中心_数调设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hs会调中心_视频设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hs怀北车间_数据制作" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hs怀北车间_数据网设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hs怀北车间_数调设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hs怀北车间_视频设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hs衡水车间_数据制作" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hs衡水车间_数据网设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hs衡水车间_数调设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hs衡水车间_视频设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hs邯郸车间_数据制作" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hs邯郸车间_数据网设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hs邯郸车间_数调设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hs邯郸车间_视频设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ht会调中心_天线" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ht怀北车间_天线" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ht衡水车间_天线" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ht邯郸车间_天线" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hw会调中心_外界影响" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hw会调中心_无线干扰" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hw会调中心_无线漏缆" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hw会调中心_无线设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hw怀北车间_外界影响" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hw怀北车间_无线干扰" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hw怀北车间_无线漏缆" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hw怀北车间_无线设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hw衡水车间_外界影响" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hw衡水车间_无线干扰" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hw衡水车间_无线漏缆" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hw衡水车间_无线设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hw邯郸车间_外界影响" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hw邯郸车间_无线干扰" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hw邯郸车间_无线漏缆" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hw邯郸车间_无线设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hx会调中心_信号设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hx怀北车间_信号设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hx衡水车间_信号设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hx邯郸车间_信号设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="qc秦皇岛车间_传输渠道" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="qc秦皇岛车间_传输设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="qc秦皇岛车间_车站台" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="qd秦皇岛车间_电源设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="qf秦皇岛车间_FAS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="qg秦皇岛车间_光电缆线路" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="qg秦皇岛车间_光缆线路" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="qg秦皇岛车间_干扰" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="qg秦皇岛车间_杆塔" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="qh秦皇岛车间_会议设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="qh秦皇岛车间_核心网设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="qj秦皇岛车间_机车台" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="qk秦皇岛车间_空中切换" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="qk秦皇岛车间_空中掉话" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ql秦皇岛车间_雷害" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="qq秦皇岛车间_其它" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="qs秦皇岛车间_数据制作" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="qs秦皇岛车间_数据网设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="qs秦皇岛车间_数调设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="qs秦皇岛车间_视频设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="qt秦皇岛车间_天线" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="qw秦皇岛车间_外界影响" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="qw秦皇岛车间_无线干扰" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="qw秦皇岛车间_无线漏缆" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="qw秦皇岛车间_无线设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="qx秦皇岛车间_信号设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sc石家庄车间_传输渠道" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sc石家庄车间_传输设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sc石家庄车间_车站台" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sd石家庄车间_电源设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sf石家庄车间_FAS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sg石家庄车间_光电缆线路" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sg石家庄车间_光缆线路" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sg石家庄车间_干扰" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sg石家庄车间_杆塔" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sh石家庄车间_会议设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sh石家庄车间_核心网设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sj石家庄车间_机车台" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sk石家庄车间_空中切换" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sk石家庄车间_空中掉话" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sl石家庄车间_雷害" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sq石家庄车间_其它" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ss石家庄车间_数据制作" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ss石家庄车间_数据网设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ss石家庄车间_数调设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ss石家庄车间_视频设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="st石家庄车间_天线" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sw石家庄车间_外界影响" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sw石家庄车间_无线干扰" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sw石家庄车间_无线漏缆" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sw石家庄车间_无线设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sx石家庄车间_信号设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tc唐山车间_传输渠道" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tc唐山车间_传输设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tc唐山车间_车站台" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tc天津西车间_传输渠道" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tc天津西车间_传输设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tc天津西车间_车站台" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tc天津车间_传输渠道" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tc天津车间_传输设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tc天津车间_车站台" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="td唐山车间_电源设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="td天津西车间_电源设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="td天津车间_电源设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tf唐山车间_FAS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tf天津西车间_FAS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tf天津车间_FAS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tg唐山车间_光电缆线路" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tg唐山车间_光缆线路" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tg唐山车间_干扰" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tg唐山车间_杆塔" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tg天津西车间_光电缆线路" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tg天津西车间_光缆线路" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tg天津西车间_干扰" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tg天津西车间_杆塔" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tg天津车间_光电缆线路" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tg天津车间_光缆线路" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tg天津车间_干扰" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tg天津车间_杆塔" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="th唐山车间_会议设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="th唐山车间_核心网设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="th天津西车间_会议设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="th天津西车间_核心网设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="th天津车间_会议设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="th天津车间_核心网设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tj唐山车间_机车台" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tj天津西车间_机车台" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tj天津车间_机车台" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tk唐山车间_空中切换" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tk唐山车间_空中掉话" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tk天津西车间_空中切换" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tk天津西车间_空中掉话" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tk天津车间_空中切换" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tk天津车间_空中掉话" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tl唐山车间_雷害" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tl天津西车间_雷害" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tl天津车间_雷害" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tq唐山车间_其它" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tq天津西车间_其它" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tq天津车间_其它" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ts唐山车间_数据制作" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ts唐山车间_数据网设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ts唐山车间_数调设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ts唐山车间_视频设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ts天津西车间_数据制作" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ts天津西车间_数据网设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ts天津西车间_数调设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ts天津西车间_视频设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ts天津车间_数据制作" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ts天津车间_数据网设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ts天津车间_数调设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ts天津车间_视频设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tt唐山车间_天线" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tt天津西车间_天线" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tt天津车间_天线" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tw唐山车间_外界影响" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tw唐山车间_无线干扰" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tw唐山车间_无线漏缆" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tw唐山车间_无线设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tw天津西车间_外界影响" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tw天津西车间_无线干扰" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tw天津西车间_无线漏缆" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tw天津西车间_无线设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tw天津车间_外界影响" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tw天津车间_无线干扰" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tw天津车间_无线漏缆" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tw天津车间_无线设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tx唐山车间_信号设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tx天津西车间_信号设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tx天津车间_信号设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="wc北京无线车间_传输渠道" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="wc北京无线车间_传输设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="wc北京无线车间_车站台" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="wd北京无线车间_电源设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="wf北京无线车间_FAS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="wg北京无线车间_光电缆线路" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="wg北京无线车间_光缆线路" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="wg北京无线车间_干扰" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="wg北京无线车间_杆塔" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="wh北京无线车间_会议设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="wh北京无线车间_核心网设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="wj北京无线车间_机车台" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="wk北京无线车间_空中切换" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="wk北京无线车间_空中掉话" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="wl北京无线车间_雷害" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="wq北京无线车间_其它" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ws北京无线车间_数据制作" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ws北京无线车间_数据网设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ws北京无线车间_数调设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ws北京无线车间_视频设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="wt北京无线车间_天线" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ww北京无线车间_外界影响" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ww北京无线车间_无线干扰" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ww北京无线车间_无线漏缆" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ww北京无线车间_无线设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="wx北京无线车间_信号设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="yc阳泉车间_传输渠道" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="yc阳泉车间_传输设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="yc阳泉车间_车站台" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="yd阳泉车间_电源设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="yf阳泉车间_FAS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="yg阳泉车间_光电缆线路" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="yg阳泉车间_光缆线路" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="yg阳泉车间_干扰" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="yg阳泉车间_杆塔" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="yh阳泉车间_会议设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="yh阳泉车间_核心网设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="yj阳泉车间_机车台" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="yk阳泉车间_空中切换" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="yk阳泉车间_空中掉话" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="yl阳泉车间_雷害" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="yq阳泉车间_其它" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ys阳泉车间_数据制作" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ys阳泉车间_数据网设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ys阳泉车间_数调设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ys阳泉车间_视频设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="yt阳泉车间_天线" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="yw阳泉车间_外界影响" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="yw阳泉车间_无线干扰" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="yw阳泉车间_无线漏缆" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="yw阳泉车间_无线设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="yx阳泉车间_信号设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="zc张家口车间_传输渠道" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="zc张家口车间_传输设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="zc张家口车间_车站台" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="zd张家口车间_电源设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="zf张家口车间_FAS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="zg张家口车间_光电缆线路" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="zg张家口车间_光缆线路" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="zg张家口车间_干扰" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="zg张家口车间_杆塔" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="zh张家口车间_会议设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="zh张家口车间_核心网设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="zj张家口车间_机车台" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="zk张家口车间_空中切换" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="zk张家口车间_空中掉话" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="zl张家口车间_雷害" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="zq张家口车间_其它" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="zs张家口车间_数据制作" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="zs张家口车间_数据网设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="zs张家口车间_数调设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="zs张家口车间_视频设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="zt张家口车间_天线" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="zw张家口车间_外界影响" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="zw张家口车间_无线干扰" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="zw张家口车间_无线漏缆" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="zw张家口车间_无线设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="zx张家口车间_信号设备" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="月份" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="c车间设备二级月份计算" nillable="true" type="tns:c车间设备二级月份计算" />
+  <xs:complexType name="ArrayOftx定责故障统计">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="tx定责故障统计" nillable="true" type="tns:tx定责故障统计" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftx定责故障统计" nillable="true" type="tns:ArrayOftx定责故障统计" />
+  <xs:complexType name="tx定责故障统计">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="定性名称" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="序号" type="xs:int" />
+      <xs:element minOccurs="0" name="数量" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="tx定责故障统计" nillable="true" type="tns:tx定责故障统计" />
+  <xs:complexType name="ArrayOf车间故障统计">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="车间故障统计" nillable="true" type="tns:车间故障统计" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOf车间故障统计" nillable="true" type="tns:ArrayOf车间故障统计" />
+  <xs:complexType name="车间故障统计">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="序号" type="xs:int" />
+      <xs:element minOccurs="0" name="数量" type="xs:int" />
+      <xs:element minOccurs="0" name="车间名称" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="车间故障统计" nillable="true" type="tns:车间故障统计" />
+  <xs:complexType name="ArrayOf同期对比图list">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="同期对比图list" nillable="true" type="tns:同期对比图list" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOf同期对比图list" nillable="true" type="tns:ArrayOf同期对比图list" />
+  <xs:complexType name="同期对比图list">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_10月" type="xs:int" />
+      <xs:element minOccurs="0" name="_11月" type="xs:int" />
+      <xs:element minOccurs="0" name="_12月" type="xs:int" />
+      <xs:element minOccurs="0" name="_1月" type="xs:int" />
+      <xs:element minOccurs="0" name="_2月" type="xs:int" />
+      <xs:element minOccurs="0" name="_3月" type="xs:int" />
+      <xs:element minOccurs="0" name="_4月" type="xs:int" />
+      <xs:element minOccurs="0" name="_5月" type="xs:int" />
+      <xs:element minOccurs="0" name="_6月" type="xs:int" />
+      <xs:element minOccurs="0" name="_7月" type="xs:int" />
+      <xs:element minOccurs="0" name="_8月" type="xs:int" />
+      <xs:element minOccurs="0" name="_9月" type="xs:int" />
+      <xs:element minOccurs="0" name="单位名称" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="合计" type="xs:int" />
+      <xs:element minOccurs="0" name="年份" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="同期对比图list" nillable="true" type="tns:同期对比图list" />
+  <xs:complexType name="ArrayOfchart通信故障件数设备类型一类">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="chart通信故障件数设备类型一类" nillable="true" type="tns:chart通信故障件数设备类型一类" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfchart通信故障件数设备类型一类" nillable="true" type="tns:ArrayOfchart通信故障件数设备类型一类" />
+  <xs:complexType name="chart通信故障件数设备类型一类">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="件数" type="xs:int" />
+      <xs:element minOccurs="0" name="日期" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="设备类型一类" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="chart通信故障件数设备类型一类" nillable="true" type="tns:chart通信故障件数设备类型一类" />
+  <xs:complexType name="ArrayOftx设备类型故障统计">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="tx设备类型故障统计" nillable="true" type="tns:tx设备类型故障统计" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftx设备类型故障统计" nillable="true" type="tns:ArrayOftx设备类型故障统计" />
+  <xs:complexType name="tx设备类型故障统计">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="序号" type="xs:int" />
+      <xs:element minOccurs="0" name="数量" type="xs:int" />
+      <xs:element minOccurs="0" name="设备名称" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="tx设备类型故障统计" nillable="true" type="tns:tx设备类型故障统计" />
+  <xs:complexType name="ArrayOfchart月份故障比较返回">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="chart月份故障比较返回" nillable="true" type="tns:chart月份故障比较返回" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfchart月份故障比较返回" nillable="true" type="tns:ArrayOfchart月份故障比较返回" />
+  <xs:complexType name="chart月份故障比较返回">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="D10事故" type="xs:int" />
+      <xs:element minOccurs="0" name="D16事故" type="xs:int" />
+      <xs:element minOccurs="0" name="D21事故" type="xs:int" />
+      <xs:element minOccurs="0" name="D9事故" type="xs:int" />
+      <xs:element minOccurs="0" name="合计" type="xs:int" />
+      <xs:element minOccurs="0" name="大通道中断" type="xs:int" />
+      <xs:element minOccurs="0" name="月份" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="行车设备故障" type="xs:int" />
+      <xs:element minOccurs="0" name="记事" type="xs:int" />
+      <xs:element minOccurs="0" name="通信一类障碍" type="xs:int" />
+      <xs:element minOccurs="0" name="通信二类障碍" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="chart月份故障比较返回" nillable="true" type="tns:chart月份故障比较返回" />
+  <xs:complexType name="ArrayOftx定性故障统计">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="tx定性故障统计" nillable="true" type="tns:tx定性故障统计" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftx定性故障统计" nillable="true" type="tns:ArrayOftx定性故障统计" />
+  <xs:complexType name="tx定性故障统计">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="定性名称" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="序号" type="xs:int" />
+      <xs:element minOccurs="0" name="数量" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="tx定性故障统计" nillable="true" type="tns:tx定性故障统计" />
+  <xs:complexType name="ArrayOfchart月份故障分析返回">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="chart月份故障分析返回" nillable="true" type="tns:chart月份故障分析返回" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfchart月份故障分析返回" nillable="true" type="tns:ArrayOfchart月份故障分析返回" />
+  <xs:complexType name="chart月份故障分析返回">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="sum类别" type="xs:int" />
+      <xs:element minOccurs="0" name="sum类别百分比" type="xs:double" />
+      <xs:element minOccurs="0" name="故障类别" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="chart月份故障分析返回" nillable="true" type="tns:chart月份故障分析返回" />
+  <xs:complexType name="ArrayOftx车间故障统计">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="tx车间故障统计" nillable="true" type="tns:tx车间故障统计" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftx车间故障统计" nillable="true" type="tns:ArrayOftx车间故障统计" />
+  <xs:complexType name="tx车间故障统计">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="序号" type="xs:int" />
+      <xs:element minOccurs="0" name="数量" type="xs:int" />
+      <xs:element minOccurs="0" name="车间" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="tx车间故障统计" nillable="true" type="tns:tx车间故障统计" />
+  <xs:complexType name="ArrayOftx局定责任统计">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="tx局定责任统计" nillable="true" type="tns:tx局定责任统计" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftx局定责任统计" nillable="true" type="tns:ArrayOftx局定责任统计" />
+  <xs:complexType name="tx局定责任统计">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="局定责任" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="数量" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="tx局定责任统计" nillable="true" type="tns:tx局定责任统计" />
+  <xs:complexType name="ArrayOf故障延时占比">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="故障延时占比" nillable="true" type="tns:故障延时占比" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOf故障延时占比" nillable="true" type="tns:ArrayOf故障延时占比" />
+  <xs:complexType name="故障延时占比">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="数量" type="xs:int" />
+      <xs:element minOccurs="0" name="时间长度" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="故障延时占比" nillable="true" type="tns:故障延时占比" />
+  <xs:complexType name="ArrayOftx段定责统计">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="tx段定责统计" nillable="true" type="tns:tx段定责统计" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftx段定责统计" nillable="true" type="tns:ArrayOftx段定责统计" />
+  <xs:complexType name="tx段定责统计">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="数量" type="xs:int" />
+      <xs:element minOccurs="0" name="段定" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="tx段定责统计" nillable="true" type="tns:tx段定责统计" />
+</xs:schema>

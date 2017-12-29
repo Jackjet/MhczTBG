@@ -1,0 +1,339 @@
+﻿<UserControl xmlns:my="clr-namespace:MhczTBG.Controls.Load"                  
+                  xmlns:ms="http://namespaces.mindscape.co.nz/wpf" 
+                  x:Class="MhczTBG.Helper.GuZhangShouLi_New"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+                 mc:Ignorable="d" 
+             >
+    <UserControl.Resources>
+        <Style x:Key="ListBoxItemStyle1" TargetType="ListBoxItem">
+            <Setter Property="Padding" Value="3"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="VerticalContentAlignment" Value="Top"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ListBoxItem">
+                        <Grid Background="{TemplateBinding Background}">
+                            <Rectangle x:Name="fillColor" Fill="#FFBADDE9" IsHitTestVisible="False" Opacity="0" RadiusY="1" RadiusX="1"/>
+                            <Rectangle x:Name="fillColor2" Fill="#FFBADDE9" IsHitTestVisible="False" Opacity="0" RadiusY="1" RadiusX="1"/>
+                            <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
+                                <ContentPresenter x:Name="contentPresenter" ContentTemplate="{TemplateBinding ContentTemplate}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Height="18" Margin="0,0,50,0"/>
+                                <Image x:Name="imgexit" HorizontalAlignment="Left" Width="20" Height="20" Cursor="Hand"  Tag="{Binding Content, ElementName=contentPresenter}"  ToolTipService.ToolTip="{Binding Content, ElementName=contentPresenter}" />
+                            </StackPanel>
+                            <Rectangle x:Name="FocusVisualElement" RadiusY="1" RadiusX="1" Stroke="#FF6DBDD1" StrokeThickness="1" Visibility="Collapsed"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    <Grid x:Name="LayoutRoot" Visibility="Visible" Background="White" Grid.Row="1" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <Border BorderBrush="DarkGray" BorderThickness="1">
+            <ScrollViewer x:Name="sbTongXinGZ" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Margin="0">
+                <Grid Width="790">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="42"/>
+                        <RowDefinition Height="32"/>
+                        <RowDefinition Height="32"/>
+                        <RowDefinition Height="32"/>
+                        <RowDefinition Height="82"/>
+                        <RowDefinition Height="32"/>
+                        <RowDefinition Height="32"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="0"/>
+                        <RowDefinition Height="32"/>
+                        <RowDefinition Height="32"/>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="32"/>
+                        <RowDefinition Height="32"/>
+                        <RowDefinition Height="0"/>
+
+
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock  Grid.ColumnSpan="2" Text="单位：北京通信段" FontSize="12" Height="30"  VerticalAlignment="Bottom" Margin="10,0,14,2" Foreground="Black" />
+                    <TextBlock x:Name="Title" Grid.ColumnSpan="7" Text="通信故障(障碍)受理" FontSize="24" Height="30"  VerticalAlignment="Center" Margin="0,0,0,0" Foreground="Black" HorizontalAlignment="Center" />
+                    <ComboBox Width="130" x:Name="leibie"  Grid.ColumnSpan="7"  VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,10,0">
+
+                    </ComboBox>
+                    <Border BorderBrush="DarkGray" BorderThickness="1,1,1,0" Background="#FFEFEDED"  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"/>
+                    <Border BorderBrush="DarkGray" BorderThickness="0,1,1,0" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" />
+                    <Border BorderBrush="DarkGray" BorderThickness="0,1,1,1" Grid.Row="2" Grid.Column="4" Grid.ColumnSpan="3" />
+                    <Border BorderBrush="DarkGray" BorderThickness="0, 1,1,1" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" />
+                    <Border BorderBrush="DarkGray" BorderThickness="0,1,1,0" Background="#FFEFEDED"  Grid.Row="1" Grid.Column="4"/>
+                    <Border BorderBrush="DarkGray" BorderThickness="0,1,1,1" Background="#FFEFEDED"  Grid.Row="2" Grid.Column="4"/>
+                    <Border BorderBrush="DarkGray" BorderThickness="0,1,1,0" Grid.Row="1" Grid.Column="5" Grid.ColumnSpan="2" />
+
+                    <Border BorderBrush="DarkGray" BorderThickness="1,1,1,1" Background="#FFEFEDED"  Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"/>
+                    <Border BorderBrush="DarkGray" BorderThickness="1,0,1,1" Background="#FFEFEDED"  Grid.ColumnSpan="2" Grid.Row="3" Grid.Column="0"/>
+                    <Border BorderBrush="DarkGray" BorderThickness="0,0,1,0" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2" />
+
+                    <Border BorderBrush="DarkGray" BorderThickness="1,0,1,1" Background="#FFEFEDED"  Grid.Row="5" Grid.Column="0" Grid.RowSpan="2"/>
+                    <Border BorderBrush="DarkGray" BorderThickness="1,0,1,1" Background="#FFEFEDED"  Grid.Row="5" Grid.Column="1"/>
+                    <Border BorderBrush="DarkGray" BorderThickness="1,0,1,1" Background="#FFEFEDED"  Grid.Row="6" Grid.Column="1"/>
+                    <Border BorderBrush="DarkGray" BorderThickness="0,0,1,1" Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="2" />
+
+
+
+                    <Border BorderBrush="DarkGray" BorderThickness="0,0,1,1" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2" />
+                    <Border BorderBrush="DarkGray" BorderThickness="0,0,1,1" Grid.Row="5" Grid.Column="5" Grid.ColumnSpan="2" />
+                    <Border BorderBrush="DarkGray" BorderThickness="0,0,1,1" Grid.Row="6" Grid.Column="5" Grid.ColumnSpan="2" />
+
+
+                    <Border BorderBrush="DarkGray" BorderThickness="0,0,1,1" Background="#FFEFEDED"  Grid.Row="5" Grid.Column="4"/>
+                    <Border BorderBrush="DarkGray" BorderThickness="0,0,1,1" Grid.Row="10" Grid.Column="5" Grid.ColumnSpan="2" />
+                    <Border BorderBrush="DarkGray" BorderThickness="0,0,1,1" Grid.Row="10" Grid.Column="2" Grid.ColumnSpan="2" />
+                    <Border BorderBrush="DarkGray" BorderThickness="0,0,1,1" Background="#FFEFEDED"  Grid.ColumnSpan="1" Grid.Row="6" Grid.Column="4"/>
+
+
+                    <Border BorderBrush="DarkGray" BorderThickness="1,0,1,1" Background="#FFEFEDED"  Grid.ColumnSpan="1" Grid.Row="6" Grid.Column="1"/>
+                    <Border BorderBrush="DarkGray" BorderThickness="0,0,1,1" Grid.Row="11" Grid.Column="2" Grid.ColumnSpan="2" />
+                    <Border BorderBrush="DarkGray" BorderThickness="0,0,1,1" Background="#FFEFEDED"  Grid.ColumnSpan="1" Grid.Row="10" Grid.Column="4"/>
+                    <Border BorderBrush="DarkGray" BorderThickness="1,0,1,1" Background="#FFEFEDED"  Grid.ColumnSpan="2" Grid.Row="10" Grid.Column="0"/>
+
+
+                    <Border BorderBrush="DarkGray" BorderThickness="0,0,1,1" Grid.Row="7" Grid.Column="2" Grid.ColumnSpan="5" />
+                    <Border BorderBrush="DarkGray" BorderThickness="0,0,1,1" Grid.Row="8" Grid.Column="2" Grid.ColumnSpan="5" />
+                    <Border BorderBrush="DarkGray" BorderThickness="0,0,1,1"  Background="#FFEFEDED"  Grid.Row="11" Grid.Column="4"/>
+                    <Border BorderBrush="DarkGray" BorderThickness="0,0,1,1" Grid.Row="11" Grid.Column="5" Grid.ColumnSpan="2" />
+                    <Border BorderBrush="DarkGray" BorderThickness="0,0,1,1" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="5" />
+                    <Border BorderBrush="DarkGray" BorderThickness="1,0,1,1" Background="#FFEFEDED" Grid.ColumnSpan="2"  Grid.Row="11" Grid.Column="0"/>
+
+
+
+                    <Border BorderBrush="DarkGray" BorderThickness="1,0,1,1" Background="#FFEFEDED"  Grid.ColumnSpan="2" Grid.Row="7" Grid.Column="0"/>
+                    <Border BorderBrush="DarkGray" BorderThickness="0,0,1,1"   Grid.ColumnSpan="5" Grid.Row="7" Grid.Column="2"/>
+                    <Border BorderBrush="DarkGray" BorderThickness="1,0,1,1" Background="#FFEFEDED"  Grid.ColumnSpan="2" Grid.Row="8" Grid.Column="0"/>
+                    <Border BorderBrush="DarkGray" BorderThickness="0,0,1,0"   Grid.ColumnSpan="5" Grid.Row="8" Grid.Column="2"/>
+                    <Border BorderBrush="DarkGray" BorderThickness="0,0,1,1" Background="#FFEFEDED"  Grid.ColumnSpan="1" Grid.Row="3" Grid.Column="4"/>
+
+
+                    <Border BorderBrush="DarkGray" BorderThickness="1,0,1,1" Background="#FFEFEDED" Grid.ColumnSpan="2"  Grid.Row="9" Grid.Column="0"/>
+                    <Border BorderBrush="DarkGray" BorderThickness="0,0,1,1"    Grid.ColumnSpan="5"  Grid.Row="9" Grid.Column="2"/>
+                    <Border BorderBrush="DarkGray" BorderThickness="1,0,1,1" Background="#FFEFEDED" Grid.ColumnSpan="2"  Grid.Row="4" Grid.Column="0"/>
+                    <Border BorderBrush="DarkGray" BorderThickness="0,0,1,1"  Grid.ColumnSpan="5"  Grid.Row="4" Grid.Column="2"/>
+
+
+                    <Border BorderBrush="DarkGray" BorderThickness="0,0,1,1" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="5" />
+                    <Border BorderBrush="DarkGray" BorderThickness="0,0,1,1" Grid.Row="9" Grid.Column="2" Grid.ColumnSpan="5" />
+                    <Border BorderBrush="DarkGray" BorderThickness="0,0,1,1" Background="#FFEFEDED"  Grid.Row="12" Grid.ColumnSpan="2"  Grid.Column="0"/>
+
+                    <Border BorderBrush="DarkGray" BorderThickness="1,0,1,1" Background="#FFEFEDED"  Grid.ColumnSpan="2" Grid.Row="13" Grid.Column="0"/>
+                    <Border BorderBrush="DarkGray" BorderThickness="0,0,1,1" Grid.Row="11" Grid.Column="2" Grid.ColumnSpan="5" />
+
+
+                    <Border BorderBrush="DarkGray" BorderThickness="0,0,1,1" Grid.Row="13" Grid.Column="2" Grid.ColumnSpan="5" />
+
+                    <Border BorderBrush="DarkGray" BorderThickness="1,0,1,1" Background="#FFEFEDED"  Grid.ColumnSpan="2" Grid.Row="14" Grid.Column="0"/>
+                    <Border BorderBrush="DarkGray" BorderThickness="0,0,1,1" Grid.Row="14" Grid.Column="2" Grid.ColumnSpan="5" />
+
+                    <Border BorderBrush="DarkGray" BorderThickness="1,0,1,1" Background="#FFEFEDED"  Grid.ColumnSpan="2" Grid.Row="15" Grid.Column="0"/>
+                    <Border BorderBrush="DarkGray" BorderThickness="0,0,1,1" Grid.Row="15" Grid.Column="2" Grid.ColumnSpan="5" />
+
+                    <!-- 申告单位-->
+
+                    <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center"  Grid.ColumnSpan="2">
+                        <TextBlock Text="申告单位"  VerticalAlignment="Center"/>
+                        <TextBlock Text=" *" Height="11" Foreground="Red"   VerticalAlignment="Center"   />
+
+                    </StackPanel>
+                    <ComboBox  x:Name="cmb申告单位" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Margin="8,0,4,0" HorizontalAlignment="Left" VerticalAlignment="Center" Width="130">
+                        <ComboBoxItem Content="车间(全部)" />
+                    </ComboBox>
+                    <TextBox x:Name="tb外单位"  Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="1" Margin="4,0,8,0"   BorderThickness="0,0,0,1" BorderBrush="#FF9B9B9B" VerticalAlignment="Center" HorizontalAlignment="Stretch" />
+
+                    <!--日期-->
+                    <StackPanel Grid.Row="1" Grid.Column="4" Orientation="Horizontal" HorizontalAlignment="Center"  Grid.ColumnSpan="1">
+                        <TextBlock Text="日期"  VerticalAlignment="Center" HorizontalAlignment="Center" />
+                        <TextBlock Text=" *" Height="11" Foreground="Red"   VerticalAlignment="Center"   />
+
+                    </StackPanel>
+
+                    <DatePicker x:Name="dp发生日期" Grid.Row="1" Grid.Column="5" Grid.ColumnSpan="2" Margin="8,3" VerticalAlignment="Center" HorizontalAlignment="Stretch"/>
+
+
+                    <!--设备类型级别-->
+                    <TextBlock Text="设备类型级别" TextWrapping="Wrap"  Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    <StackPanel Orientation="Horizontal" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2">
+                        <ComboBox x:Name="cmb设备类型一级"   HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="8,0" Width="130">
+                            <ComboBoxItem Content="设备类型一级" IsSelected="True"/>
+                        </ComboBox>
+
+                        <ComboBox x:Name="cboxSheBeiLeiXingErJi"  HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="4,0,8,0" Width="130">
+                            <ComboBoxItem Content="设备类型二级" IsSelected="True"/>
+                        </ComboBox>
+                    </StackPanel>
+
+                    <!--责任单位-->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2" Grid.Row="2" Grid.Column="0">
+                        <TextBlock  Text="责任单位" />
+                        <TextBlock Foreground="Red" Text=" *" VerticalAlignment="Center" Height="11" />
+                    </StackPanel>
+                    <ComboBox  x:Name="cmb责任单位"   Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Margin="8,0" HorizontalAlignment="Left" VerticalAlignment="Center" Width="130">
+                        <!--<ComboBoxItem Content="车间(全部)" />-->
+                    </ComboBox>
+                    <TextBox x:Name="txt外单位"  Grid.Row="2" Grid.Column="3" Grid.ColumnSpan="1" Margin="4,0,8,0" Style="{DynamicResource TextBoxStyle1}"  BorderThickness="0,0,0,1" BorderBrush="#FF9B9B9B" VerticalAlignment="Center" HorizontalAlignment="Stretch" />
+                    <!--处所-->
+                    <TextBox x:Name="tb处所" Grid.Row="2"  Grid.Column="5"  Grid.ColumnSpan="2" Margin="8,0" Style="{DynamicResource TextBoxStyle1}"  BorderThickness="0,0,0,1" BorderBrush="#FF9B9B9B" VerticalAlignment="Center" HorizontalAlignment="Stretch" />
+
+                    <StackPanel Margin="8,0" Grid.Row="2" HorizontalAlignment="Center"  Grid.Column="4"  Orientation="Horizontal"  >
+
+                        <TextBlock Text="地点" TextWrapping="Wrap"  VerticalAlignment="Center" HorizontalAlignment="Center" />
+                        <TextBlock Text=" *" Height="11" Foreground="Red"   VerticalAlignment="Center"   />
+                    </StackPanel>
+
+                    <!--地点-->
+                    <TextBlock Text="线路"  Margin="0,0,12,0" TextWrapping="Wrap" Grid.Row="3" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    <ComboBox Name="txtXianLu"  Grid.Row="3" Grid.Column="5" Grid.ColumnSpan="2"  Margin="8,0"  VerticalAlignment="Center" >
+                        <ComboBoxItem Content="车间(全部)" />
+                    </ComboBox>
+
+
+
+
+                    <!--故障现象-->
+
+                    <TextBlock Text="故障现象" TextWrapping="Wrap"  Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"  VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    <TextBox x:Name="tb现象特点" VerticalScrollBarVisibility="Auto"  AcceptsReturn ="true" TextWrapping="Wrap"  Grid.Row="4" Grid.RowSpan="1" Grid.Column="2"  Style="{DynamicResource TextBoxStyleCenter}" Grid.ColumnSpan="5"  BorderThickness="1" BorderBrush="#FF9B9B9B" VerticalAlignment="Stretch" Margin="3,1" />
+
+                    <!--时间相关-->
+                    <TextBlock Text="相关  时间" TextWrapping="Wrap" Grid.Row="5" Grid.Column="0" Grid.RowSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" />
+
+                    <!--发生时间-->
+
+                    <StackPanel  Grid.Row="5" Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock Text="发生时间" TextWrapping="Wrap"  />
+                        <TextBlock Text=" *" Height="11" Foreground="Red"   VerticalAlignment="Center"   />
+
+                    </StackPanel>
+
+                    
+
+                    <TextBlock Text="修复时间" TextWrapping="Wrap"  Grid.Row="5" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    <DatePicker x:Name="dp修复日期"  Grid.Row="5" Grid.Column="5" Grid.ColumnSpan="1" Margin="8,3" VerticalAlignment="Center" HorizontalAlignment="Stretch"/>
+
+                    
+
+                    <!--受理时间-->
+                    <StackPanel  Grid.Row="6" Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock Text="受理时间" TextWrapping="Wrap"  VerticalAlignment="Center" HorizontalAlignment="Center" />
+                        <TextBlock Text=" *" Height="11" Foreground="Red"   VerticalAlignment="Center"   />
+
+                    </StackPanel>
+                    <DatePicker x:Name="dp受理日期"  Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="1" Margin="8,3" VerticalAlignment="Center" HorizontalAlignment="Stretch"/>
+                   
+                    <!--延时-->
+
+                    <TextBlock Text="延时" TextWrapping="Wrap"  Grid.Row="6" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    <TextBox x:Name="tb延时" IsReadOnly="True" Grid.Row="6" Grid.Column="5" Grid.ColumnSpan="2" Margin="8,0" Style="{DynamicResource TextBoxStyle1}"  BorderThickness="0,0,0,1" BorderBrush="#FF9B9B9B" VerticalAlignment="Center" HorizontalAlignment="Stretch" />
+
+                    <!--影响范围-->
+                    <StackPanel  Grid.ColumnSpan="2"  Grid.Row="7" Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock Text="影响范围:"  TextWrapping="Wrap"  VerticalAlignment="Center" HorizontalAlignment="Center" />
+
+                    </StackPanel>
+                    <TextBox x:Name="tb影响范围"  VerticalScrollBarVisibility="Auto" TextWrapping="Wrap" AcceptsReturn ="true" Grid.Row="7" Grid.Column="2" Grid.ColumnSpan="5"      BorderThickness="1" BorderBrush="#FF9B9B9B"  Margin="3,1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" />
+
+
+                    <!--原因分析-->
+                    <TextBlock Text="原因分析：" TextWrapping="Wrap" Grid.ColumnSpan="2"  Grid.Row="8" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    <TextBox x:Name="tb原因分析"  BorderThickness="1" VerticalScrollBarVisibility="Auto" TextWrapping="Wrap"   AcceptsReturn ="true"  Grid.Row="8" Grid.Column="2" Grid.ColumnSpan="5"       BorderBrush="#FF9B9B9B" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"  Margin="3,1" />
+
+                    <!--查找修复情况-->
+
+                    <TextBlock Text="查找修复情况" TextWrapping="Wrap" Grid.ColumnSpan="2"  Grid.Row="9" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    <StackPanel Background="Transparent" Grid.Row="9" Grid.Column="2" Grid.ColumnSpan="5" >
+                        <TextBox x:Name="tb查找修复情况"  Margin="3,1" Height="50" AcceptsReturn ="true" TextWrapping="Wrap"       BorderThickness="1,1,1,1" BorderBrush="#FF9B9B9B" VerticalAlignment="Stretch" HorizontalAlignment="Left" Width="664" />
+
+                        <ScrollViewer  Foreground="DarkGray" x:Name="lishijilu"   Margin="3" VerticalScrollBarVisibility="Auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                            <StackPanel   x:Name="messageinfo" >
+
+                            </StackPanel>
+                        </ScrollViewer>
+                    </StackPanel>
+
+                    <!--通信中断路时-->
+
+                    <TextBlock Text="通信中断路时" TextWrapping="Wrap"  Grid.ColumnSpan="2"  Grid.Row="10" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    <TextBox x:Name="time通信中断路时" Grid.Row="10" Grid.Column="2" Grid.ColumnSpan="2"   BorderThickness="0,0,0,1" BorderBrush="#FF9B9B9B" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="8,3"/>
+
+
+                    <!--上级单位受理人-->
+                    <TextBlock Text="上级单位受理人" TextWrapping="Wrap" Grid.Column="4"   Grid.ColumnSpan="1"  Grid.Row="10" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    <TextBox x:Name="tb上级单位受理人" Grid.Row="10" Grid.Column="5" Grid.ColumnSpan="2" Margin="8,0"   BorderThickness="0,0,0,1" BorderBrush="#FF9B9B9B" VerticalAlignment="Center" HorizontalAlignment="Stretch" />
+
+
+                    <!--处理人-->
+                    <TextBlock Text="处理人" TextWrapping="Wrap"  Grid.ColumnSpan="2"  Grid.Row="11" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    <TextBox x:Name="tb受理人" Grid.Row="11" Grid.Column="2" Grid.ColumnSpan="2" Margin="8,0"   BorderThickness="0,0,0,1" BorderBrush="#FF9B9B9B" VerticalAlignment="Center" HorizontalAlignment="Stretch" />
+
+
+
+                    <!--文件列表-->
+
+                    <Border Background="Transparent" BorderBrush="DarkGray" BorderThickness="1,0,1,1"  Grid.ColumnSpan="7"  Grid.Row="12" Grid.Column="0">
+
+                        <Grid Background="Transparent" >
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="40"/>
+                                <ColumnDefinition Width="80"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="80"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="附件" Grid.ColumnSpan="2" Grid.RowSpan="2" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                            <ListBox x:Name="uploadlist" VerticalAlignment="Stretch"  Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="5" Margin="0" >
+                            </ListBox>
+                            <Button x:Name="btn附件"  Content="选择文件" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="1" Grid.Column="2" Margin="5,2,0,2"/>
+                        </Grid>
+                    </Border>
+
+                    <!--故障登记-->
+                    <TextBlock Text="故障登记" TextWrapping="Wrap" Grid.ColumnSpan="2"  Grid.Row="13" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    <CheckBox x:Name="YN受理" HorizontalAlignment="Left" VerticalAlignment="Center" Content="是否登记"  Grid.Row="13" Grid.Column="2"></CheckBox>
+                    <Button Grid.Row="13" Visibility="Collapsed" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center" Height="22" Width="60" Content="选择人员" x:Name="btn选择人员" ></Button>
+
+                    <TextBox x:Name="tb权限" IsReadOnly="True" Visibility="Collapsed" Grid.Row="13" Grid.Column="3" Grid.ColumnSpan="5" Margin="3" Style="{DynamicResource TextBoxStyle1}"  BorderThickness="0,0,0,1" BorderBrush="#FF9B9B9B" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" />
+
+                    <!--故障是否完成-->
+                    <TextBlock Text="故障是否完成" TextWrapping="Wrap" Grid.ColumnSpan="2"  Grid.Row="14" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    <CheckBox x:Name="isfinish"  HorizontalAlignment="Left" VerticalAlignment="Center" IsEnabled="False"  Content="标记已完成"  Grid.Row="14" Grid.Column="2"></CheckBox>
+
+                </Grid>
+
+            </ScrollViewer>
+        </Border>
+        
+        <StackPanel Margin="0,7,0,7" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right">
+
+            <Button x:Name="btnSubmit"  Height="25" Width="80" Margin="0,0,20,0" Content="提  交" Foreground="Red"/>
+
+            <Button x:Name="btnCancel" Height="25" Width="80" Margin="0,0,20,0" Content="取 消" />
+        </StackPanel>
+<my:LoadingPage Opacity="0.1"/>
+    </Grid>
+</UserControl>

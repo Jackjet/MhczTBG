@@ -1,0 +1,55 @@
+﻿<UserControl x:Class="MhczTBG.Controls.DataGridOperate.ScroviewDataPager"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+              d:DesignWidth="300">
+    <UserControl.Resources>
+        <ControlTemplate x:Key="InTemplate">
+            <Grid Width="20" Height="20">
+                <Path RenderTransformOrigin="0.5,0.5" Name="img" Fill="LightBlue" Stretch="Fill" Data="F1M149,44C165.417,44.076 196.502,48.91 192,69 190.653,75.011 185.59,77.932 188,86 191.333,95.332 194.667,104.668 198,114 205.002,153.631 169.033,184.537 140,190 97.042,198.083 66.914,164.334 60,135 53.177,106.052 70.958,64.218 94,62 94.333,63 94.667,64 95,65 97.862,69.536 101.402,82.215 99,88 94.667,94.666 90.333,101.334 86,108 77.249,136.406 97.256,159.793 117,164 157.631,172.658 185.504,116.959 156,96 114.841,112.909 133.65,54.586 149,44z">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                    <Path.Triggers>
+                        <!--<EventTrigger RoutedEvent="Loaded">
+                            <BeginStoryboard >
+                                <Storyboard >
+                                    <DoubleAnimation Duration="0:0:1" RepeatBehavior="Forever" To="-360" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" >
+                                    </DoubleAnimation>
+                                </Storyboard>
+                            </BeginStoryboard>
+
+                        </EventTrigger>-->
+                    </Path.Triggers>
+                    <Path.Effect>
+                        <BlurEffect Radius="3"/>
+                    </Path.Effect>
+                </Path>
+            </Grid>
+        </ControlTemplate>
+    </UserControl.Resources>
+    <Grid>
+        <StackPanel Name="stackPanel" Visibility="Collapsed" HorizontalAlignment="Left" Orientation="Horizontal">
+            <Button x:Name="StaticSync" Margin="20,0,0,0" Template="{StaticResource InTemplate}" />
+            <TextBlock Margin="20,0,0,0" VerticalAlignment="Center" Text="正在加载更多数据,请稍等"/>
+        </StackPanel>
+
+        <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" Margin="0,0,10,0" >
+
+            <TextBlock Text="已加载" />
+
+            <TextBlock Name="txtEnd"/>
+            <TextBlock Text="条数据" Margin="0,0,30,0"/>
+            <TextBlock Text="总计"/>
+            <TextBlock Name="txtAllcount" Text="1" />
+            <TextBlock Text="条"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

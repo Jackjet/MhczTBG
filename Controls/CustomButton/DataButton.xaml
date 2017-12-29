@@ -1,0 +1,56 @@
+﻿<UserControl x:Class="MhczTBG.Controls.DataButton"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" d:DesignWidth="800"
+             d:DesignHeight="50">
+    <UserControl.Resources>
+        <!--<SolidColorBrush x:Key="btnColor1" Color="SkyBlue"/>-->
+    </UserControl.Resources>
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Grid Height="40" Margin="0">
+            <Border BorderBrush="DarkGray" BorderThickness="1" CornerRadius="5" Background="#FFEBEBEB" Padding="2,0">
+                <Grid VerticalAlignment="Center">
+                    <StackPanel HorizontalAlignment="Left"  VerticalAlignment="Center" Orientation="Horizontal" Height="auto">
+                        <ComboBox x:Name="cboxYear" SelectionChanged="cboxYear_SelectionChanged"  ToolTipService.ToolTip="选择年份"   HorizontalAlignment="Left" VerticalAlignment="Center" Width="72" Grid.Row="1" Margin="0,5,5,5" Height="26" FontSize="12" />
+                        <StackPanel Orientation="Horizontal" Name="stackMonth">
+                            <Button  ToolTipService.ToolTip="1月" x:Name="one" Tag="01" Content="1月"   HorizontalAlignment="Left" Width="38" d:LayoutOverrides="Height" VerticalAlignment="Center" Margin="5,0,0,0" FontSize="12" Click="one_Click" />
+                            <Button  ToolTipService.ToolTip="2月" x:Name="two" Tag="02" Content="2月"  HorizontalAlignment="Left" Width="38" d:LayoutOverrides="Height" VerticalAlignment="Center" Margin="5,0,0,0" FontSize="12" Click="one_Click"/>
+                            <Button  ToolTipService.ToolTip="3月" x:Name="three" Tag="03" Content="3月"  HorizontalAlignment="Left" Width="38" d:LayoutOverrides="Height" VerticalAlignment="Center" Margin="5,0,0,0" FontSize="12" Click="one_Click"/>
+                            <Button  ToolTipService.ToolTip="4月" x:Name="fore" Tag="04" Content="4月"  HorizontalAlignment="Left" Width="38" d:LayoutOverrides="Height" VerticalAlignment="Center" Margin="5,0,0,0" FontSize="12" Click="one_Click"/>
+                            <Button  ToolTipService.ToolTip="5月" x:Name="five" Tag="05" Content="5月"  HorizontalAlignment="Left" Width="38" d:LayoutOverrides="Height" VerticalAlignment="Center" Margin="5,0,0,0" FontSize="12" Click="one_Click"/>
+                            <Button  ToolTipService.ToolTip="6月" x:Name="six" Tag="06" Content="6月"  HorizontalAlignment="Left" Width="38" d:LayoutOverrides="Height" VerticalAlignment="Center" Margin="5,0,0,0" FontSize="12" Click="one_Click"/>
+                            <Button  ToolTipService.ToolTip="7月" x:Name="seven" Tag="07" Content="7月"  HorizontalAlignment="Left" Width="38" d:LayoutOverrides="Height" VerticalAlignment="Center" Margin="5,0,0,0" FontSize="12" Click="one_Click"/>
+                            <Button  ToolTipService.ToolTip="8月" x:Name="eight" Tag="08" Content="8月"  HorizontalAlignment="Left" Width="38" d:LayoutOverrides="Height" VerticalAlignment="Center" Margin="5,0,0,0" FontSize="12" Click="one_Click"/>
+                            <Button ToolTipService.ToolTip="9月"  x:Name="nine" Tag="09" Content="9月"  HorizontalAlignment="Left" Width="38" d:LayoutOverrides="Height" VerticalAlignment="Center" Margin="5,0,0,0" FontSize="12" Click="one_Click"/>
+                            <Button  ToolTipService.ToolTip="10月" x:Name="ten" Tag="10" Content="10月"  HorizontalAlignment="Left" Width="38" d:LayoutOverrides="Height" VerticalAlignment="Center" Margin="5,0,0,0" FontSize="12" Click="one_Click"/>
+                            <Button  ToolTipService.ToolTip="11月" x:Name="eleven" Tag="11" Content="11月"  HorizontalAlignment="Left" Width="38" d:LayoutOverrides="Height" VerticalAlignment="Center" Margin="5,0,0,0" FontSize="12" Click="one_Click"/>
+                            <Button  ToolTipService.ToolTip="12月" x:Name="twelve" Tag="12" Content="12月"  HorizontalAlignment="Left" Width="38" d:LayoutOverrides="Height" VerticalAlignment="Center" Margin="5,0,0,0" FontSize="12" Click="one_Click"/>
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                        
+                            <Button Visibility="Visible" x:FieldModifier="public" x:Name="btnShiTu" Content="自 定 义 视 图"  Height="25" Cursor="Hand" Width="100" Margin="6,4"  HorizontalAlignment="Center"      >
+                                <Button.ToolTip>
+                                    <TextBlock Text="自定义视图"/>
+                                </Button.ToolTip>
+                            </Button>
+                      
+                        <Button x:Name="btnExcel"  Height="25" Width="26" HorizontalAlignment="Right" Margin="0,0,5,0"  VerticalAlignment="Center" FontSize="13" FontStretch="Normal"   ToolTipService.ToolTip="导出Excel" >
+                            <Image Margin="0" Source="/MhczTBG;component/Resources/xls.png" Stretch="Fill"/>
+                        </Button>
+                        <Button Height="23" Width="23" HorizontalAlignment="Right"  Margin="0,0,5,0" Name="btnPrint" VerticalAlignment="Center" FontSize="13" FontStretch="Normal"   ToolTipService.ToolTip="打印" >
+                            <Image Margin="0" Height="23" Width="23" Source="/MhczTBG;component/Resources/打印.png" Stretch="Fill"/>
+                        </Button>
+                        <Button x:Name="btnAddGuzhang" Cursor="Hand"  Content="故障受理" HorizontalAlignment="Right" Width="68" FontSize="12" VerticalAlignment="Center" Height="25" Margin="0,0,2,0">
+                            <Button.ToolTip>
+                                <TextBlock Text="点击弹出故障受理窗体"/>
+                            </Button.ToolTip>
+                        </Button>
+                    </StackPanel>
+                </Grid>
+            </Border>
+        </Grid>
+    </Grid>
+</UserControl>

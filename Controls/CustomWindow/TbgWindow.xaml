@@ -1,0 +1,82 @@
+﻿<Window x:Class="MhczTBG.Controls.CustomWindow.TbgWindow" WindowStyle="None"  WindowStartupLocation="CenterScreen" AllowsTransparency="True"  Background="Transparent"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"  FontSize="13" FontFamily="雅黑"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  Topmost="False" 
+        Title="TbgWindow" Height="300" Width="600" MinHeight="300" MinWidth="600">
+    <Window.Resources>
+        <LinearGradientBrush x:Key="linColor1" EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+            <GradientStop Color="#FFF5F5E9" Offset="0"/>
+            <GradientStop Color="#FFAFAFA3" Offset="0.853"/>
+        </LinearGradientBrush>
+
+        <SolidColorBrush x:Key="ss"  Color="Orange">
+
+        </SolidColorBrush>
+
+        <RadialGradientBrush x:Key="rad2">
+            <GradientStop Offset="0.2" Color="White"/>
+            <GradientStop Offset="0.9" Color="SkyBlue"/>
+
+        </RadialGradientBrush>
+    </Window.Resources>
+    <Border Margin="11" BorderBrush="Black" BorderThickness="1"  CornerRadius="6"  >
+        <Grid>
+            <!--环形border-->
+            <Border Name="borRound" Background="Transparent" Margin="1"   BorderBrush="{StaticResource ss}" BorderThickness="6"   />
+            <Border Background="Transparent" Margin="1"   BorderThickness="6"  CornerRadius="5" >
+                <Grid>
+                    <Grid.Resources>
+                        <Style TargetType="Thumb">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate>
+                                        <Rectangle Fill="Transparent"/>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Grid.Resources>
+                    <Thumb Name="thumbBottom"  VerticalAlignment="Bottom" Cursor="SizeNS" Margin="0,5,5,-5" Height="5" DragDelta="Thumb_DragDelta"/>
+                    <Border Name="thumbTop" Background="Transparent"  VerticalAlignment="Top" MouseDown="Border_MouseDown"  Margin="5,-5,5,0" Height="5"/>
+
+                    <Thumb Name="thumbLeft"  HorizontalAlignment="Left"  Margin="-5,5,0,5" Width="5"/>
+                    <Thumb Name="thumbRight"    HorizontalAlignment="Right" Cursor="SizeWE"  Margin="0,5,-5,5" Width="5" DragDelta="Thumb_DragDelta_1"/>
+
+                    <Thumb Name="thumbRR" Opacity="0.5" Background="Green" DockPanel.Dock="Right" HorizontalAlignment="Right" VerticalAlignment="Bottom" Cursor="SizeNWSE" DragDelta="Thumb_DragDelta_2" Margin="0,0,-3,-3" Width="5" Height="5">
+
+                    </Thumb>
+
+                    <Grid Background="Transparent">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid >
+                            <!--标题-->
+                            <Border Name="borTittle"  Background="{StaticResource ss}"  MouseDown="Border_MouseDown" BorderThickness="0,0,0,0.5" BorderBrush="Gray"  />
+                            <StackPanel Margin="0,-5,0,0" Orientation="Horizontal"   HorizontalAlignment="Left" VerticalAlignment="Center">
+                                <Image Name="Ico" Height="15" Stretch="Fill" Width="20" Source="/MhczTBG;component/Resources/Search.png" />
+                                <TextBlock x:FieldModifier="public" Name="winTittle"  Text="自定义窗体"/>
+                            </StackPanel>
+
+                            <StackPanel Margin="0,-15,0,0" Orientation="Horizontal" HorizontalAlignment="Right">
+                                <Border Height="18" Width="20" BorderBrush="Gray" BorderThickness="1,0,0,1">
+                                    <Image Name="min"   Stretch="Fill" Cursor="Hand" MouseLeftButtonDown="min_MouseLeftButtonDown"  HorizontalAlignment="Right" Source="/MhczTBG;component/Image/Min.png" />
+                                </Border>
+                                <Border Height="18" Width="20" BorderBrush="Gray" BorderThickness="0,0,0,1">
+                                    <Image Name="huan"   Stretch="Fill"  Cursor="Hand" MouseLeftButtonDown="huan_MouseLeftButtonDown" HorizontalAlignment="Right" Source="/MhczTBG;component/Image/Huan.png" />
+                                </Border>
+                                <Border Height="18" Width="25" BorderBrush="Gray" BorderThickness="0,0,1,1">
+                                    <Image Name="close" Stretch="Fill"  Cursor="Hand" MouseLeftButtonDown="close_MouseLeftButtonDown"  HorizontalAlignment="Right" Source="/MhczTBG;component/Image/close.png" />
+                                </Border>
+                            </StackPanel>
+
+                        </Grid>
+                        <Border x:FieldModifier="public" BorderBrush="Black" Name="BorMain" BorderThickness="1" Grid.Row="1" Background="White"/>
+                    </Grid>
+                </Grid>
+
+            </Border>
+        </Grid>
+    </Border>
+
+</Window>

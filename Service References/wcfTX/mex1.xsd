@@ -1,0 +1,908 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://txds.bjtxd.com/_Layouts/FtxdWcf/txd.svc/mex?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/TxdWcf.Layouts.FTxdWcf" />
+  <xs:import schemaLocation="http://txds.bjtxd.com/_Layouts/FtxdWcf/txd.svc/mex?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="TList返回字段编辑参数">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Pweb" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Plist" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TList返回字段编辑参数Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/TxdWcf.Layouts.FTxdWcf" minOccurs="0" name="TList返回字段编辑参数Result" nillable="true" type="q1:ArrayOf两列数据返回" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUserInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LDAP" nillable="true" type="xs:string" />
+        <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Dictionary" nillable="true" type="q2:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUserInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateUserInfoResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="根据ID读取Item项权限V2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Pweb" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Plist" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="itemID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="根据ID读取Item项权限V2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="根据ID读取Item项权限V2Result" nillable="true" type="q3:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadADUserAndGroup">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadADUserAndGroupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ReadADUserAndGroupResult" nillable="true" type="q4:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addUserInDomain">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LDAP" nillable="true" type="xs:string" />
+        <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="permUserInfo" nillable="true" type="q5:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addUserInDomainResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="addUserInDomainResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="currUserInfo">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="currUserInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/TxdWcf.Layouts.FTxdWcf" minOccurs="0" name="currUserInfoResult" nillable="true" type="q6:ArrayOfUserInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="集合加入故障列表权限V2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Pweb" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Plist" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ItemID" type="xs:int" />
+        <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="S" nillable="true" type="q7:ArrayOfKeyValueOfstringstring" />
+        <xs:element minOccurs="0" name="isFirst" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="集合加入故障列表权限V2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="集合加入故障列表权限V2Result" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GroupMenbers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="webName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="GroupName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GroupMenbersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/TxdWcf.Layouts.FTxdWcf" minOccurs="0" name="GroupMenbersResult" nillable="true" type="q8:ArrayOfUserInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SuperUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Pweb" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SuperUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SuperUserResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeletUserFromSPgroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="webName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="GroupName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeletUserFromSPgroupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeletUserFromSPgroupResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="isHavePermissions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Pweb" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Plist" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="isHavePermissionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="isHavePermissionsResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddUserInSPgroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="webName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="GroupName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddUserInSPgroupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddUserInSPgroupResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeLUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PermLDAProot" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeLUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeLUserResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadADUser">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReadADUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ReadADUserResult" nillable="true" type="q9:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LDAP用户信息">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LDAP" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LDAP用户信息Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/TxdWcf.Layouts.FTxdWcf" minOccurs="0" name="LDAP用户信息Result" nillable="true" type="q10:ArrayOfUserInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ADUserPassword">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLdap" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="oldPass" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="newPass" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ADUserPasswordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ADUserPasswordResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ClosePC">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ClosePCResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Fontion">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FontionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FontionResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FileSum">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Pweb" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Plist" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Pid" type="xs:int" />
+        <xs:element xmlns:q11="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="BigFilePart" nillable="true" type="q11:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FileSumResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FileSumResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getFile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="file" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getFileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getFileResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="copy附件">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="copy附件Response">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChengeItemUsersPermission">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="dirParms" nillable="true" type="q12:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChengeItemUsersPermissionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ChengeItemUsersPermissionResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dicReturn">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="FieldParms" nillable="true" type="q13:ArrayOfKeyValueOfstringstring" />
+        <xs:element xmlns:q14="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="camlDir" nillable="true" type="q14:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dicReturnResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="dicReturnResult" nillable="true" type="q15:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="deletItemAttachment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Pweb" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Plist" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Pid" type="xs:int" />
+        <xs:element xmlns:q16="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="fileNameslist" nillable="true" type="q16:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="deletItemAttachmentResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateListItemAsync">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Pweb" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Plist" nillable="true" type="xs:string" />
+        <xs:element xmlns:q17="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="DictionaryFields" nillable="true" type="q17:ArrayOfKeyValueOfstringanyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateListItemAsyncResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateListItemAsyncResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updataListItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Pweb" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Plist" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Pid" type="xs:int" />
+        <xs:element xmlns:q18="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="DictionaryFields" nillable="true" type="q18:ArrayOfKeyValueOfstringanyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updataListItemResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="deletListItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Pweb" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Plist" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Pid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="deletListItemResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateListItemAndFolder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="webName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="listName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q19="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="DictionaryFields" nillable="true" type="q19:ArrayOfKeyValueOfstringanyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateListItemAndFolderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateListItemAndFolderResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updataGZItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Pweb" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Pid" type="xs:int" />
+        <xs:element xmlns:q20="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="DictionaryFields" nillable="true" type="q20:ArrayOfKeyValueOfstringanyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updataGZItemResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listTitle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Pweb" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Plist" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listTitleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/TxdWcf.Layouts.FTxdWcf" minOccurs="0" name="listTitleResult" nillable="true" type="q21:ArrayOf返回一列数据" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="三列数据返回">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Pweb" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Plist" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fields" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="三列数据返回Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/TxdWcf.Layouts.FTxdWcf" minOccurs="0" name="三列数据返回Result" nillable="true" type="q22:ArrayOf多列数据返回" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="retureTXListItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Pweb" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Plist" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Pid" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="retureTXListItemResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/TxdWcf.Layouts.FTxdWcf" minOccurs="0" name="retureTXListItemResult" nillable="true" type="q23:ArrayOfTXListItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="List返回两列数据">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Pweb" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Plist" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="List返回两列数据Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/TxdWcf.Layouts.FTxdWcf" minOccurs="0" name="List返回两列数据Result" nillable="true" type="q24:ArrayOf两列数据返回" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TXList列表v2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Pweb" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Plist" nillable="true" type="xs:string" />
+        <xs:element xmlns:q25="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Pd" nillable="true" type="q25:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TXList列表v2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/TxdWcf.Layouts.FTxdWcf" minOccurs="0" name="TXList列表v2Result" nillable="true" type="q26:ArrayOfTXListV2" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="logList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Pweb" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Plist" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_ID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="logListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/TxdWcf.Layouts.FTxdWcf" minOccurs="0" name="logListResult" nillable="true" type="q27:ArrayOflist日志01" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MessageReturn">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Pweb" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Derprment" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MessageReturnResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MessageReturnResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="T定性分类统计月份">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Pweb" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Plist" nillable="true" type="xs:string" />
+        <xs:element xmlns:q28="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Pd" nillable="true" type="q28:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="T定性分类统计月份Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/TxdWcf.Layouts.FTxdWcf" minOccurs="0" name="T定性分类统计月份Result" nillable="true" type="q29:ArrayOfT定性分类统计表月份" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="T二级设备分类统计车间">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Pweb" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Plist" nillable="true" type="xs:string" />
+        <xs:element xmlns:q30="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Pd" nillable="true" type="q30:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="T二级设备分类统计车间Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/TxdWcf.Layouts.FTxdWcf" minOccurs="0" name="T二级设备分类统计车间Result" nillable="true" type="q31:ArrayOfT设备二级分类统计表车间" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="T定责段局统计月份">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Pweb" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Plist" nillable="true" type="xs:string" />
+        <xs:element xmlns:q32="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Pd" nillable="true" type="q32:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="T定责段局统计月份Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/TxdWcf.Layouts.FTxdWcf" minOccurs="0" name="T定责段局统计月份Result" nillable="true" type="q33:ArrayOft定责段局分类统计表月份" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="T定责段局分类统计车间">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Pweb" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Plist" nillable="true" type="xs:string" />
+        <xs:element xmlns:q34="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Pd" nillable="true" type="q34:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="T定责段局分类统计车间Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/TxdWcf.Layouts.FTxdWcf" minOccurs="0" name="T定责段局分类统计车间Result" nillable="true" type="q35:ArrayOft定责段局分类统计表车间" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="T二级设备类型故障统计表V2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Pweb" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Plist" nillable="true" type="xs:string" />
+        <xs:element xmlns:q36="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Pd" nillable="true" type="q36:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="T二级设备类型故障统计表V2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/TxdWcf.Layouts.FTxdWcf" minOccurs="0" name="T二级设备类型故障统计表V2Result" nillable="true" type="q37:ArrayOf三级设备类型故障统计" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="T全年车间统计V2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Pweb" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Plist" nillable="true" type="xs:string" />
+        <xs:element xmlns:q38="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Pd" nillable="true" type="q38:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="T全年车间统计V2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/TxdWcf.Layouts.FTxdWcf" minOccurs="0" name="T全年车间统计V2Result" nillable="true" type="q39:ArrayOf三级设备类型故障统计" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="T二级设备分类统计月份">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Pweb" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Plist" nillable="true" type="xs:string" />
+        <xs:element xmlns:q40="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Pd" nillable="true" type="q40:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="T二级设备分类统计月份Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/TxdWcf.Layouts.FTxdWcf" minOccurs="0" name="T二级设备分类统计月份Result" nillable="true" type="q41:ArrayOfT设备二级分类统计表" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="T全年定责统计V2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Pweb" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Plist" nillable="true" type="xs:string" />
+        <xs:element xmlns:q42="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Pd" nillable="true" type="q42:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="T全年定责统计V2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/TxdWcf.Layouts.FTxdWcf" minOccurs="0" name="T全年定责统计V2Result" nillable="true" type="q43:ArrayOf三级设备类型故障统计" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="T定性分类统计车间">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Pweb" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Plist" nillable="true" type="xs:string" />
+        <xs:element xmlns:q44="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Pd" nillable="true" type="q44:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="T定性分类统计车间Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/TxdWcf.Layouts.FTxdWcf" minOccurs="0" name="T定性分类统计车间Result" nillable="true" type="q45:ArrayOfT定性分类统计表车间" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="T车间设备二级月份计算">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Pweb" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Plist" nillable="true" type="xs:string" />
+        <xs:element xmlns:q46="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Pd" nillable="true" type="q46:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="T车间设备二级月份计算Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/TxdWcf.Layouts.FTxdWcf" minOccurs="0" name="T车间设备二级月份计算Result" nillable="true" type="q47:ArrayOfc车间设备二级月份计算" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="chart通信定责统计图">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Pweb" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Plist" nillable="true" type="xs:string" />
+        <xs:element xmlns:q48="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Pd" nillable="true" type="q48:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="chart通信定责统计图Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/TxdWcf.Layouts.FTxdWcf" minOccurs="0" name="chart通信定责统计图Result" nillable="true" type="q49:ArrayOftx定责故障统计" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="chart通信车间故障占比">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Pweb" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Plist" nillable="true" type="xs:string" />
+        <xs:element xmlns:q50="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Pd" nillable="true" type="q50:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="chart通信车间故障占比Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/TxdWcf.Layouts.FTxdWcf" minOccurs="0" name="chart通信车间故障占比Result" nillable="true" type="q51:ArrayOf车间故障统计" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="chart通信同期对比图list">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Pweb" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Plist" nillable="true" type="xs:string" />
+        <xs:element xmlns:q52="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Pd" nillable="true" type="q52:ArrayOfKeyValueOfstringstring" />
+        <xs:element minOccurs="0" name="Year01" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Year02" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="chart通信同期对比图listResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/TxdWcf.Layouts.FTxdWcf" minOccurs="0" name="chart通信同期对比图listResult" nillable="true" type="q53:ArrayOf同期对比图list" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="chart通信故障件数设备类型一类">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Pweb" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Plist" nillable="true" type="xs:string" />
+        <xs:element xmlns:q54="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Pd" nillable="true" type="q54:ArrayOfKeyValueOfstringstring" />
+        <xs:element minOccurs="0" name="YearMonth" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="chart通信故障件数设备类型一类Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/TxdWcf.Layouts.FTxdWcf" minOccurs="0" name="chart通信故障件数设备类型一类Result" nillable="true" type="q55:ArrayOfchart通信故障件数设备类型一类" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="chart通信设备类型二级统计图">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Pweb" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Plist" nillable="true" type="xs:string" />
+        <xs:element xmlns:q56="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Pd" nillable="true" type="q56:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="chart通信设备类型二级统计图Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/TxdWcf.Layouts.FTxdWcf" minOccurs="0" name="chart通信设备类型二级统计图Result" nillable="true" type="q57:ArrayOftx设备类型故障统计" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="chart通信设备类型一级统计图">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Pweb" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Plist" nillable="true" type="xs:string" />
+        <xs:element xmlns:q58="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Pd" nillable="true" type="q58:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="chart通信设备类型一级统计图Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q59="http://schemas.datacontract.org/2004/07/TxdWcf.Layouts.FTxdWcf" minOccurs="0" name="chart通信设备类型一级统计图Result" nillable="true" type="q59:ArrayOftx设备类型故障统计" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="chart返回连续个月的对比">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Pweb" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Plist" nillable="true" type="xs:string" />
+        <xs:element xmlns:q60="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Pd" nillable="true" type="q60:ArrayOfKeyValueOfstringstring" />
+        <xs:element minOccurs="0" name="Month01" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="chart返回连续个月的对比Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q61="http://schemas.datacontract.org/2004/07/TxdWcf.Layouts.FTxdWcf" minOccurs="0" name="chart返回连续个月的对比Result" nillable="true" type="q61:ArrayOfchart月份故障比较返回" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="chart通信定性统计图">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Pweb" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Plist" nillable="true" type="xs:string" />
+        <xs:element xmlns:q62="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Pd" nillable="true" type="q62:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="chart通信定性统计图Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q63="http://schemas.datacontract.org/2004/07/TxdWcf.Layouts.FTxdWcf" minOccurs="0" name="chart通信定性统计图Result" nillable="true" type="q63:ArrayOftx定性故障统计" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="chart月份故障分析表">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Pweb" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Plist" nillable="true" type="xs:string" />
+        <xs:element xmlns:q64="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Pd" nillable="true" type="q64:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="chart月份故障分析表Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q65="http://schemas.datacontract.org/2004/07/TxdWcf.Layouts.FTxdWcf" minOccurs="0" name="chart月份故障分析表Result" nillable="true" type="q65:ArrayOfchart月份故障分析返回" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="chart通信车间故障统计图">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Pweb" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Plist" nillable="true" type="xs:string" />
+        <xs:element xmlns:q66="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Pd" nillable="true" type="q66:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="chart通信车间故障统计图Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q67="http://schemas.datacontract.org/2004/07/TxdWcf.Layouts.FTxdWcf" minOccurs="0" name="chart通信车间故障统计图Result" nillable="true" type="q67:ArrayOftx车间故障统计" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Tchart局定定责统计">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Pweb" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Plist" nillable="true" type="xs:string" />
+        <xs:element xmlns:q68="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Pd" nillable="true" type="q68:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Tchart局定定责统计Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q69="http://schemas.datacontract.org/2004/07/TxdWcf.Layouts.FTxdWcf" minOccurs="0" name="Tchart局定定责统计Result" nillable="true" type="q69:ArrayOftx局定责任统计" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Tchart故障延时占比V2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Pweb" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Plist" nillable="true" type="xs:string" />
+        <xs:element xmlns:q70="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Pd" nillable="true" type="q70:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Tchart故障延时占比V2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q71="http://schemas.datacontract.org/2004/07/TxdWcf.Layouts.FTxdWcf" minOccurs="0" name="Tchart故障延时占比V2Result" nillable="true" type="q71:ArrayOf故障延时占比" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Tchart段定定责统计">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Pweb" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Plist" nillable="true" type="xs:string" />
+        <xs:element xmlns:q72="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Pd" nillable="true" type="q72:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Tchart段定定责统计Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q73="http://schemas.datacontract.org/2004/07/TxdWcf.Layouts.FTxdWcf" minOccurs="0" name="Tchart段定定责统计Result" nillable="true" type="q73:ArrayOftx段定责统计" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

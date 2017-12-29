@@ -1,0 +1,2226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Stxd" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="BasicHttpBinding_Itxd_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <http:NtlmAuthentication xmlns:http="http://schemas.microsoft.com/ws/06/2004/policy/http" />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="BasicHttpBinding_Itxd2_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <http:NtlmAuthentication xmlns:http="http://schemas.microsoft.com/ws/06/2004/policy/http" />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://txds.bjtxd.com/_Layouts/FtxdWcf/txd.svc/mex?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://txds.bjtxd.com/_Layouts/FtxdWcf/txd.svc/mex?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://txds.bjtxd.com/_Layouts/FtxdWcf/txd.svc/mex?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/TxdWcf.Layouts.FTxdWcf" />
+      <xsd:import schemaLocation="http://txds.bjtxd.com/_Layouts/FtxdWcf/txd.svc/mex?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="Itxd_TList返回字段编辑参数_InputMessage">
+    <wsdl:part name="parameters" element="tns:TList返回字段编辑参数" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_TList返回字段编辑参数_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TList返回字段编辑参数Response" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_UpdateUserInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserInfo" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_UpdateUserInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_根据ID读取Item项权限V2_InputMessage">
+    <wsdl:part name="parameters" element="tns:根据ID读取Item项权限V2" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_根据ID读取Item项权限V2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:根据ID读取Item项权限V2Response" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_ReadADUserAndGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadADUserAndGroup" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_ReadADUserAndGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadADUserAndGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_addUserInDomain_InputMessage">
+    <wsdl:part name="parameters" element="tns:addUserInDomain" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_addUserInDomain_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addUserInDomainResponse" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_currUserInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:currUserInfo" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_currUserInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:currUserInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_集合加入故障列表权限V2_InputMessage">
+    <wsdl:part name="parameters" element="tns:集合加入故障列表权限V2" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_集合加入故障列表权限V2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:集合加入故障列表权限V2Response" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_GroupMenbers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GroupMenbers" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_GroupMenbers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GroupMenbersResponse" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_SuperUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:SuperUser" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_SuperUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SuperUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_DeletUserFromSPgroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletUserFromSPgroup" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_DeletUserFromSPgroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletUserFromSPgroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_isHavePermissions_InputMessage">
+    <wsdl:part name="parameters" element="tns:isHavePermissions" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_isHavePermissions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:isHavePermissionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_AddUserInSPgroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserInSPgroup" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_AddUserInSPgroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserInSPgroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_DeLUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeLUser" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_DeLUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeLUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_ReadADUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReadADUser" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_ReadADUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReadADUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_LDAP用户信息_InputMessage">
+    <wsdl:part name="parameters" element="tns:LDAP用户信息" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_LDAP用户信息_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LDAP用户信息Response" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_ADUserPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:ADUserPassword" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_ADUserPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ADUserPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_ClosePC_InputMessage">
+    <wsdl:part name="parameters" element="tns:ClosePC" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_ClosePC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ClosePCResponse" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_Fontion_InputMessage">
+    <wsdl:part name="parameters" element="tns:Fontion" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_Fontion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FontionResponse" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_FileSum_InputMessage">
+    <wsdl:part name="parameters" element="tns:FileSum" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_FileSum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FileSumResponse" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_getFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:getFile" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_getFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_copy附件_InputMessage">
+    <wsdl:part name="parameters" element="tns:copy附件" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_copy附件_OutputMessage">
+    <wsdl:part name="parameters" element="tns:copy附件Response" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_ChengeItemUsersPermission_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChengeItemUsersPermission" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_ChengeItemUsersPermission_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChengeItemUsersPermissionResponse" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_dicReturn_InputMessage">
+    <wsdl:part name="parameters" element="tns:dicReturn" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_dicReturn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:dicReturnResponse" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_deletItemAttachment_InputMessage">
+    <wsdl:part name="parameters" element="tns:deletItemAttachment" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_deletItemAttachment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deletItemAttachmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_CreateListItemAsync_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateListItemAsync" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_CreateListItemAsync_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateListItemAsyncResponse" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_updataListItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:updataListItem" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_updataListItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updataListItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_deletListItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:deletListItem" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_deletListItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deletListItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_CreateListItemAndFolder_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateListItemAndFolder" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_CreateListItemAndFolder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateListItemAndFolderResponse" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_updataGZItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:updataGZItem" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_updataGZItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updataGZItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_listTitle_InputMessage">
+    <wsdl:part name="parameters" element="tns:listTitle" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_listTitle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listTitleResponse" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_三列数据返回_InputMessage">
+    <wsdl:part name="parameters" element="tns:三列数据返回" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_三列数据返回_OutputMessage">
+    <wsdl:part name="parameters" element="tns:三列数据返回Response" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_retureTXListItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:retureTXListItem" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_retureTXListItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:retureTXListItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_List返回两列数据_InputMessage">
+    <wsdl:part name="parameters" element="tns:List返回两列数据" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_List返回两列数据_OutputMessage">
+    <wsdl:part name="parameters" element="tns:List返回两列数据Response" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_TXList列表v2_InputMessage">
+    <wsdl:part name="parameters" element="tns:TXList列表v2" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_TXList列表v2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TXList列表v2Response" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_logList_InputMessage">
+    <wsdl:part name="parameters" element="tns:logList" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_logList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:logListResponse" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_MessageReturn_InputMessage">
+    <wsdl:part name="parameters" element="tns:MessageReturn" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_MessageReturn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MessageReturnResponse" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_T定性分类统计月份_InputMessage">
+    <wsdl:part name="parameters" element="tns:T定性分类统计月份" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_T定性分类统计月份_OutputMessage">
+    <wsdl:part name="parameters" element="tns:T定性分类统计月份Response" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_T二级设备分类统计车间_InputMessage">
+    <wsdl:part name="parameters" element="tns:T二级设备分类统计车间" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_T二级设备分类统计车间_OutputMessage">
+    <wsdl:part name="parameters" element="tns:T二级设备分类统计车间Response" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_T定责段局统计月份_InputMessage">
+    <wsdl:part name="parameters" element="tns:T定责段局统计月份" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_T定责段局统计月份_OutputMessage">
+    <wsdl:part name="parameters" element="tns:T定责段局统计月份Response" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_T定责段局分类统计车间_InputMessage">
+    <wsdl:part name="parameters" element="tns:T定责段局分类统计车间" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_T定责段局分类统计车间_OutputMessage">
+    <wsdl:part name="parameters" element="tns:T定责段局分类统计车间Response" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_T二级设备类型故障统计表V2_InputMessage">
+    <wsdl:part name="parameters" element="tns:T二级设备类型故障统计表V2" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_T二级设备类型故障统计表V2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:T二级设备类型故障统计表V2Response" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_T全年车间统计V2_InputMessage">
+    <wsdl:part name="parameters" element="tns:T全年车间统计V2" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_T全年车间统计V2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:T全年车间统计V2Response" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_T二级设备分类统计月份_InputMessage">
+    <wsdl:part name="parameters" element="tns:T二级设备分类统计月份" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_T二级设备分类统计月份_OutputMessage">
+    <wsdl:part name="parameters" element="tns:T二级设备分类统计月份Response" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_T全年定责统计V2_InputMessage">
+    <wsdl:part name="parameters" element="tns:T全年定责统计V2" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_T全年定责统计V2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:T全年定责统计V2Response" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_T定性分类统计车间_InputMessage">
+    <wsdl:part name="parameters" element="tns:T定性分类统计车间" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_T定性分类统计车间_OutputMessage">
+    <wsdl:part name="parameters" element="tns:T定性分类统计车间Response" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_T车间设备二级月份计算_InputMessage">
+    <wsdl:part name="parameters" element="tns:T车间设备二级月份计算" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_T车间设备二级月份计算_OutputMessage">
+    <wsdl:part name="parameters" element="tns:T车间设备二级月份计算Response" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_chart通信定责统计图_InputMessage">
+    <wsdl:part name="parameters" element="tns:chart通信定责统计图" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_chart通信定责统计图_OutputMessage">
+    <wsdl:part name="parameters" element="tns:chart通信定责统计图Response" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_chart通信车间故障占比_InputMessage">
+    <wsdl:part name="parameters" element="tns:chart通信车间故障占比" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_chart通信车间故障占比_OutputMessage">
+    <wsdl:part name="parameters" element="tns:chart通信车间故障占比Response" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_chart通信同期对比图list_InputMessage">
+    <wsdl:part name="parameters" element="tns:chart通信同期对比图list" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_chart通信同期对比图list_OutputMessage">
+    <wsdl:part name="parameters" element="tns:chart通信同期对比图listResponse" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_chart通信故障件数设备类型一类_InputMessage">
+    <wsdl:part name="parameters" element="tns:chart通信故障件数设备类型一类" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_chart通信故障件数设备类型一类_OutputMessage">
+    <wsdl:part name="parameters" element="tns:chart通信故障件数设备类型一类Response" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_chart通信设备类型二级统计图_InputMessage">
+    <wsdl:part name="parameters" element="tns:chart通信设备类型二级统计图" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_chart通信设备类型二级统计图_OutputMessage">
+    <wsdl:part name="parameters" element="tns:chart通信设备类型二级统计图Response" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_chart通信设备类型一级统计图_InputMessage">
+    <wsdl:part name="parameters" element="tns:chart通信设备类型一级统计图" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_chart通信设备类型一级统计图_OutputMessage">
+    <wsdl:part name="parameters" element="tns:chart通信设备类型一级统计图Response" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_chart返回连续个月的对比_InputMessage">
+    <wsdl:part name="parameters" element="tns:chart返回连续个月的对比" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_chart返回连续个月的对比_OutputMessage">
+    <wsdl:part name="parameters" element="tns:chart返回连续个月的对比Response" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_chart通信定性统计图_InputMessage">
+    <wsdl:part name="parameters" element="tns:chart通信定性统计图" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_chart通信定性统计图_OutputMessage">
+    <wsdl:part name="parameters" element="tns:chart通信定性统计图Response" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_chart月份故障分析表_InputMessage">
+    <wsdl:part name="parameters" element="tns:chart月份故障分析表" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_chart月份故障分析表_OutputMessage">
+    <wsdl:part name="parameters" element="tns:chart月份故障分析表Response" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_chart通信车间故障统计图_InputMessage">
+    <wsdl:part name="parameters" element="tns:chart通信车间故障统计图" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_chart通信车间故障统计图_OutputMessage">
+    <wsdl:part name="parameters" element="tns:chart通信车间故障统计图Response" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_Tchart局定定责统计_InputMessage">
+    <wsdl:part name="parameters" element="tns:Tchart局定定责统计" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_Tchart局定定责统计_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Tchart局定定责统计Response" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_Tchart故障延时占比V2_InputMessage">
+    <wsdl:part name="parameters" element="tns:Tchart故障延时占比V2" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_Tchart故障延时占比V2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Tchart故障延时占比V2Response" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_Tchart段定定责统计_InputMessage">
+    <wsdl:part name="parameters" element="tns:Tchart段定定责统计" />
+  </wsdl:message>
+  <wsdl:message name="Itxd_Tchart段定定责统计_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Tchart段定定责统计Response" />
+  </wsdl:message>
+  <wsdl:portType name="Itxd">
+    <wsdl:operation name="TList返回字段编辑参数">
+      <wsdl:input wsaw:Action="http://tempuri.org/Itxd/TList返回字段编辑参数" message="tns:Itxd_TList返回字段编辑参数_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Itxd/TList返回字段编辑参数Response" message="tns:Itxd_TList返回字段编辑参数_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/Itxd/UpdateUserInfo" message="tns:Itxd_UpdateUserInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Itxd/UpdateUserInfoResponse" message="tns:Itxd_UpdateUserInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="根据ID读取Item项权限V2">
+      <wsdl:input wsaw:Action="http://tempuri.org/Itxd/根据ID读取Item项权限V2" message="tns:Itxd_根据ID读取Item项权限V2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Itxd/根据ID读取Item项权限V2Response" message="tns:Itxd_根据ID读取Item项权限V2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadADUserAndGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/Itxd/ReadADUserAndGroup" message="tns:Itxd_ReadADUserAndGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Itxd/ReadADUserAndGroupResponse" message="tns:Itxd_ReadADUserAndGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addUserInDomain">
+      <wsdl:input wsaw:Action="http://tempuri.org/Itxd/addUserInDomain" message="tns:Itxd_addUserInDomain_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Itxd/addUserInDomainResponse" message="tns:Itxd_addUserInDomain_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="currUserInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/Itxd/currUserInfo" message="tns:Itxd_currUserInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Itxd/currUserInfoResponse" message="tns:Itxd_currUserInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="集合加入故障列表权限V2">
+      <wsdl:input wsaw:Action="http://tempuri.org/Itxd/集合加入故障列表权限V2" message="tns:Itxd_集合加入故障列表权限V2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Itxd/集合加入故障列表权限V2Response" message="tns:Itxd_集合加入故障列表权限V2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GroupMenbers">
+      <wsdl:input wsaw:Action="http://tempuri.org/Itxd/GroupMenbers" message="tns:Itxd_GroupMenbers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Itxd/GroupMenbersResponse" message="tns:Itxd_GroupMenbers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SuperUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/Itxd/SuperUser" message="tns:Itxd_SuperUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Itxd/SuperUserResponse" message="tns:Itxd_SuperUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletUserFromSPgroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/Itxd/DeletUserFromSPgroup" message="tns:Itxd_DeletUserFromSPgroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Itxd/DeletUserFromSPgroupResponse" message="tns:Itxd_DeletUserFromSPgroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="isHavePermissions">
+      <wsdl:input wsaw:Action="http://tempuri.org/Itxd/isHavePermissions" message="tns:Itxd_isHavePermissions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Itxd/isHavePermissionsResponse" message="tns:Itxd_isHavePermissions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUserInSPgroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/Itxd/AddUserInSPgroup" message="tns:Itxd_AddUserInSPgroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Itxd/AddUserInSPgroupResponse" message="tns:Itxd_AddUserInSPgroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeLUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/Itxd/DeLUser" message="tns:Itxd_DeLUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Itxd/DeLUserResponse" message="tns:Itxd_DeLUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReadADUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/Itxd/ReadADUser" message="tns:Itxd_ReadADUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Itxd/ReadADUserResponse" message="tns:Itxd_ReadADUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LDAP用户信息">
+      <wsdl:input wsaw:Action="http://tempuri.org/Itxd/LDAP用户信息" message="tns:Itxd_LDAP用户信息_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Itxd/LDAP用户信息Response" message="tns:Itxd_LDAP用户信息_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ADUserPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/Itxd/ADUserPassword" message="tns:Itxd_ADUserPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Itxd/ADUserPasswordResponse" message="tns:Itxd_ADUserPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ClosePC">
+      <wsdl:input wsaw:Action="http://tempuri.org/Itxd/ClosePC" message="tns:Itxd_ClosePC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Itxd/ClosePCResponse" message="tns:Itxd_ClosePC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Fontion">
+      <wsdl:input wsaw:Action="http://tempuri.org/Itxd/Fontion" message="tns:Itxd_Fontion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Itxd/FontionResponse" message="tns:Itxd_Fontion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FileSum">
+      <wsdl:input wsaw:Action="http://tempuri.org/Itxd/FileSum" message="tns:Itxd_FileSum_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Itxd/FileSumResponse" message="tns:Itxd_FileSum_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/Itxd/getFile" message="tns:Itxd_getFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Itxd/getFileResponse" message="tns:Itxd_getFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="copy附件">
+      <wsdl:input wsaw:Action="http://tempuri.org/Itxd/copy附件" message="tns:Itxd_copy附件_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Itxd/copy附件Response" message="tns:Itxd_copy附件_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChengeItemUsersPermission">
+      <wsdl:input wsaw:Action="http://tempuri.org/Itxd/ChengeItemUsersPermission" message="tns:Itxd_ChengeItemUsersPermission_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Itxd/ChengeItemUsersPermissionResponse" message="tns:Itxd_ChengeItemUsersPermission_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="dicReturn">
+      <wsdl:input wsaw:Action="http://tempuri.org/Itxd/dicReturn" message="tns:Itxd_dicReturn_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Itxd/dicReturnResponse" message="tns:Itxd_dicReturn_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deletItemAttachment">
+      <wsdl:input wsaw:Action="http://tempuri.org/Itxd/deletItemAttachment" message="tns:Itxd_deletItemAttachment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Itxd/deletItemAttachmentResponse" message="tns:Itxd_deletItemAttachment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateListItemAsync">
+      <wsdl:input wsaw:Action="http://tempuri.org/Itxd/CreateListItemAsync" message="tns:Itxd_CreateListItemAsync_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Itxd/CreateListItemAsyncResponse" message="tns:Itxd_CreateListItemAsync_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updataListItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/Itxd/updataListItem" message="tns:Itxd_updataListItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Itxd/updataListItemResponse" message="tns:Itxd_updataListItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deletListItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/Itxd/deletListItem" message="tns:Itxd_deletListItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Itxd/deletListItemResponse" message="tns:Itxd_deletListItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateListItemAndFolder">
+      <wsdl:input wsaw:Action="http://tempuri.org/Itxd/CreateListItemAndFolder" message="tns:Itxd_CreateListItemAndFolder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Itxd/CreateListItemAndFolderResponse" message="tns:Itxd_CreateListItemAndFolder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updataGZItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/Itxd/updataGZItem" message="tns:Itxd_updataGZItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Itxd/updataGZItemResponse" message="tns:Itxd_updataGZItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="listTitle">
+      <wsdl:input wsaw:Action="http://tempuri.org/Itxd/listTitle" message="tns:Itxd_listTitle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Itxd/listTitleResponse" message="tns:Itxd_listTitle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="三列数据返回">
+      <wsdl:input wsaw:Action="http://tempuri.org/Itxd/三列数据返回" message="tns:Itxd_三列数据返回_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Itxd/三列数据返回Response" message="tns:Itxd_三列数据返回_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="retureTXListItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/Itxd/retureTXListItem" message="tns:Itxd_retureTXListItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Itxd/retureTXListItemResponse" message="tns:Itxd_retureTXListItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="List返回两列数据">
+      <wsdl:input wsaw:Action="http://tempuri.org/Itxd/List返回两列数据" message="tns:Itxd_List返回两列数据_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Itxd/List返回两列数据Response" message="tns:Itxd_List返回两列数据_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TXList列表v2">
+      <wsdl:input wsaw:Action="http://tempuri.org/Itxd/TXList列表v2" message="tns:Itxd_TXList列表v2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Itxd/TXList列表v2Response" message="tns:Itxd_TXList列表v2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="logList">
+      <wsdl:input wsaw:Action="http://tempuri.org/Itxd/logList" message="tns:Itxd_logList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Itxd/logListResponse" message="tns:Itxd_logList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MessageReturn">
+      <wsdl:input wsaw:Action="http://tempuri.org/Itxd/MessageReturn" message="tns:Itxd_MessageReturn_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Itxd/MessageReturnResponse" message="tns:Itxd_MessageReturn_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="T定性分类统计月份">
+      <wsdl:input wsaw:Action="http://tempuri.org/Itxd/T定性分类统计月份" message="tns:Itxd_T定性分类统计月份_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Itxd/T定性分类统计月份Response" message="tns:Itxd_T定性分类统计月份_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="T二级设备分类统计车间">
+      <wsdl:input wsaw:Action="http://tempuri.org/Itxd/T二级设备分类统计车间" message="tns:Itxd_T二级设备分类统计车间_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Itxd/T二级设备分类统计车间Response" message="tns:Itxd_T二级设备分类统计车间_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="T定责段局统计月份">
+      <wsdl:input wsaw:Action="http://tempuri.org/Itxd/T定责段局统计月份" message="tns:Itxd_T定责段局统计月份_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Itxd/T定责段局统计月份Response" message="tns:Itxd_T定责段局统计月份_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="T定责段局分类统计车间">
+      <wsdl:input wsaw:Action="http://tempuri.org/Itxd/T定责段局分类统计车间" message="tns:Itxd_T定责段局分类统计车间_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Itxd/T定责段局分类统计车间Response" message="tns:Itxd_T定责段局分类统计车间_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="T二级设备类型故障统计表V2">
+      <wsdl:input wsaw:Action="http://tempuri.org/Itxd/T二级设备类型故障统计表V2" message="tns:Itxd_T二级设备类型故障统计表V2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Itxd/T二级设备类型故障统计表V2Response" message="tns:Itxd_T二级设备类型故障统计表V2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="T全年车间统计V2">
+      <wsdl:input wsaw:Action="http://tempuri.org/Itxd/T全年车间统计V2" message="tns:Itxd_T全年车间统计V2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Itxd/T全年车间统计V2Response" message="tns:Itxd_T全年车间统计V2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="T二级设备分类统计月份">
+      <wsdl:input wsaw:Action="http://tempuri.org/Itxd/T二级设备分类统计月份" message="tns:Itxd_T二级设备分类统计月份_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Itxd/T二级设备分类统计月份Response" message="tns:Itxd_T二级设备分类统计月份_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="T全年定责统计V2">
+      <wsdl:input wsaw:Action="http://tempuri.org/Itxd/T全年定责统计V2" message="tns:Itxd_T全年定责统计V2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Itxd/T全年定责统计V2Response" message="tns:Itxd_T全年定责统计V2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="T定性分类统计车间">
+      <wsdl:input wsaw:Action="http://tempuri.org/Itxd/T定性分类统计车间" message="tns:Itxd_T定性分类统计车间_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Itxd/T定性分类统计车间Response" message="tns:Itxd_T定性分类统计车间_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="T车间设备二级月份计算">
+      <wsdl:input wsaw:Action="http://tempuri.org/Itxd/T车间设备二级月份计算" message="tns:Itxd_T车间设备二级月份计算_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Itxd/T车间设备二级月份计算Response" message="tns:Itxd_T车间设备二级月份计算_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="chart通信定责统计图">
+      <wsdl:input wsaw:Action="http://tempuri.org/Itxd/chart通信定责统计图" message="tns:Itxd_chart通信定责统计图_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Itxd/chart通信定责统计图Response" message="tns:Itxd_chart通信定责统计图_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="chart通信车间故障占比">
+      <wsdl:input wsaw:Action="http://tempuri.org/Itxd/chart通信车间故障占比" message="tns:Itxd_chart通信车间故障占比_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Itxd/chart通信车间故障占比Response" message="tns:Itxd_chart通信车间故障占比_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="chart通信同期对比图list">
+      <wsdl:input wsaw:Action="http://tempuri.org/Itxd/chart通信同期对比图list" message="tns:Itxd_chart通信同期对比图list_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Itxd/chart通信同期对比图listResponse" message="tns:Itxd_chart通信同期对比图list_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="chart通信故障件数设备类型一类">
+      <wsdl:input wsaw:Action="http://tempuri.org/Itxd/chart通信故障件数设备类型一类" message="tns:Itxd_chart通信故障件数设备类型一类_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Itxd/chart通信故障件数设备类型一类Response" message="tns:Itxd_chart通信故障件数设备类型一类_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="chart通信设备类型二级统计图">
+      <wsdl:input wsaw:Action="http://tempuri.org/Itxd/chart通信设备类型二级统计图" message="tns:Itxd_chart通信设备类型二级统计图_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Itxd/chart通信设备类型二级统计图Response" message="tns:Itxd_chart通信设备类型二级统计图_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="chart通信设备类型一级统计图">
+      <wsdl:input wsaw:Action="http://tempuri.org/Itxd/chart通信设备类型一级统计图" message="tns:Itxd_chart通信设备类型一级统计图_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Itxd/chart通信设备类型一级统计图Response" message="tns:Itxd_chart通信设备类型一级统计图_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="chart返回连续个月的对比">
+      <wsdl:input wsaw:Action="http://tempuri.org/Itxd/chart返回连续个月的对比" message="tns:Itxd_chart返回连续个月的对比_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Itxd/chart返回连续个月的对比Response" message="tns:Itxd_chart返回连续个月的对比_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="chart通信定性统计图">
+      <wsdl:input wsaw:Action="http://tempuri.org/Itxd/chart通信定性统计图" message="tns:Itxd_chart通信定性统计图_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Itxd/chart通信定性统计图Response" message="tns:Itxd_chart通信定性统计图_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="chart月份故障分析表">
+      <wsdl:input wsaw:Action="http://tempuri.org/Itxd/chart月份故障分析表" message="tns:Itxd_chart月份故障分析表_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Itxd/chart月份故障分析表Response" message="tns:Itxd_chart月份故障分析表_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="chart通信车间故障统计图">
+      <wsdl:input wsaw:Action="http://tempuri.org/Itxd/chart通信车间故障统计图" message="tns:Itxd_chart通信车间故障统计图_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Itxd/chart通信车间故障统计图Response" message="tns:Itxd_chart通信车间故障统计图_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Tchart局定定责统计">
+      <wsdl:input wsaw:Action="http://tempuri.org/Itxd/Tchart局定定责统计" message="tns:Itxd_Tchart局定定责统计_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Itxd/Tchart局定定责统计Response" message="tns:Itxd_Tchart局定定责统计_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Tchart故障延时占比V2">
+      <wsdl:input wsaw:Action="http://tempuri.org/Itxd/Tchart故障延时占比V2" message="tns:Itxd_Tchart故障延时占比V2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Itxd/Tchart故障延时占比V2Response" message="tns:Itxd_Tchart故障延时占比V2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Tchart段定定责统计">
+      <wsdl:input wsaw:Action="http://tempuri.org/Itxd/Tchart段定定责统计" message="tns:Itxd_Tchart段定定责统计_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Itxd/Tchart段定定责统计Response" message="tns:Itxd_Tchart段定定责统计_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_Itxd" type="tns:Itxd">
+    <wsp:PolicyReference URI="#BasicHttpBinding_Itxd_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="TList返回字段编辑参数">
+      <soap:operation soapAction="http://tempuri.org/Itxd/TList返回字段编辑参数" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserInfo">
+      <soap:operation soapAction="http://tempuri.org/Itxd/UpdateUserInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="根据ID读取Item项权限V2">
+      <soap:operation soapAction="http://tempuri.org/Itxd/根据ID读取Item项权限V2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReadADUserAndGroup">
+      <soap:operation soapAction="http://tempuri.org/Itxd/ReadADUserAndGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addUserInDomain">
+      <soap:operation soapAction="http://tempuri.org/Itxd/addUserInDomain" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="currUserInfo">
+      <soap:operation soapAction="http://tempuri.org/Itxd/currUserInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="集合加入故障列表权限V2">
+      <soap:operation soapAction="http://tempuri.org/Itxd/集合加入故障列表权限V2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GroupMenbers">
+      <soap:operation soapAction="http://tempuri.org/Itxd/GroupMenbers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuperUser">
+      <soap:operation soapAction="http://tempuri.org/Itxd/SuperUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletUserFromSPgroup">
+      <soap:operation soapAction="http://tempuri.org/Itxd/DeletUserFromSPgroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isHavePermissions">
+      <soap:operation soapAction="http://tempuri.org/Itxd/isHavePermissions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUserInSPgroup">
+      <soap:operation soapAction="http://tempuri.org/Itxd/AddUserInSPgroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeLUser">
+      <soap:operation soapAction="http://tempuri.org/Itxd/DeLUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReadADUser">
+      <soap:operation soapAction="http://tempuri.org/Itxd/ReadADUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LDAP用户信息">
+      <soap:operation soapAction="http://tempuri.org/Itxd/LDAP用户信息" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ADUserPassword">
+      <soap:operation soapAction="http://tempuri.org/Itxd/ADUserPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClosePC">
+      <soap:operation soapAction="http://tempuri.org/Itxd/ClosePC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Fontion">
+      <soap:operation soapAction="http://tempuri.org/Itxd/Fontion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FileSum">
+      <soap:operation soapAction="http://tempuri.org/Itxd/FileSum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFile">
+      <soap:operation soapAction="http://tempuri.org/Itxd/getFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="copy附件">
+      <soap:operation soapAction="http://tempuri.org/Itxd/copy附件" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChengeItemUsersPermission">
+      <soap:operation soapAction="http://tempuri.org/Itxd/ChengeItemUsersPermission" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dicReturn">
+      <soap:operation soapAction="http://tempuri.org/Itxd/dicReturn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deletItemAttachment">
+      <soap:operation soapAction="http://tempuri.org/Itxd/deletItemAttachment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateListItemAsync">
+      <soap:operation soapAction="http://tempuri.org/Itxd/CreateListItemAsync" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updataListItem">
+      <soap:operation soapAction="http://tempuri.org/Itxd/updataListItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deletListItem">
+      <soap:operation soapAction="http://tempuri.org/Itxd/deletListItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateListItemAndFolder">
+      <soap:operation soapAction="http://tempuri.org/Itxd/CreateListItemAndFolder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updataGZItem">
+      <soap:operation soapAction="http://tempuri.org/Itxd/updataGZItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listTitle">
+      <soap:operation soapAction="http://tempuri.org/Itxd/listTitle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="三列数据返回">
+      <soap:operation soapAction="http://tempuri.org/Itxd/三列数据返回" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retureTXListItem">
+      <soap:operation soapAction="http://tempuri.org/Itxd/retureTXListItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="List返回两列数据">
+      <soap:operation soapAction="http://tempuri.org/Itxd/List返回两列数据" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TXList列表v2">
+      <soap:operation soapAction="http://tempuri.org/Itxd/TXList列表v2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="logList">
+      <soap:operation soapAction="http://tempuri.org/Itxd/logList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MessageReturn">
+      <soap:operation soapAction="http://tempuri.org/Itxd/MessageReturn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="T定性分类统计月份">
+      <soap:operation soapAction="http://tempuri.org/Itxd/T定性分类统计月份" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="T二级设备分类统计车间">
+      <soap:operation soapAction="http://tempuri.org/Itxd/T二级设备分类统计车间" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="T定责段局统计月份">
+      <soap:operation soapAction="http://tempuri.org/Itxd/T定责段局统计月份" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="T定责段局分类统计车间">
+      <soap:operation soapAction="http://tempuri.org/Itxd/T定责段局分类统计车间" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="T二级设备类型故障统计表V2">
+      <soap:operation soapAction="http://tempuri.org/Itxd/T二级设备类型故障统计表V2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="T全年车间统计V2">
+      <soap:operation soapAction="http://tempuri.org/Itxd/T全年车间统计V2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="T二级设备分类统计月份">
+      <soap:operation soapAction="http://tempuri.org/Itxd/T二级设备分类统计月份" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="T全年定责统计V2">
+      <soap:operation soapAction="http://tempuri.org/Itxd/T全年定责统计V2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="T定性分类统计车间">
+      <soap:operation soapAction="http://tempuri.org/Itxd/T定性分类统计车间" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="T车间设备二级月份计算">
+      <soap:operation soapAction="http://tempuri.org/Itxd/T车间设备二级月份计算" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="chart通信定责统计图">
+      <soap:operation soapAction="http://tempuri.org/Itxd/chart通信定责统计图" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="chart通信车间故障占比">
+      <soap:operation soapAction="http://tempuri.org/Itxd/chart通信车间故障占比" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="chart通信同期对比图list">
+      <soap:operation soapAction="http://tempuri.org/Itxd/chart通信同期对比图list" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="chart通信故障件数设备类型一类">
+      <soap:operation soapAction="http://tempuri.org/Itxd/chart通信故障件数设备类型一类" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="chart通信设备类型二级统计图">
+      <soap:operation soapAction="http://tempuri.org/Itxd/chart通信设备类型二级统计图" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="chart通信设备类型一级统计图">
+      <soap:operation soapAction="http://tempuri.org/Itxd/chart通信设备类型一级统计图" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="chart返回连续个月的对比">
+      <soap:operation soapAction="http://tempuri.org/Itxd/chart返回连续个月的对比" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="chart通信定性统计图">
+      <soap:operation soapAction="http://tempuri.org/Itxd/chart通信定性统计图" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="chart月份故障分析表">
+      <soap:operation soapAction="http://tempuri.org/Itxd/chart月份故障分析表" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="chart通信车间故障统计图">
+      <soap:operation soapAction="http://tempuri.org/Itxd/chart通信车间故障统计图" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Tchart局定定责统计">
+      <soap:operation soapAction="http://tempuri.org/Itxd/Tchart局定定责统计" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Tchart故障延时占比V2">
+      <soap:operation soapAction="http://tempuri.org/Itxd/Tchart故障延时占比V2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Tchart段定定责统计">
+      <soap:operation soapAction="http://tempuri.org/Itxd/Tchart段定定责统计" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_Itxd1" type="tns:Itxd">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="TList返回字段编辑参数">
+      <soap:operation soapAction="http://tempuri.org/Itxd/TList返回字段编辑参数" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserInfo">
+      <soap:operation soapAction="http://tempuri.org/Itxd/UpdateUserInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="根据ID读取Item项权限V2">
+      <soap:operation soapAction="http://tempuri.org/Itxd/根据ID读取Item项权限V2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReadADUserAndGroup">
+      <soap:operation soapAction="http://tempuri.org/Itxd/ReadADUserAndGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addUserInDomain">
+      <soap:operation soapAction="http://tempuri.org/Itxd/addUserInDomain" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="currUserInfo">
+      <soap:operation soapAction="http://tempuri.org/Itxd/currUserInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="集合加入故障列表权限V2">
+      <soap:operation soapAction="http://tempuri.org/Itxd/集合加入故障列表权限V2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GroupMenbers">
+      <soap:operation soapAction="http://tempuri.org/Itxd/GroupMenbers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuperUser">
+      <soap:operation soapAction="http://tempuri.org/Itxd/SuperUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletUserFromSPgroup">
+      <soap:operation soapAction="http://tempuri.org/Itxd/DeletUserFromSPgroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isHavePermissions">
+      <soap:operation soapAction="http://tempuri.org/Itxd/isHavePermissions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUserInSPgroup">
+      <soap:operation soapAction="http://tempuri.org/Itxd/AddUserInSPgroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeLUser">
+      <soap:operation soapAction="http://tempuri.org/Itxd/DeLUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReadADUser">
+      <soap:operation soapAction="http://tempuri.org/Itxd/ReadADUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LDAP用户信息">
+      <soap:operation soapAction="http://tempuri.org/Itxd/LDAP用户信息" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ADUserPassword">
+      <soap:operation soapAction="http://tempuri.org/Itxd/ADUserPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClosePC">
+      <soap:operation soapAction="http://tempuri.org/Itxd/ClosePC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Fontion">
+      <soap:operation soapAction="http://tempuri.org/Itxd/Fontion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FileSum">
+      <soap:operation soapAction="http://tempuri.org/Itxd/FileSum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFile">
+      <soap:operation soapAction="http://tempuri.org/Itxd/getFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="copy附件">
+      <soap:operation soapAction="http://tempuri.org/Itxd/copy附件" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChengeItemUsersPermission">
+      <soap:operation soapAction="http://tempuri.org/Itxd/ChengeItemUsersPermission" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dicReturn">
+      <soap:operation soapAction="http://tempuri.org/Itxd/dicReturn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deletItemAttachment">
+      <soap:operation soapAction="http://tempuri.org/Itxd/deletItemAttachment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateListItemAsync">
+      <soap:operation soapAction="http://tempuri.org/Itxd/CreateListItemAsync" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updataListItem">
+      <soap:operation soapAction="http://tempuri.org/Itxd/updataListItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deletListItem">
+      <soap:operation soapAction="http://tempuri.org/Itxd/deletListItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateListItemAndFolder">
+      <soap:operation soapAction="http://tempuri.org/Itxd/CreateListItemAndFolder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updataGZItem">
+      <soap:operation soapAction="http://tempuri.org/Itxd/updataGZItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listTitle">
+      <soap:operation soapAction="http://tempuri.org/Itxd/listTitle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="三列数据返回">
+      <soap:operation soapAction="http://tempuri.org/Itxd/三列数据返回" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retureTXListItem">
+      <soap:operation soapAction="http://tempuri.org/Itxd/retureTXListItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="List返回两列数据">
+      <soap:operation soapAction="http://tempuri.org/Itxd/List返回两列数据" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TXList列表v2">
+      <soap:operation soapAction="http://tempuri.org/Itxd/TXList列表v2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="logList">
+      <soap:operation soapAction="http://tempuri.org/Itxd/logList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MessageReturn">
+      <soap:operation soapAction="http://tempuri.org/Itxd/MessageReturn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="T定性分类统计月份">
+      <soap:operation soapAction="http://tempuri.org/Itxd/T定性分类统计月份" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="T二级设备分类统计车间">
+      <soap:operation soapAction="http://tempuri.org/Itxd/T二级设备分类统计车间" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="T定责段局统计月份">
+      <soap:operation soapAction="http://tempuri.org/Itxd/T定责段局统计月份" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="T定责段局分类统计车间">
+      <soap:operation soapAction="http://tempuri.org/Itxd/T定责段局分类统计车间" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="T二级设备类型故障统计表V2">
+      <soap:operation soapAction="http://tempuri.org/Itxd/T二级设备类型故障统计表V2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="T全年车间统计V2">
+      <soap:operation soapAction="http://tempuri.org/Itxd/T全年车间统计V2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="T二级设备分类统计月份">
+      <soap:operation soapAction="http://tempuri.org/Itxd/T二级设备分类统计月份" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="T全年定责统计V2">
+      <soap:operation soapAction="http://tempuri.org/Itxd/T全年定责统计V2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="T定性分类统计车间">
+      <soap:operation soapAction="http://tempuri.org/Itxd/T定性分类统计车间" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="T车间设备二级月份计算">
+      <soap:operation soapAction="http://tempuri.org/Itxd/T车间设备二级月份计算" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="chart通信定责统计图">
+      <soap:operation soapAction="http://tempuri.org/Itxd/chart通信定责统计图" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="chart通信车间故障占比">
+      <soap:operation soapAction="http://tempuri.org/Itxd/chart通信车间故障占比" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="chart通信同期对比图list">
+      <soap:operation soapAction="http://tempuri.org/Itxd/chart通信同期对比图list" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="chart通信故障件数设备类型一类">
+      <soap:operation soapAction="http://tempuri.org/Itxd/chart通信故障件数设备类型一类" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="chart通信设备类型二级统计图">
+      <soap:operation soapAction="http://tempuri.org/Itxd/chart通信设备类型二级统计图" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="chart通信设备类型一级统计图">
+      <soap:operation soapAction="http://tempuri.org/Itxd/chart通信设备类型一级统计图" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="chart返回连续个月的对比">
+      <soap:operation soapAction="http://tempuri.org/Itxd/chart返回连续个月的对比" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="chart通信定性统计图">
+      <soap:operation soapAction="http://tempuri.org/Itxd/chart通信定性统计图" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="chart月份故障分析表">
+      <soap:operation soapAction="http://tempuri.org/Itxd/chart月份故障分析表" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="chart通信车间故障统计图">
+      <soap:operation soapAction="http://tempuri.org/Itxd/chart通信车间故障统计图" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Tchart局定定责统计">
+      <soap:operation soapAction="http://tempuri.org/Itxd/Tchart局定定责统计" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Tchart故障延时占比V2">
+      <soap:operation soapAction="http://tempuri.org/Itxd/Tchart故障延时占比V2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Tchart段定定责统计">
+      <soap:operation soapAction="http://tempuri.org/Itxd/Tchart段定定责统计" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_Itxd2" type="tns:Itxd">
+    <wsp:PolicyReference URI="#BasicHttpBinding_Itxd2_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="TList返回字段编辑参数">
+      <soap:operation soapAction="http://tempuri.org/Itxd/TList返回字段编辑参数" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserInfo">
+      <soap:operation soapAction="http://tempuri.org/Itxd/UpdateUserInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="根据ID读取Item项权限V2">
+      <soap:operation soapAction="http://tempuri.org/Itxd/根据ID读取Item项权限V2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReadADUserAndGroup">
+      <soap:operation soapAction="http://tempuri.org/Itxd/ReadADUserAndGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addUserInDomain">
+      <soap:operation soapAction="http://tempuri.org/Itxd/addUserInDomain" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="currUserInfo">
+      <soap:operation soapAction="http://tempuri.org/Itxd/currUserInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="集合加入故障列表权限V2">
+      <soap:operation soapAction="http://tempuri.org/Itxd/集合加入故障列表权限V2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GroupMenbers">
+      <soap:operation soapAction="http://tempuri.org/Itxd/GroupMenbers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuperUser">
+      <soap:operation soapAction="http://tempuri.org/Itxd/SuperUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletUserFromSPgroup">
+      <soap:operation soapAction="http://tempuri.org/Itxd/DeletUserFromSPgroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isHavePermissions">
+      <soap:operation soapAction="http://tempuri.org/Itxd/isHavePermissions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUserInSPgroup">
+      <soap:operation soapAction="http://tempuri.org/Itxd/AddUserInSPgroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeLUser">
+      <soap:operation soapAction="http://tempuri.org/Itxd/DeLUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReadADUser">
+      <soap:operation soapAction="http://tempuri.org/Itxd/ReadADUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LDAP用户信息">
+      <soap:operation soapAction="http://tempuri.org/Itxd/LDAP用户信息" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ADUserPassword">
+      <soap:operation soapAction="http://tempuri.org/Itxd/ADUserPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClosePC">
+      <soap:operation soapAction="http://tempuri.org/Itxd/ClosePC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Fontion">
+      <soap:operation soapAction="http://tempuri.org/Itxd/Fontion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FileSum">
+      <soap:operation soapAction="http://tempuri.org/Itxd/FileSum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFile">
+      <soap:operation soapAction="http://tempuri.org/Itxd/getFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="copy附件">
+      <soap:operation soapAction="http://tempuri.org/Itxd/copy附件" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChengeItemUsersPermission">
+      <soap:operation soapAction="http://tempuri.org/Itxd/ChengeItemUsersPermission" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dicReturn">
+      <soap:operation soapAction="http://tempuri.org/Itxd/dicReturn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deletItemAttachment">
+      <soap:operation soapAction="http://tempuri.org/Itxd/deletItemAttachment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateListItemAsync">
+      <soap:operation soapAction="http://tempuri.org/Itxd/CreateListItemAsync" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updataListItem">
+      <soap:operation soapAction="http://tempuri.org/Itxd/updataListItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deletListItem">
+      <soap:operation soapAction="http://tempuri.org/Itxd/deletListItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateListItemAndFolder">
+      <soap:operation soapAction="http://tempuri.org/Itxd/CreateListItemAndFolder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updataGZItem">
+      <soap:operation soapAction="http://tempuri.org/Itxd/updataGZItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listTitle">
+      <soap:operation soapAction="http://tempuri.org/Itxd/listTitle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="三列数据返回">
+      <soap:operation soapAction="http://tempuri.org/Itxd/三列数据返回" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retureTXListItem">
+      <soap:operation soapAction="http://tempuri.org/Itxd/retureTXListItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="List返回两列数据">
+      <soap:operation soapAction="http://tempuri.org/Itxd/List返回两列数据" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TXList列表v2">
+      <soap:operation soapAction="http://tempuri.org/Itxd/TXList列表v2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="logList">
+      <soap:operation soapAction="http://tempuri.org/Itxd/logList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MessageReturn">
+      <soap:operation soapAction="http://tempuri.org/Itxd/MessageReturn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="T定性分类统计月份">
+      <soap:operation soapAction="http://tempuri.org/Itxd/T定性分类统计月份" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="T二级设备分类统计车间">
+      <soap:operation soapAction="http://tempuri.org/Itxd/T二级设备分类统计车间" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="T定责段局统计月份">
+      <soap:operation soapAction="http://tempuri.org/Itxd/T定责段局统计月份" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="T定责段局分类统计车间">
+      <soap:operation soapAction="http://tempuri.org/Itxd/T定责段局分类统计车间" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="T二级设备类型故障统计表V2">
+      <soap:operation soapAction="http://tempuri.org/Itxd/T二级设备类型故障统计表V2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="T全年车间统计V2">
+      <soap:operation soapAction="http://tempuri.org/Itxd/T全年车间统计V2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="T二级设备分类统计月份">
+      <soap:operation soapAction="http://tempuri.org/Itxd/T二级设备分类统计月份" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="T全年定责统计V2">
+      <soap:operation soapAction="http://tempuri.org/Itxd/T全年定责统计V2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="T定性分类统计车间">
+      <soap:operation soapAction="http://tempuri.org/Itxd/T定性分类统计车间" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="T车间设备二级月份计算">
+      <soap:operation soapAction="http://tempuri.org/Itxd/T车间设备二级月份计算" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="chart通信定责统计图">
+      <soap:operation soapAction="http://tempuri.org/Itxd/chart通信定责统计图" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="chart通信车间故障占比">
+      <soap:operation soapAction="http://tempuri.org/Itxd/chart通信车间故障占比" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="chart通信同期对比图list">
+      <soap:operation soapAction="http://tempuri.org/Itxd/chart通信同期对比图list" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="chart通信故障件数设备类型一类">
+      <soap:operation soapAction="http://tempuri.org/Itxd/chart通信故障件数设备类型一类" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="chart通信设备类型二级统计图">
+      <soap:operation soapAction="http://tempuri.org/Itxd/chart通信设备类型二级统计图" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="chart通信设备类型一级统计图">
+      <soap:operation soapAction="http://tempuri.org/Itxd/chart通信设备类型一级统计图" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="chart返回连续个月的对比">
+      <soap:operation soapAction="http://tempuri.org/Itxd/chart返回连续个月的对比" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="chart通信定性统计图">
+      <soap:operation soapAction="http://tempuri.org/Itxd/chart通信定性统计图" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="chart月份故障分析表">
+      <soap:operation soapAction="http://tempuri.org/Itxd/chart月份故障分析表" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="chart通信车间故障统计图">
+      <soap:operation soapAction="http://tempuri.org/Itxd/chart通信车间故障统计图" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Tchart局定定责统计">
+      <soap:operation soapAction="http://tempuri.org/Itxd/Tchart局定定责统计" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Tchart故障延时占比V2">
+      <soap:operation soapAction="http://tempuri.org/Itxd/Tchart故障延时占比V2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Tchart段定定责统计">
+      <soap:operation soapAction="http://tempuri.org/Itxd/Tchart段定定责统计" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Stxd">
+    <wsdl:port name="BasicHttpBinding_Itxd" binding="tns:BasicHttpBinding_Itxd">
+      <soap:address location="http://txds.bjtxd.com/_Layouts/FtxdWcf/txd.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
